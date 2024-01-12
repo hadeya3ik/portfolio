@@ -12,7 +12,7 @@ function hero() {
           I enjoy finding ways to combine my creative side with the tech world. I enjoy using my creativity and problem-solving skills to create digital experiences. Whether it's through a striking piece of mixed media art or a clever bit of coding, I'm all about finding the spot where imagination meets innovation.
         </p>
         <button className="linkdin_button" href="https://www.linkedin.com/in/hadeya-ikram-23197622a/">
-          <FaSearch size={30} /> linkedin.com/hadeya-ikram
+          <FaSearch className="search_icon" size={30} /> linkedin.com/hadeya-ikram
         </button>
       </div>
       
