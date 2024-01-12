@@ -1,0 +1,53 @@
+#project {
+    border: 5px solid;
+    border-radius: 15px;
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+    margin: 1rem;
+}
+
+.project_bar {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 6px;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.mini_button {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 1px;
+    border: none;
+}
+
+.project_footer {
+	padding-top: 2rem;
+	display: flex;
+    justify-content: space-between;
+}
+
+.techstack > * {
+	padding-right: 10px;
+	padding-bottom: 0px;
+}
+
+.github_link {
+    margin-left: 1rem;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 10px;
+}
+
+#project_cont {
+    display: grid;
+    grid-auto-flow: dense; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
