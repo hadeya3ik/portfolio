@@ -36,13 +36,13 @@
     padding: 1rem;
     height: 400px;
     animation: animate 5s ease-in-out infinite;
-    border-radius: 53% 47% 46% 54% / 62% 43% 57% 38%
+    border-radius: 60% 47% 46% 54% / 62% 43% 57% 38%
 }
 
 
 @keyframes animate {
     0%, 100%{
-        border-radius: 51% 49% 46% 54% / 54% 54% 46% 46%
+        border-radius: 51% 49% 36% 54% / 54% 54% 46% 46%
     }
     50%{
         border-radius: 53% 47% 46% 54% / 62% 43% 57% 38%
@@ -60,8 +60,8 @@
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 30px;
-    max-width: 400px;
     white-space: nowrap;
+    width: fit-content;
 }
 
 .search_icon {

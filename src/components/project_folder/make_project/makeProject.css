@@ -12,7 +12,7 @@
 }
 
 .content {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .mini_button {
@@ -44,6 +44,11 @@ hr {
 	padding: 0.5rem 1rem;
 	border: none;
 	border-radius: 10px;
+}
+
+.github_link {
+    border-right: 5px solid pink;
+    border-bottom: 5px solid pink;
 }
 
 #project_cont {

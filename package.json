@@ -19,7 +19,9 @@
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.21.2",
     "react-scroll-parallax": "^3.4.5",
-    "react-spring": "^9.7.3"
+    "react-simple-typewriter": "^5.0.1",
+    "react-spring": "^9.7.3",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
