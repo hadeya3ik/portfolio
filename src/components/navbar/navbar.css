@@ -1,0 +1,15 @@
+#nav {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 1000;
+    font-size: 2rem;
+    letter-spacing: 0.75rem; 
+    display: flex;
+    gap: 4rem;
+    justify-content: flex-end;
+    padding: 2rem 3rem; 
+}
+
+#nav-li{
+    transition: color 500ms ease;
+}
+

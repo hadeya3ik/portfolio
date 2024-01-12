@@ -1,0 +1,16 @@
+#nav-li:hover {
+    color: rgb(0, 42, 255);
+}
+
+#nav-li .active {
+    color:rgb(123, 148, 123);
+}
+
+.linkdin_button {
+    color: white;
+    background-color: rgb(123, 148, 123);
+}
+
+#dp {
+    border: 20px solid rgb(127, 145, 120); 
+}

@@ -3,7 +3,7 @@ import "./navbar.css";
 
 const NavItem = ({ to, children, isActive }) => {
   return (
-    <li className="nav-li">
+    <li id="nav-li">
       <Link to={to} className={isActive ? "active" : ""}>
         {children}
       </Link>
@@ -20,8 +20,8 @@ const NavBar = () => {
   const location = useLocation();
   return (
     <>
-      <nav className="top-nav">
-        <ul className="top-ul">
+      <nav>
+        <ul id="nav">
           {navItems.map((item) => (
             <NavItem
               key={item.to}
