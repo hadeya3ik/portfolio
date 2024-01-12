@@ -1,14 +1,30 @@
-.paragraph_style {
+.paragraph_style, .paragraph_mini  {
 	font-family: "DM Sans", sans-serif;
 	letter-spacing: 2px;
 	font-size: 0.75rem;
 	line-height: 20px; 
 }
 
-.bold_style {
+.paragraph_mini {
+	letter-spacing: 0px;
+	font-weight: 600;
+}
+
+.bold_style, .bold_mini {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-family: "Akshar", sans-serif;
 	letter-spacing: 2px;
 	font-size: 5rem;
+}
+
+.bold_mini {
+	font-size: 2rem;
+}
+
+.github_link {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: "Akshar", sans-serif;
+	letter-spacing: 2px;
 }

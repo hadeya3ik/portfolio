@@ -14,3 +14,12 @@
 #dp {
     border: 20px solid rgb(127, 145, 120); 
 }
+
+.project_description, .project_title, .mini_button, #project, .content{
+    color:rgb(123, 148, 123);
+}
+
+.github_link {
+	color: white;
+	background-color:rgb(123, 148, 123);
+}

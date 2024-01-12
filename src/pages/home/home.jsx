@@ -9,7 +9,7 @@ import checker from './../../images/olivee.svg'
 function home() {
   return (<>
   <div>
-      {/* <Parallax strength={600}>
+      <Parallax strength={600}>
         < Hero />
       </Parallax>
       <Parallax bgImage={checker} strength={600}>
@@ -17,11 +17,7 @@ function home() {
       </Parallax>
       <Parallax strength={600}>
         <Projects />  
-      </Parallax> */}
-
-        < Hero />
-        < Skills />
-        <Projects />  
+      </Parallax>
   </div>
   </>)
 }
