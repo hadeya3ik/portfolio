@@ -14,6 +14,7 @@ function Project() {
   return (
     <div className='cont'>
     <div id="project-cont">
+    <h4 className='bold_mini sub_header'>PROJECTS</h4>
       <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
         <Masonry> <div className="filler"></div>
         <MakeProject 

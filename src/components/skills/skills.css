@@ -41,14 +41,28 @@
     flex-direction: column;
 }
 
+.tech_skills_container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub_header {
+    align-self: flex-start;
+}
+
 @media (max-width: 950px) {
+    .tech_skills_container {
+        align-self: center; 
+    } 
+
     .skills_container {
         flex-direction: column;
+        align-self: center; 
     }
 
     .tech_skills_container, .experience {
         padding-top: 3rem;
         padding-bottom: 3rem;
     } 
-
 }

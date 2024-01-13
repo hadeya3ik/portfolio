@@ -20,6 +20,7 @@ function skills() {
   return (
     <div className="skills_container">
       <div className="tech_skills_container">
+        <h4 className='bold_mini sub_header'>SKILLS</h4>
         <div className="box">
           <h2 className="skill">C/C++</h2>
           <h2 className="skill">Python</h2>
@@ -37,7 +38,9 @@ function skills() {
           <h2 className="skill">Adobe</h2>
         </div>
       </div>
+      
       <div className="experience">
+      <h4 className='bold_mini sub_header'>EXPERIENCE</h4>
         <Job year="2023" title="juniour Technical Analyst" company="Ontario Ministry of Transportation"/>
         <Job year="2022" title="instructional support assitant" company="University of Waterloo"/>
         <Job year="2019" title="summer camp leader" company="Town of Milton"/>

@@ -1,8 +1,9 @@
 :root {
     --background-color: #ffffff;
     --dark_txt: rgb(65, 49, 89);
-    --lighter-txt:  rgb(239, 227, 242);
-    --light-txt: rgb(248, 229, 251); 
+    --dark_accent_txt: rgb(116, 35, 11);
+    --lighter-txt:  rgb(242, 233, 244);
+    --light-txt: rgb(255, 252, 255); 
     --between_txt: rgb(238, 194, 194);
     --active: pink; 
     --hover: rgb(234, 192, 255); 
@@ -48,6 +49,7 @@ body {
 .github_link {
     transition: color 500ms ease;
     background-color: var(--between_txt);
+    border: 1px solid var(--dark_txt); 
 }
 
 .github_link:hover {
