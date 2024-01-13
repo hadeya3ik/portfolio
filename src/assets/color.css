@@ -1,3 +1,4 @@
+/* 
 :root {
     --background-color: #ffffff;
     --dark_txt: rgb(65, 49, 89);
@@ -9,8 +10,9 @@
     --hover: rgb(234, 192, 255); 
 }
 
-/* :root {
+:root {
     --background-color: #ffffff;
+    --dark_accent_txt: rgb(255, 218, 207);
     --dark_txt: rgb(215, 210, 204);
     --light-txt: rgb(25, 14, 50); 
     --lighter-txt: rgb(21, 12, 44);
@@ -19,8 +21,40 @@
     --hover: rgb(234, 192, 255); 
 } */
 
+
+/* Base styles */
+:root {
+    --background-color: #ffffff; /* Common styles can go here */
+    --hover: rgb(234, 192, 255); 
+}
+
+/* light mode */
+.light-theme {
+    --dark_txt: rgb(65, 49, 89);
+    --dark_accent_txt: rgb(116, 35, 11);
+    --lighter-txt: rgb(242, 233, 244);
+    --light-txt: rgb(255, 252, 255); 
+    --between_txt: rgb(238, 194, 194);
+    --active: pink; 
+}
+
+/* dark mode */
+.dark-theme {
+    --dark_accent_txt: rgb(255, 218, 207);
+    --dark_txt: rgb(215, 210, 204);
+    --light-txt: rgb(25, 14, 50); 
+    --lighter-txt: rgb(21, 12, 44);
+    --between_txt: rgb(146, 131, 155);
+    --active: rgb(114, 80, 86); 
+}
+
 body {
     background-color: var(--light-txt);
+}
+
+/* idk */
+.bold_mini.sub_header {
+	color: var(--dark_accent_txt);
 }
 
 /* navbar */
