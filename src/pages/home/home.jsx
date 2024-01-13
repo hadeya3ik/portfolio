@@ -10,7 +10,8 @@ function home() {
       <Parallax strength={600}>
         < Hero />
       </Parallax>
-      <Parallax bgImage={checker} strength={600}>
+      {/* <Parallax bgImage={checker} strength={600}> */}
+      <Parallax strength={600}>
         < Skills />
       </Parallax>
       <Parallax strength={600}>

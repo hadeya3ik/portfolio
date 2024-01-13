@@ -1,62 +1,106 @@
-#nav-li:hover {
-    color: rgb(0, 42, 255);
+:root {
+    --background-color: #ffffff;
+    --dark_txt: rgb(65, 49, 89);
+    --lighter-txt:  rgb(239, 227, 242);
+    --light-txt: rgb(248, 229, 251); 
+    --between_txt: rgb(238, 194, 194);
+    --active: pink; 
+    --hover: rgb(234, 192, 255); 
 }
 
+/* :root {
+    --background-color: #ffffff;
+    --dark_txt: rgb(215, 210, 204);
+    --light-txt: rgb(25, 14, 50); 
+    --lighter-txt: rgb(21, 12, 44);
+    --between_txt: rgb(146, 131, 155);
+    --active: rgb(114, 80, 86); 
+    --hover: rgb(234, 192, 255); 
+} */
+
+body {
+    background-color: var(--light-txt);
+}
+
+/* navbar */
 #nav-li .active {
-    color:rgb(32, 35, 32);
+    color: var(--active); /* Assuming you want to change this */
 }
 
+#nav-li:hover {
+    color: var(--hover);
+}
+
+/* profile pic */
 #dp {
-    border: 20px solid rgb(0, 0, 0); 
+    border: 20px solid var(--dark_txt);
 }
 
+/* buttons */
 .linkdin_button {
-    color: white;
-    background-color: rgb(0, 0, 0);
+    transition: color 500ms ease;
+}
+
+.linkdin_button:hover {
+    background-color: var(--hover);
+}
+
+.github_link {
+    transition: color 500ms ease;
+    background-color: var(--between_txt);
+}
+
+.github_link:hover {
+    background-color: var(--hover);
+}
+
+/* inverse colours */
+.linkdin_button {
+    color: var(--light-txt);
+    background-color: var(--dark_txt);
 }
 
 .skill {
-    color: white;
-    background-color: black;
+    color: var(--light-txt);
+    background-color: var(--dark_txt);
 }
 
-
-/* website icons */
-
-
-.github_link {
-	color: rgb(255, 255, 255);
-	background-color:rgb(107, 107, 107);
-}
-
+/* colours of the projects  */
 .project_bar {
-    background-color: rgb(197, 195, 177);
+    background-color: var(--between_txt);
 }
 
 .content {
-    background-color: rgb(248, 248, 248);
+    background-color: var(--lighter-txt);
 }
 
+/* all standard text */
+.paragraph_style, .paragraph_mini, .bold_style, .bold_mini, 
+.job_title, .bold_mini, .github_link, .icon, #nav {
+    color: var(--dark_txt);
+}
 
+/* project border color */
 .project_description, .project_title, .mini_button, #project, .content{
-    color:rgb(0, 0, 0);
+    color: var(--dark_txt);
 }
-
 
 #project {
-    border-right: 10px solid rgb(0, 0, 0);
-    border-bottom: 10px solid rgb(0, 0, 0);
+    border-right: 10px solid var(--dark_txt);
+    border-bottom: 10px solid var(--dark_txt);
 }
+
 .project_bar {
-    border-bottom: 3px solid rgb(0, 0, 0);
+    border-bottom: 3px solid var(--dark_txt);
 }
 
 .github_link {
-    border-right: 5px solid rgb(0, 0, 0);
-    border-bottom: 5px solid rgb(0, 0, 0);
+    border-right: 5px solid var(--dark_txt);
+    border-bottom: 5px solid var(--dark_txt);
+    color: var(--background-color);
 }
 
 hr {
-    background-color:  rgb(0, 0, 0);
+    background-color:  var(--dark_txt);
     height: 1.5px;
 }

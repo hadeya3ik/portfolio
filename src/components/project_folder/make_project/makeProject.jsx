@@ -16,16 +16,16 @@ MakeProject.propTypes = {
     return (
       <div id="project" className={className}>
         <div className="project_bar">
-          <FaCircleStop className='mini_button' />
-          <FaRegCircle className='mini_button' />
+          <FaCircleStop id='mini_button' className='icon' />
+          <FaRegCircle id='mini_button' className='icon'/>
         </div>
         <div className="content">
-          <h2 className='project_title bold_mini'>{title}</h2>
+          <h2 className='bold_mini'>{title}</h2>
           <hr></hr>
-          <p className='project_description paragraph_mini'>{text}</p>
+          <p className='paragraph_mini'>{text}</p>
           <div className="project_footer">
             <div className="techstack">
-              {techIcons.map((Icon, index) => <Icon key={index} size={40} />)}
+              {techIcons.map((Icon, index) => <Icon key={index} className="icon" size={40} />)}
             </div>
             <a href={link} className="github_link" target="_blank" rel="noopener noreferrer">
               View Code
