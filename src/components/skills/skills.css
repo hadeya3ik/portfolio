@@ -1,0 +1,54 @@
+.skill {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    margin: 0.25rem;
+}
+
+.skills_container {
+    display: flex;
+}
+
+.experience {
+    align-self: center;
+}
+
+.bullet {
+    display: flex;
+    gap: 5px;
+}
+
+.job {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.box, .skills_container {
+    display: flex;
+}
+
+.skills_container {
+    padding: 3rem;
+    justify-content: space-around;
+}
+
+.tech_skills_container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 950px) {
+    .skills_container {
+        flex-direction: column;
+    }
+
+    .tech_skills_container, .experience {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    } 
+
+}

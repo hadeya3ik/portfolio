@@ -10,13 +10,14 @@
 	font-weight: 600;
 }
 
-.bold_style, .bold_mini {
+.bold_style, .bold_mini, .job_title {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-family: "Akshar", sans-serif;
 	letter-spacing: 2px;
 	font-size: 5rem;
 }
+	
 
 .bold_mini {
 	font-size: 2rem;
@@ -27,4 +28,8 @@
 	font-weight: 500;
 	font-family: "Akshar", sans-serif;
 	letter-spacing: 2px;
+}
+
+.job_title {
+	font-size: 1rem;
 }

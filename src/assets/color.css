@@ -15,6 +15,12 @@
     border: 20px solid rgb(127, 145, 120); 
 }
 
+.skill {
+    color: white;
+    background-color: black;
+}
+
+/* website icons */
 .project_description, .project_title, .mini_button, #project, .content{
     color:rgb(123, 148, 123);
 }

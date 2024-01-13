@@ -1,15 +1,28 @@
+.projects_title{
+	font-family: "Akshar", sans-serif;
+	letter-spacing: 2px;
+	font-size: 2rem;
+	font-weight: 1000;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 #project-cont {
     padding: 6rem 4rem;
     align-items: center;
 }
 
 #project {
-    margin: 1.5rem;
+    margin: 1.25rem;
+}
+
+#proj_title {
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     #project {
-        margin: 1.5rem;
+        margin: 1.25rem;
     }
 
     #project-cont {
@@ -20,4 +33,3 @@
 .filler {
     height: 40px;
 }
-

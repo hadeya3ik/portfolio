@@ -13,7 +13,8 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 function Project() {
   return (
-    <>
+    <div className='cont'>
+    <h className="projects_title">Projects</h>
     <div id="project-cont">
       <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
         <Masonry> <div className="filler"></div>
@@ -56,7 +57,7 @@ function Project() {
         </Masonry>
       </ResponsiveMasonry>
       </div>
-    </>
+    </ div>
   );
 }
 

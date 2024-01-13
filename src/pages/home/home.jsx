@@ -1,6 +1,6 @@
 import Hero from './../../components/hero/hero'
 import Skills from './../../components/skills/skills'
-import Projects from './../../components/projects/projects'
+import Project from './../../components/project_folder/project'
 
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { Parallax } from 'react-parallax'
@@ -16,7 +16,7 @@ function home() {
         < Skills />
       </Parallax>
       <Parallax strength={600}>
-        <Projects />  
+        <Project />  
       </Parallax>
   </div>
   </>)
