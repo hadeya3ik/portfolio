@@ -1,5 +1,8 @@
 import './makeProject.css'
 import { FaRegCircle } from "react-icons/fa";
+import { FaCircleStop } from "react-icons/fa6";
+
+
 import PropTypes from 'prop-types';
 
 MakeProject.propTypes = {
@@ -9,11 +12,11 @@ MakeProject.propTypes = {
   };
 
 
-function MakeProject({ className, title, text, techIcons }) {
+  function MakeProject({ className, title, text, techIcons, link }) {
     return (
       <div id="project" className={className}>
         <div className="project_bar">
-          <FaRegCircle className='mini_button' />
+          <FaCircleStop className='mini_button' />
           <FaRegCircle className='mini_button' />
         </div>
         <div className="content">
@@ -24,9 +27,9 @@ function MakeProject({ className, title, text, techIcons }) {
             <div className="techstack">
               {techIcons.map((Icon, index) => <Icon key={index} size={40} />)}
             </div>
-            <button className="github_link">
+            <a href={link} className="github_link" target="_blank" rel="noopener noreferrer">
               View Code
-            </button>
+            </a>
           </div>
         </div>
       </div>

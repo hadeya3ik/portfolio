@@ -3,16 +3,16 @@
 }
 
 #nav-li .active {
-    color:rgb(123, 148, 123);
+    color:rgb(32, 35, 32);
+}
+
+#dp {
+    border: 20px solid rgb(0, 0, 0); 
 }
 
 .linkdin_button {
     color: white;
-    background-color: rgb(123, 148, 123);
-}
-
-#dp {
-    border: 20px solid rgb(127, 145, 120); 
+    background-color: rgb(0, 0, 0);
 }
 
 .skill {
@@ -20,39 +20,43 @@
     background-color: black;
 }
 
+
 /* website icons */
-.project_description, .project_title, .mini_button, #project, .content{
-    color:rgb(123, 148, 123);
-}
+
 
 .github_link {
-	color: white;
-	background-color:rgb(123, 148, 123);
+	color: rgb(255, 255, 255);
+	background-color:rgb(107, 107, 107);
 }
 
 .project_bar {
-    background-color: rgb(242, 194, 194);
-    border-bottom: 3px solid rgb(123, 148, 123);
+    background-color: rgb(197, 195, 177);
 }
 
 .content {
-    background-color: rgb(225, 230, 207);
+    background-color: rgb(248, 248, 248);
 }
+
+
+.project_description, .project_title, .mini_button, #project, .content{
+    color:rgb(0, 0, 0);
+}
+
 
 #project {
-    border-right: 10px solid rgb(127, 145, 120);
-    border-bottom: 10px solid rgb(127, 145, 120);
+    border-right: 10px solid rgb(0, 0, 0);
+    border-bottom: 10px solid rgb(0, 0, 0);
 }
-
-.mini_button {
-    color: rgb(89, 112, 89);
-}
-
-hr {
-    background-color:  rgb(89, 112, 89);
+.project_bar {
+    border-bottom: 3px solid rgb(0, 0, 0);
 }
 
 .github_link {
-    border-right: 5px solid pink;
-    border-bottom: 5px solid pink;
+    border-right: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+hr {
+    background-color:  rgb(0, 0, 0);
+    height: 1.5px;
 }

@@ -1,10 +1,8 @@
 import Hero from './../../components/hero/hero'
 import Skills from './../../components/skills/skills'
 import Project from './../../components/project_folder/project'
-
-// import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { Parallax } from 'react-parallax'
-import checker from './../../images/olivee.svg'
+import checker from './../../images/gggrain.svg'
 
 function home() {
   return (<>

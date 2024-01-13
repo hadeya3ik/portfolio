@@ -1,5 +1,10 @@
+import './play.css'
+
 function play() {
-  return (<></>
+  return (
+    <div className="play_container">
+
+    </div>
   )
 }
 

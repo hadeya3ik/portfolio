@@ -1,4 +1,4 @@
-.projects_title{
+.projects_title {
 	font-family: "Akshar", sans-serif;
 	letter-spacing: 2px;
 	font-size: 2rem;
@@ -8,7 +8,7 @@
 }
 
 #project-cont {
-    padding: 6rem 4rem;
+    padding: 4rem 4rem ;
     align-items: center;
 }
 
@@ -32,4 +32,8 @@
 
 .filler {
     height: 40px;
+}
+
+#project-cont {
+    padding-top: 5rem;
 }
