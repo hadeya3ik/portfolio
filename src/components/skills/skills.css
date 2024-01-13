@@ -7,10 +7,6 @@
     margin: 0.25rem;
 }
 
-.skills_container {
-    display: flex;
-}
-
 .experience {
     align-self: center;
 }
@@ -67,20 +63,7 @@
     } 
 }
 
-/* Add this to your main container, likely the top-level div of your app or the specific component */
-.main-container {
-    position: relative; /* This creates a new positioning context for absolutely positioned children */
-    overflow: hidden; /* This ensures that nothing spills outside the container */
-    /* other styles */
-  }
-  
-  /* Your existing styles for .grainy-background */
-  .grainy-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; /* This ensures that the div covers the whole parent container */
-    z-index: -1;
-    /* other styles */
-  }
+.skills_container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
