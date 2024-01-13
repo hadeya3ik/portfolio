@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 4rem;
+    padding-bottom: 6rem;
+    gap: 1rem; 
+}
+
+.socials{
+    display: flex;
+    gap: 2rem;
+}

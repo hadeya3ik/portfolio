@@ -1,6 +1,5 @@
 import './project.css'
 import { SiCplusplus } from "react-icons/si";
-import { FaRegCircle } from "react-icons/fa";
 import MakeProject from './make_project/makeProject.jsx';
 import { FaPython } from "react-icons/fa";
 import { SiNumpy } from "react-icons/si";
@@ -14,7 +13,6 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 function Project() {
   return (
     <div className='cont'>
-    <h className="projects_title">Projects</h>
     <div id="project-cont">
       <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
         <Masonry> <div className="filler"></div>
