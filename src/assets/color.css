@@ -45,3 +45,8 @@
 hr {
     background-color:  rgb(89, 112, 89);
 }
+
+.github_link {
+    border-right: 5px solid pink;
+    border-bottom: 5px solid pink;
+}

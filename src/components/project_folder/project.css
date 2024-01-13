@@ -1,0 +1,23 @@
+#project-cont {
+    padding: 6rem 4rem;
+    align-items: center;
+}
+
+#project {
+    margin: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    #project {
+        margin: 1.5rem;
+    }
+
+    #project-cont {
+        padding: 3rem 2rem;
+    }
+}
+
+.filler {
+    height: 40px;
+}
+

@@ -3,12 +3,13 @@
     border-radius: 15px;
     border-right: 10px solid;
     border-bottom: 10px solid;
-    margin: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .project_bar {
     border-top-left-radius: 10px;
-    border-top-right-radius: 6px;
+    border-top-right-radius: 6px; 
 }
 
 .content {
@@ -44,15 +45,8 @@ hr {
 	padding: 0.5rem 1rem;
 	border: none;
 	border-radius: 10px;
-}
-
-.github_link {
-    border-right: 5px solid pink;
-    border-bottom: 5px solid pink;
-}
-
-#project_cont {
-    display: grid;
-    grid-auto-flow: dense; 
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    white-space: nowrap;
+    height: fit-content;
+    justify-self: flex-end;
+    align-self: flex-end;
 }
