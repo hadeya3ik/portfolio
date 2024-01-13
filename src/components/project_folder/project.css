@@ -44,13 +44,13 @@
     gap: 10px;
   }
   
-  @media (max-width: 868px) {
+  @media (max-width: 968px) {
     .project_container {
       grid-template-columns: repeat(2, 1fr); 
     }
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 680px) {
     .project_container {
       grid-template-columns: repeat(1, 1fr);
     }

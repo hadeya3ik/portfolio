@@ -5,10 +5,10 @@
 	line-height: 20px; 
 }
 
-.paragraph_mini {
-	letter-spacing: 0px;
-	font-weight: 600;
-}
+/* .paragraph_mini {
+	letter-spacing: 1px;
+	font-weight: 300;
+} */
 
 .bold_style, .bold_mini, .job_title {
 	text-transform: uppercase;
