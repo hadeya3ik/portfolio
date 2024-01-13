@@ -8,15 +8,13 @@ import { FaHtml5 } from "react-icons/fa";
 import { SiCsharp } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiGnubash } from "react-icons/si";
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 function Project() {
   return (
     <div className='cont'>
     <div id="project-cont">
     <h4 className='bold_mini sub_header'>PROJECTS</h4>
-      <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
-        <Masonry> <div className="filler"></div>
+    <div className="project_container">
         <MakeProject 
         className="connect_4" 
         title="Connect 4 " 
@@ -58,9 +56,8 @@ function Project() {
         text="Personal Portfolio to showcase my personal projects, built using React.js."
         techIcons={[FaReact, IoLogoJavascript]}
         link="https://github.com/hadeya3ik/portfolio"
-      />             
-        </Masonry>
-      </ResponsiveMasonry>
+      />           
+      </div>  
       </div>
     </ div>
   );

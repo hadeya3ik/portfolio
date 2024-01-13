@@ -37,3 +37,21 @@
 #project-cont {
     padding-top: 5rem;
 }
+
+.project_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  @media (max-width: 868px) {
+    .project_container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project_container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
