@@ -1,6 +1,7 @@
 import './skills.css'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import { SiApachespark } from "react-icons/si";
+import GrainyBackground from '../grain_gradient/grainyBackground';
 
 function Job({year, title, company}) {
   return (
@@ -18,6 +19,8 @@ function Job({year, title, company}) {
 
 function skills() {
   return (
+    <div className="main-container">
+      <GrainyBackground />
     <div className="skills_container">
       <div className="tech_skills_container">
         <h4 className='bold_mini sub_header'>SKILLS</h4>
@@ -45,6 +48,7 @@ function skills() {
         <Job year="2022" title="instructional support assitant" company="University of Waterloo"/>
         <Job year="2019" title="summer camp leader" company="Town of Milton"/>
       </div>
+    </div>
     </div>
   )
 }

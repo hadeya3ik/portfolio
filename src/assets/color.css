@@ -1,30 +1,5 @@
-/* 
 :root {
-    --background-color: #ffffff;
-    --dark_txt: rgb(65, 49, 89);
-    --dark_accent_txt: rgb(116, 35, 11);
-    --lighter-txt:  rgb(242, 233, 244);
-    --light-txt: rgb(255, 252, 255); 
-    --between_txt: rgb(238, 194, 194);
-    --active: pink; 
-    --hover: rgb(234, 192, 255); 
-}
-
-:root {
-    --background-color: #ffffff;
-    --dark_accent_txt: rgb(255, 218, 207);
-    --dark_txt: rgb(215, 210, 204);
-    --light-txt: rgb(25, 14, 50); 
-    --lighter-txt: rgb(21, 12, 44);
-    --between_txt: rgb(146, 131, 155);
-    --active: rgb(114, 80, 86); 
-    --hover: rgb(234, 192, 255); 
-} */
-
-
-/* Base styles */
-:root {
-    --background-color: #ffffff; /* Common styles can go here */
+    --background-color: #ffffff; 
     --hover: rgb(234, 192, 255); 
 }
 
@@ -36,6 +11,9 @@
     --light-txt: rgb(255, 252, 255); 
     --between_txt: rgb(238, 194, 194);
     --active: pink; 
+    --project_outline : rgb(237, 165, 165); 
+    --project_top: rgb(231, 202, 234); 
+    --project_button: rgb(95, 17, 17); 
 }
 
 /* dark mode */
@@ -44,8 +22,11 @@
     --dark_txt: rgb(215, 210, 204);
     --light-txt: rgb(25, 14, 50); 
     --lighter-txt: rgb(21, 12, 44);
-    --between_txt: rgb(146, 131, 155);
+    --between_txt: rgb(21, 12, 44);
     --active: rgb(114, 80, 86); 
+    --project_outline : rgb(81, 7, 7); 
+    --project_top: rgb(133, 94, 138); 
+    --project_button: rgb(44, 44, 87); 
 }
 
 body {
@@ -82,7 +63,7 @@ body {
 
 .github_link {
     transition: color 500ms ease;
-    background-color: var(--between_txt);
+    background-color: var(--project_button);
     border: 1px solid var(--dark_txt); 
 }
 
@@ -103,7 +84,7 @@ body {
 
 /* colours of the projects  */
 .project_bar {
-    background-color: var(--between_txt);
+    background-color: var(--project_top);
 }
 
 .content {
@@ -118,25 +99,27 @@ body {
 
 /* project border color */
 .project_description, .project_title, .mini_button, #project, .content{
-    color: var(--dark_txt);
+    color: var(--between_txt);
+     /* SHOULD I COMMENT THIS OUT IDK  */
+    color: var(--project_outline);
 }
 
 #project {
-    border-right: 10px solid var(--dark_txt);
-    border-bottom: 10px solid var(--dark_txt);
+    border-right: 10px solid var(--project_outline);
+    border-bottom: 10px solid var(--project_outline);
 }
 
 .project_bar {
-    border-bottom: 3px solid var(--dark_txt);
+    border-bottom: 3px solid var(--project_outline);
 }
 
 .github_link {
-    border-right: 5px solid var(--dark_txt);
-    border-bottom: 5px solid var(--dark_txt);
+    border-right: 5px solid var(--project_outline);
+    border-bottom: 5px solid var(--project_outline);
     color: var(--background-color);
 }
 
 hr {
-    background-color:  var(--dark_txt);
+    background-color:  var(--project_outline);
     height: 1.5px;
 }
