@@ -1,19 +1,35 @@
 #project {
-    border: 3px solid;
+    border: 2px solid;
     border-radius: 15px;
-    border-right: 10px solid;
-    border-bottom: 10px solid;
     display: flex;
     flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.inner_content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project_bar {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 6px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 9px; 
 }
 
 .content {
     padding: 1rem;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.project_footer {
+	padding-top: 1rem;
+	display: flex;
+    justify-content: space-between;
 }
 
 #mini_button {
@@ -29,15 +45,13 @@ hr {
     border: none;
 }
 
-.project_footer {
-	padding-top: 2rem;
-	display: flex;
-    justify-content: space-between;
-}
-
 .techstack > * {
 	padding-right: 10px;
 	padding-bottom: 0px;
+}
+
+.techstack {
+    justify-self: flex-start
 }
 
 .github_link {

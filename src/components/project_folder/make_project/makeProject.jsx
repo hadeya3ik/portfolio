@@ -21,15 +21,16 @@ MakeProject.propTypes = {
         </div>
         <div className="content">
           <h2 className='bold_mini'>{title}</h2>
-          <hr></hr>
-          <p className='paragraph_mini'>{text}</p>
-          <div className="project_footer">
-            <div className="techstack">
-              {techIcons.map((Icon, index) => <Icon key={index} className="icon" size={40} />)}
+          <div className="inner_content">
+            <p className='paragraph_mini'>{text}</p>
+            <div className="project_footer">
+              <div className="techstack">
+                {techIcons.map((Icon, index) => <Icon key={index} className="icon" size={30} />)}
+              </div>
+              <a href={link} className="github_link" target="_blank" rel="noopener noreferrer">
+                View Code
+              </a>
             </div>
-            <a href={link} className="github_link" target="_blank" rel="noopener noreferrer">
-              View Code
-            </a>
           </div>
         </div>
       </div>

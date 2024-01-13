@@ -7,13 +7,13 @@
 .light-theme {
     --dark_txt: rgb(65, 49, 89);
     --dark_accent_txt: rgb(116, 35, 11);
-    --lighter-txt: rgb(242, 233, 244);
+    --lighter-txt: rgb(255, 255, 255);
     --light-txt: rgb(255, 252, 255); 
     --between_txt: rgb(238, 194, 194);
     --active: pink; 
-    --project_outline : rgb(237, 165, 165); 
-    --project_top: rgb(231, 202, 234); 
-    --project_button: rgb(95, 17, 17); 
+    --project_outline : rgb(237, 193, 193); 
+    --project_top: rgb(254, 246, 255); 
+    --project_button: rgb(190, 190, 238); 
 }
 
 /* dark mode */
@@ -24,8 +24,8 @@
     --lighter-txt: rgb(21, 12, 44);
     --between_txt: rgb(21, 12, 44);
     --active: rgb(114, 80, 86); 
-    --project_outline : rgb(81, 7, 7); 
-    --project_top: rgb(133, 94, 138); 
+    --project_outline : rgb(205, 189, 189); 
+    --project_top: rgb(43, 28, 69); 
     --project_button: rgb(44, 44, 87); 
 }
 
@@ -64,7 +64,7 @@ body {
 .github_link {
     transition: color 500ms ease;
     background-color: var(--project_button);
-    border: 1px solid var(--dark_txt); 
+    border: 1px solid var(--project_outline); 
 }
 
 .github_link:hover {
@@ -105,8 +105,8 @@ body {
 }
 
 #project {
-    border-right: 10px solid var(--project_outline);
-    border-bottom: 10px solid var(--project_outline);
+    border-right: 5px solid var(--project_outline);
+    border-bottom: 5px solid var(--project_outline);
 }
 
 .project_bar {
@@ -114,12 +114,14 @@ body {
 }
 
 .github_link {
-    border-right: 5px solid var(--project_outline);
-    border-bottom: 5px solid var(--project_outline);
+    border-right: 3px solid var(--project_outline);
+    border-bottom: 3px solid var(--project_outline);
     color: var(--background-color);
 }
 
 hr {
     background-color:  var(--project_outline);
+    background-color: black;
     height: 1.5px;
+    padding: 0;
 }

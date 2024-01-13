@@ -15,13 +15,6 @@ function Project() {
     <div id="project-cont">
     <h4 className='bold_mini sub_header'>PROJECTS</h4>
     <div className="project_container">
-        <MakeProject 
-        className="connect_4" 
-        title="Connect 4 " 
-        text="A simple Connect four Game developed using python, numpy and pygame. Features and option to play both multiplayer and single-player modes, along with customizable difficulty levels for the AI bot  developed using the Alpha-Beta and Minimax algorithms. "
-        techIcons={[FaPython, SiNumpy]}
-        link="https://github.com/hadeya3ik/Connect-4"
-      />
       <MakeProject 
         className="baking_horizon" 
         title="Baking Horizon - creator" 
@@ -37,13 +30,6 @@ function Project() {
         link="https://github.com/hadeya3ik/Catan"
       />
       <MakeProject 
-        className="hangman" 
-        title="Hangman" 
-        text="Developed a text-based 'Hangman' game in C, designed to run in the terminal on Linux systems. "
-        techIcons={[SiCsharp]} 
-        link="https://github.com/hadeya3ik/Hangman"
-      />
-      <MakeProject 
         className="pixel_sketch" 
         title="Pixel-Sketch" 
         text="Utilized HTML, CSS, and vanilla JavaScript to develop a web-based drawing application that allows users to create pixel art in a simple manner. "
@@ -51,12 +37,26 @@ function Project() {
         link="https://github.com/hadeya3ik/pixel-draw"
       />    
       <MakeProject 
+        className="hangman" 
+        title="Hangman" 
+        text="Developed a text-based 'Hangman' game in C, designed to run in the terminal on Linux systems. "
+        techIcons={[SiCsharp]} 
+        link="https://github.com/hadeya3ik/Hangman"
+      />
+      <MakeProject 
         className="portfolio" 
         title="Portfolio Website" 
         text="Personal Portfolio to showcase my personal projects, built using React.js."
         techIcons={[FaReact, IoLogoJavascript]}
         link="https://github.com/hadeya3ik/portfolio"
-      />           
+      />
+      <MakeProject 
+        className="connect_4" 
+        title="Connect 4 " 
+        text="A simple Connect four Game developed using python, numpy and pygame. Features and option to play both multiplayer and single-player modes, along with customizable difficulty levels for the AI bot  developed using the Alpha-Beta and Minimax algorithms. "
+        techIcons={[FaPython, SiNumpy]}
+        link="https://github.com/hadeya3ik/Connect-4"
+      />        
       </div>  
       </div>
     </ div>
