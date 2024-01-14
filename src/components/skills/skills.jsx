@@ -13,11 +13,10 @@ function skills() {
         <div className="box">
           <h2 className="skill">Frontend Dev</h2>
           <h2 className="skill">UX/UI</h2>
-          <h2 className="skill">Usability Testing</h2>
+          <h2 className="skill">OOP</h2>
         </div>
         <div className="box">
-
-          <h2 className="skill">OOP</h2>
+        <h2 className="skill">Usability Testing</h2>
           <h2 className="skill">Illistrations</h2>
         </div>
       </div>

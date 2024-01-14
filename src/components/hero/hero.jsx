@@ -38,7 +38,7 @@ function Hero() {
             <FaSearch className="search_icon" size={30} />
             <Typewriter
               options={{
-                strings: ['linkedin.com/hadeya-ikram', 'github.com/hadeya3ik'],
+                strings: ['linkedin/hadeyaikram', 'github.com/hadeya3ik'],
                 autoStart: true,
                 loop: true,
               }}
