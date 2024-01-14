@@ -30,7 +30,7 @@ function Hero() {
       <img id="dp" src={isDarkMode ? dark_profile : light_profile}  alt="Profile"></img>
       <div className="hero_text">
         <h1 className="bold_style">hi, I'm Hadeya</h1>
-        <p className="paragraph_style">
+        <p id="hero_p" className="paragraph_style">
         I enjoy using my creativity and problem-solving skills to create digital experiences. Whether it's through a striking piece of mixed media art or a clever bit of coding, I'm all about finding the spot where imagination meets innovation.
         </p>
         <div>

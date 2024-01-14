@@ -26,10 +26,6 @@
     #dp {
         margin: 3rem 0rem;
     }
-
-    /* .bold_style {
-        white-space: nowrap;
-    } */
 }
 
 @media (max-width: 800px) {   
@@ -39,14 +35,12 @@
     }
 }
 
-
 #dp {
     padding: 1rem;
     height: 400px;
     animation: animate 5s ease-in-out infinite;
     border-radius: 60% 47% 46% 54% / 62% 43% 57% 38%
 }
-
 
 @keyframes animate {
     0%, 100%{
@@ -65,7 +59,7 @@
     align-items: center;
     justify-content: space-between;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
     border-radius: 30px;
     white-space: nowrap;
