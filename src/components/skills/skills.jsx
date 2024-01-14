@@ -19,7 +19,6 @@ function skills() {
 
           <h2 className="skill">OOP</h2>
           <h2 className="skill">Illistrations</h2>
-          <h2 className="skill">Frontend Dev</h2>
         </div>
       </div>
       <div className="tech_skills_container">

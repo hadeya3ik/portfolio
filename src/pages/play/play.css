@@ -1,0 +1,27 @@
+.play_container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.play_container h4,  .play_container p{
+    padding-left: 4rem;
+}
+
+.play_header, .play_desc {
+    padding: 2rem;
+} 
+.play_desc {
+    padding-top: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 4rem; 
+}
+
+.art_img {
+    margin: 3rem;
+}
