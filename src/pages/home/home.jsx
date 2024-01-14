@@ -2,13 +2,13 @@ import Hero from './../../components/hero/hero'
 import Skills from './../../components/skills/skills'
 import Project from './../../components/project_folder/project'
 import { Parallax } from 'react-parallax'
-import checker from './../../images/gggrain.svg'
+import { useState } from 'react';
 
 function home() {
   return (<>
   <div>
       <Parallax strength={600}>
-        < Hero />
+          <Hero />
       </Parallax>
       {/* <Parallax bgImage={checker} strength={600}> */}
       <Parallax strength={600}>

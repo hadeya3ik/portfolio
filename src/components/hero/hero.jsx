@@ -1,11 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import "./hero.css";
 import profile from "./../../images/profile_pic.jpg";
+import dark_profile from "./../../images/dark_dp.svg";
+import light_profile from "./../../images/light_dp.svg";
 import { FaSearch } from "react-icons/fa";
 import Typewriter from 'typewriter-effect';
+import ModeContext from './../../pages/modeContext';
 
 function Hero() {
   const [currentLink, setCurrentLink] = useState("");
+  const { isDarkMode } = useContext(ModeContext);
 
   useEffect(() => {
     const typewriterText = document.querySelector(".Typewriter__wrapper");
@@ -24,7 +28,8 @@ function Hero() {
 
   return (
     <div id="hero">
-      <img id="dp" src={profile} alt="Profile"></img>
+      <img id="dp" src={isDarkMode ? dark_profile : light_profile}  alt="Profile"></img>
+      {/* <img id="dp" src={dark_profile}  alt="Profile"></img> */}
       <div className="hero_text">
         <h1 className="bold_style">hi, I'm Hadeya</h1>
         <p className="paragraph_style">

@@ -4,13 +4,15 @@
     font-size: 2rem;
     letter-spacing: 0.75rem; 
     display: flex;
-    gap: 4rem;
     justify-content: flex-end;
     padding: 2rem 3rem; 
 }
 
+
+
 #nav-li {
     transition: color 500ms ease;
+    padding-left: 4rem;
 }
 
 @media (max-width: 969px) {
@@ -18,3 +20,13 @@
         padding: 1.5rem 1rem; 
     }
 }
+
+#mode_button {
+    padding-left: 2rem;
+}
+
+/* @media (max-width: 600pxx) {
+    #mode_button {
+        padding-left: 2rem;
+    }
+} */
