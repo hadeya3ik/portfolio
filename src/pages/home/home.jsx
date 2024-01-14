@@ -6,15 +6,11 @@ import { Parallax } from 'react-parallax'
 function home() {
   return (<>
   <div>
-      <Parallax strength={600}>
-          <Hero />
-      </Parallax>
+     <Hero />
       <Parallax strength={600}>
         < Skills />
       </Parallax>
-      <Parallax strength={600}>
-        <Project />  
-      </Parallax>
+        <Project /> 
   </div>
   </>)
 }

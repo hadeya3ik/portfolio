@@ -1,26 +1,27 @@
 import './skills.css'
-import { SiApachespark } from "react-icons/si";
 import GrainyBackground from '../grain_gradient/grainyBackground';
-
-function Job({year, title, company}) {
-  return (
-    <div className="job">
-      <div className='bullet'>
-        <SiApachespark className='icon' size={30} />
-        <h3 className="year bold_mini">{year}</h3>
-      </div>
-      <div className="details">
-        <h4 className="job_title">{title}</h4>
-        <p className="paragraph_style">{company}</p>
-      </div>
-    </div>)
-}
+import Job from './job/job'
 
 function skills() {
   return (
     <>
       <GrainyBackground />
     <div className="skills_container">
+      <div className="skill_column">
+      <div className="tech_skills_container">
+        <h4 className='bold_mini sub_header'>GENERAL</h4>
+        <div className="box">
+          <h2 className="skill">Frontend Dev</h2>
+          <h2 className="skill">UX/UI</h2>
+          <h2 className="skill">Usability Testing</h2>
+        </div>
+        <div className="box">
+
+          <h2 className="skill">OOP</h2>
+          <h2 className="skill">Illistrations</h2>
+          <h2 className="skill">Frontend Dev</h2>
+        </div>
+      </div>
       <div className="tech_skills_container">
         <h4 className='bold_mini sub_header'>SKILLS</h4>
         <div className="box">
@@ -40,7 +41,8 @@ function skills() {
           <h2 className="skill">Adobe</h2>
         </div>
       </div>
-      
+      </div>
+    
       <div className="experience">
       <h4 className='bold_mini sub_header'>EXPERIENCE</h4>
         <Job year="2023" title="juniour Technical Analyst" company="Ontario Ministry of Transportation"/>

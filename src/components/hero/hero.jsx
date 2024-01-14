@@ -31,7 +31,7 @@ function Hero() {
       <div className="hero_text">
         <h1 className="bold_style">hi, I'm Hadeya</h1>
         <p className="paragraph_style">
-        I enjoy finding ways to combine my creative side with the tech world. I enjoy using my creativity and problem-solving skills to create digital experiences. Whether it's through a striking piece of mixed media art or a clever bit of coding, I'm all about finding the spot where imagination meets innovation.
+        I enjoy using my creativity and problem-solving skills to create digital experiences. Whether it's through a striking piece of mixed media art or a clever bit of coding, I'm all about finding the spot where imagination meets innovation.
         </p>
         <div>
           <a className="linkdin_button" href={currentLink} target="_blank" rel="noopener noreferrer">

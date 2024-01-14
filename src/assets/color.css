@@ -6,12 +6,13 @@
 /* light mode */
 .light-theme {
     --dark_txt: rgb(65, 49, 89);
-    --dark_accent_txt: rgb(116, 35, 11);
+    --dark_accent_txt: rgb(43, 23, 94);
+    --hover_txt: rgb(43, 23, 94, 0.3);
     --lighter-txt: rgb(255, 255, 255);
     --light-txt: rgb(255, 252, 255); 
     --between_txt: rgb(238, 194, 194);
     --active: pink; 
-    --project_outline : rgb(237, 193, 193); 
+    --project_outline : rgb(65, 67, 92); 
     --project_top: rgb(254, 246, 255); 
     --project_button: rgb(190, 190, 238); 
 }
@@ -19,11 +20,12 @@
 /* dark mode */
 .dark-theme {
     --dark_accent_txt: rgb(255, 218, 207);
+    --hover_txt: rgb(255, 218, 207, 0.3);
     --dark_txt: rgb(215, 210, 204);
     --light-txt: rgb(25, 14, 50); 
     --lighter-txt: rgb(21, 12, 44);
     --between_txt: rgb(21, 12, 44);
-    --active: rgb(114, 80, 86); 
+    --active: rgb(249, 199, 208); 
     --project_outline : rgb(205, 189, 189); 
     --project_top: rgb(43, 28, 69); 
     --project_button: rgb(44, 44, 87); 
@@ -124,4 +126,8 @@ hr {
     background-color: black;
     height: 1.5px;
     padding: 0;
+}
+
+#project:hover {
+    box-shadow: 0px 0px 15px var(--hover_txt); 
 }

@@ -68,3 +68,11 @@ hr {
 .content h2 {
     padding-bottom: 1rem;
 }
+
+#project {
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#project:hover {
+    transform: scale(1.05);
+}

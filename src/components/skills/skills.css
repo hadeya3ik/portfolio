@@ -43,9 +43,6 @@
     flex-direction: column;
 }
 
-.sub_header {
-    align-self: flex-start;
-}
 
 @media (max-width: 950px) {
     .tech_skills_container {
@@ -66,4 +63,10 @@
 .skills_container {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.skill_column {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
