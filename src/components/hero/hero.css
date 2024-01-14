@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+.hero_text {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 3rem;
+}
+
 @media (max-width: 969px) {
     #hero {
         flex-direction: column;
@@ -20,16 +27,16 @@
         margin: 3rem 0rem;
     }
 
-    .bold_style {
+    /* .bold_style {
         white-space: nowrap;
-    }
+    } */
 }
 
-.hero_text {
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-    gap: 3rem;
+@media (max-width: 800px) {   
+    .hero_text {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
 }
 
 #dp {

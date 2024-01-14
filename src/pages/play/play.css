@@ -23,5 +23,16 @@
 }
 
 .art_img {
-    margin: 3rem;
+    margin: 2.5rem;
+}
+
+@media (max-width: 800px) {   
+    .gallery {
+        padding: 2rem;
+        gap: 2rem; 
+    }
+
+    .art_img {
+        margin: 1.3rem;
+    }
 }
