@@ -2,7 +2,6 @@ import Hero from './../../components/hero/hero'
 import Skills from './../../components/skills/skills'
 import Project from './../../components/project_folder/project'
 import { Parallax } from 'react-parallax'
-import { useState } from 'react';
 
 function home() {
   return (<>
@@ -10,7 +9,6 @@ function home() {
       <Parallax strength={600}>
           <Hero />
       </Parallax>
-      {/* <Parallax bgImage={checker} strength={600}> */}
       <Parallax strength={600}>
         < Skills />
       </Parallax>

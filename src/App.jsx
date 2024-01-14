@@ -7,7 +7,7 @@ import { ModeProvider } from './pages/modeContext';
 
 function App() {
   return (
-    <ModeProvider> {/* Wrap everything that needs access to the dark mode state */}
+    <ModeProvider> 
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
