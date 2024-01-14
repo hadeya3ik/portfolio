@@ -39,7 +39,12 @@ const NavBar = () => {
           ))}
           <li id="mode_button" onClick={toggleTheme}>
             {isDarkMode ? (
-              <MdLightMode size={40} />) : ( <MdOutlineLightMode size={40} />
+              <div className="dark_icon">
+                <MdLightMode/>
+              </div> ) : ( 
+              <div className="dark_icon">
+                <MdOutlineLightMode/> 
+              </div>  
             )}
           </li>
         </ul>
