@@ -21,6 +21,7 @@ function Project() {
         text="Baking Horizon is a web application made for a small business, featuring an engaging, interactive gallery with a responsive U/I. This project, developed using React, includes efficient back-end scripts for media management."
         techIcons={[FaReact, SiGnubash]}
         link="https://github.com/hadeya3ik/bakingHorizon"
+        visit="https://hadeya3ik.github.io/bakingHorizon/"
       />
       <MakeProject 
         className="catan" 
@@ -28,6 +29,7 @@ function Project() {
         text="Created a Catan-inspired board game using C++ in a Linux environment. The game employs the MVC architectural pattern."
         techIcons={[SiCplusplus, SiGnubash]}
         link="https://github.com/hadeya3ik/Catan"
+        visit="none"
       />
       <MakeProject 
         className="pixel_sketch" 
@@ -35,6 +37,7 @@ function Project() {
         text="Utilized HTML, CSS, and vanilla JavaScript to develop a web-based drawing application that allows users to create pixel art in a simple manner. "
         techIcons={[FaHtml5, IoLogoJavascript]}
         link="https://github.com/hadeya3ik/pixel-draw"
+        visit="https://hadeya3ik.github.io/pixel-draw/"
       />    
       <MakeProject 
         className="hangman" 
@@ -42,6 +45,7 @@ function Project() {
         text="Developed a text-based 'Hangman' game in C, designed to run in the terminal on Linux systems. "
         techIcons={[SiCsharp]} 
         link="https://github.com/hadeya3ik/Hangman"
+        visit="none"
       />
       <MakeProject 
         className="portfolio" 
@@ -49,6 +53,7 @@ function Project() {
         text="Personal Portfolio to showcase my personal projects, built using React.js."
         techIcons={[FaReact, IoLogoJavascript]}
         link="https://github.com/hadeya3ik/portfolio"
+        visit="https://hadeya3ik.github.io/portfolio/"
       />
       <MakeProject 
         className="connect_4" 
@@ -56,6 +61,7 @@ function Project() {
         text="A simple Connect four Game developed using python, numpy and pygame. Features and option to play both multiplayer and single-player modes, along with customizable difficulty levels for the AI bot  developed using the Alpha-Beta and Minimax algorithms. "
         techIcons={[FaPython, SiNumpy]}
         link="https://github.com/hadeya3ik/Connect-4"
+        visit="none"
       />        
       </div>  
       </div>

@@ -1,13 +1,13 @@
 :root {
     --background-color: #ffffff; 
-    --hover: rgb(234, 192, 255); 
+    --hover: rgb(234, 192, 255, 0.5); 
 }
 
 /* light mode */
 .light-theme {
     --dark_txt: rgb(65, 49, 89);
     --dark_accent_txt: rgb(43, 23, 94);
-    --hover_txt: rgb(43, 23, 94, 0.3);
+    --hover_txt: rgba(127, 127, 127, 0.3);
     --lighter-txt: rgb(255, 255, 255);
     --light-txt: rgb(255, 252, 255); 
     --between_txt: rgb(238, 194, 194);
@@ -33,6 +33,17 @@
 
 body {
     background-color: var(--light-txt);
+}
+
+#web_link {
+    padding-bottom: 0rem;
+    border: 1px solid var(--dark_txt);
+    border-right: 3px solid var(--dark_txt);
+    border-bottom: 3px solid var(--dark_txt);
+}
+
+#web_link:hover {
+    background-color: var(--hover);
 }
 
 /* idk */

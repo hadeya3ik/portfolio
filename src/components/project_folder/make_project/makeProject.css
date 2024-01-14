@@ -55,7 +55,7 @@ hr {
 }
 
 .github_link {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 	padding: 0.5rem 1rem;
 	border: none;
 	border-radius: 10px;
@@ -63,6 +63,7 @@ hr {
     height: fit-content;
     justify-self: flex-end;
     align-self: flex-end;
+    font-size: 0.6rem;
 }
 
 .content h2 {
@@ -75,4 +76,14 @@ hr {
 
 #project:hover {
     transform: scale(1.05);
+}
+
+.link_container {
+    display: flex;
+    align-items: center;
+}
+
+#web_link {
+    border-radius: 55px; 
+    padding: 0.2rem;
 }

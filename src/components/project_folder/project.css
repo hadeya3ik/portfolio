@@ -50,7 +50,7 @@
     }
   }
   
-  @media (max-width: 680px) {
+  @media (max-width: 720px) {
     .project_container {
       grid-template-columns: repeat(1, 1fr);
     }
