@@ -13,13 +13,12 @@ function Hero() {
   useEffect(() => {
     const typewriterText = document.querySelector(".Typewriter__wrapper");
     const observer = new MutationObserver(() => {
-      if (typewriterText.textContent.includes('github.com/hadeya3ik')) {
+      if (typewriterText.textContent.includes('github')) {
         setCurrentLink("https://github.com/hadeya3ik?tab=repositories");
-      } else if (typewriterText.textContent.includes('linkedin/hadeyaikram')) {
+      } else if (typewriterText.textContent.includes('linkedin')) {
         setCurrentLink("https://www.linkedin.com/in/hadeya-ikram-23197622a");
       }
     });
-
     observer.observe(typewriterText, { childList: true, subtree: true });
 
     return () => observer.disconnect();
