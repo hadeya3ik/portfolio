@@ -15,8 +15,8 @@ function Hero() {
     const observer = new MutationObserver(() => {
       if (typewriterText.textContent.includes('github.com/hadeya3ik')) {
         setCurrentLink("https://github.com/hadeya3ik?tab=repositories");
-      } else if (typewriterText.textContent.includes('linkedin.com/hadeya-ikram')) {
-        setCurrentLink("https://www.linkedin.com/in/hadeya-ikram-23197622a/");
+      } else if (typewriterText.textContent.includes('linkedin/hadeyaikram')) {
+        setCurrentLink("https://www.linkedin.com/in/hadeya-ikram-23197622a");
       }
     });
 
