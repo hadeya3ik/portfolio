@@ -7,7 +7,6 @@ const VerticalSlider = () => {
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
 
-//   useEffect(()=>{scrollYProgress.on("change", e => console.log(e))}, []); 
   
   return (
     <section ref={targetRef} className="h-[200vh]">
@@ -25,7 +24,7 @@ const VerticalSlider = () => {
           />
         </svg>
       <div className="sticky top-[300px] flex items-center overflow-hidden bg-white">
-        <motion.div style={{ x }} className="flex gap-4">
+        <motion.div style={{ x }} className="flex gap-40">
           {cards.map((card, index) => (
             <div key={index} className="p-4 group relative h-[450px] w-[450px] border-8 border-black bg-orange-50">
               <h2 className="text-7xl">{card.title}</h2>
