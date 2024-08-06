@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-#cont {
-  display: flex;
-  gap: 1rem;
+
+
+.bg {
+  stroke: var(--accent);
+  opacity: 0.3;
 }
 
-#button {
-  color: rgb(0, 0, 0);
-  font-size: xx-large;
-  border: 3px solid;
-  padding: 1rem;
-  border-radius: 100px;
+#progress {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-90deg);
 }
