@@ -23,7 +23,7 @@ const VerticalSlider = () => {
             style={{ pathLength: scrollYProgress }}
           />
         </svg>
-      <div className="sticky top-[300px] flex items-center overflow-hidden bg-white">
+      <div className="sticky top-[300px] flex items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-40">
           {cards.map((card, index) => (
             <div key={index} className="p-4 group relative h-[450px] w-[450px] border-8 border-black bg-orange-50">

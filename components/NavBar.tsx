@@ -7,9 +7,7 @@ function NavBar() {
   const [previousScrollYProgress, setPreviousScrollYProgress] = useState(0);
   const {scrollYProgress} = useScroll();
 
-  useEffect(() => {
-    
-    scrollYProgress.on("change", e => console.log(e))},[]); 
+  
 
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
         const previous = previousScrollYProgress;
