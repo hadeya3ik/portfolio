@@ -1,28 +1,36 @@
 'use client'
-import { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 const VerticalSlider = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
 
-  
+  // Use useSpring to smooth out the scrollYProgress
+  const smoothScrollYProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    mass: 1
+  });
+
+  // Transform the scrollYProgress into the desired x value
+  const x = useTransform(smoothScrollYProgress, [0, 1], ["0%", "-55%"]);
+
   return (
     <section ref={targetRef} className="h-[200vh]">
-        <svg width="100" height="100" viewBox="0 0 100 100" className="relative sticky top-[100px]">
-          <circle cx="50" cy="50" r="30" pathLength="1" className="stroke-current text-orange-50  -rotate-90" strokeWidth="8" fill="none" />
-          <motion.circle
-            cx="50"
-            cy="50"
-            r="30"
-            pathLength="1"
-            className="stroke-current text-accent"
-            strokeWidth="8"
-            fill="none"
-            style={{ pathLength: scrollYProgress }}
-          />
-        </svg>
+      <svg width="100" height="100" viewBox="0 0 100 100" className="relative sticky top-[100px]">
+        <circle cx="50" cy="50" r="30" pathLength="1" className="stroke-current text-orange-50 -rotate-90" strokeWidth="8" fill="none" />
+        <motion.circle
+          cx="50"
+          cy="50"
+          r="30"
+          pathLength="1"
+          className="stroke-current text-accent"
+          strokeWidth="8"
+          fill="none"
+          style={{ pathLength: scrollYProgress }}
+        />
+      </svg>
       <div className="sticky top-[300px] flex items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-40">
           {cards.map((card, index) => (

@@ -2,8 +2,8 @@
 import React from 'react'
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion'
 
-function ColorChanger() {
-  const primary = useMotionValue('102 65 169')
+function ColorChanger({}) {
+  const primary = useMotionValue('169 102 65')
   const background = useMotionTemplate`rgb(${primary})`
 
   function ChangCol(e: React.MouseEvent<HTMLButtonElement>) {
