@@ -21,15 +21,15 @@ function NavBar() {
 
   return (
     <motion.nav 
-        className='sticky top-0 flex justify-between transition-colors duration-1000 px-8 py-2 mix-blend-hard-light'
+        className='sticky top-0 flex justify-between transition-colors duration-1000 px-8 py-2 mix-blend-color-burn'
         variants={{
             visible: { y: 0},
             hidden: {y: "-100%"}
         }}
         animate={hiddenNav ? "hidden" : "visible"}
         transition={{duration:0.35, ease:"easeInOut"}}>
-        <Logo height="40px" className="text-primary-foreground" />
-        <div className='flex gap-4'>
+        <Logo height="40px" className="text-primary" />
+        <div className='flex gap-4 text-primary'>
           <Link href="/about">ABOUT US</Link>
           <Link href="/about">CONTACT</Link>
         </div>

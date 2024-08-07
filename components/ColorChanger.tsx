@@ -2,32 +2,36 @@ import React from 'react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
 const colors = [
-  { id: '01', mainColor: '86 83 208', textColor: '196 222 213' },
-  { id: '02', mainColor: '244 113 57', textColor: '237 236 200' },
-  { id: '03', mainColor: '29 27 137', textColor: '180 147 188' },
-  { id: '04', mainColor: '100 28 25', textColor: '182 201 228' },
-  { id: '05', mainColor: '203 211 247', textColor: '220 236 205' },
+  { id: '01', primary: '152 169 151', primaryForeground: '230 232 231', secondary: '208 209 199', secondaryForeground: '133 156 127' },
+  { id: '02', primary: '95 128 192', primaryForeground: '230 211 191', secondary: '230 211 191', secondaryForeground: '88 106 220' },
 ];
 
 interface ColorChangerProps {
   setPrimary: React.Dispatch<React.SetStateAction<string>>;
   setSecondary: React.Dispatch<React.SetStateAction<string>>;
+  setPrimaryForeground: React.Dispatch<React.SetStateAction<string>>;
+  setSecondaryForeground: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function ColorChanger({ setPrimary, setSecondary }: ColorChangerProps) {
+function ColorChanger({ setPrimary, setSecondary, setPrimaryForeground, setSecondaryForeground }: ColorChangerProps) {
   const primary = useMotionValue('169 102 65');
-  const background = useMotionTemplate`rgb(${primary})`;
 
   function ChangCol(e: React.MouseEvent<HTMLButtonElement>) {
-    const mainColor = e.currentTarget.getAttribute('main-color') as string;
-    const textColor = e.currentTarget.getAttribute('text-color') as string;
+    const primaryColor = e.currentTarget.getAttribute('primary-color') as string;
+    const secondaryColor = e.currentTarget.getAttribute('secondary-color') as string;
+    const primaryForegroundColor = e.currentTarget.getAttribute('primary-foreground-color') as string;
+    const secondaryForegroundColor = e.currentTarget.getAttribute('secondary-foreground-color') as string;
     const root = document.documentElement;
-    root.style.setProperty('--primary', mainColor);
-    root.style.setProperty('--primary-foreground', textColor);
-    setPrimary(mainColor);
-    setSecondary(textColor);
-    animate(primary, mainColor, { duration: 2 });
-    animate(primary, textColor, { duration: 2 });
+    root.style.setProperty('--primary', primaryColor);
+    root.style.setProperty('--secondary', secondaryColor);
+    root.style.setProperty('--primary-foreground', primaryForegroundColor);
+    root.style.setProperty('--secondary-foreground', secondaryForegroundColor);
+    setPrimary(primaryColor);
+    setSecondary(primaryForegroundColor);
+    setPrimaryForeground(primaryForegroundColor)
+    setSecondaryForeground(secondaryForegroundColor)
+    animate(primary, primaryColor, { duration: 1.5, ease: [0.25, 0.1, 0.25, 1] });
+    animate(primary, primaryForegroundColor, { duration: 1.5, ease: [0.25, 0.1, 0.25, 1] });
   }
 
   return (
@@ -38,8 +42,10 @@ function ColorChanger({ setPrimary, setSecondary }: ColorChangerProps) {
             key={color.id}
             className='border-4 p-2 px-3 border-primary-foreground rounded-full font-semibold transition-colors duration-1000'
             onClick={ChangCol}
-            main-color={color.mainColor}
-            text-color={color.textColor}>
+            primary-color={color.primary}
+            secondary-color={color.secondary}
+            secondary-foreground-color={color.secondaryForeground}
+            primary-foreground-color={color.primaryForeground}>
             {color.id}
           </button>
         ))}

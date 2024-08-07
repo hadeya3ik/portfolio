@@ -13,7 +13,10 @@ import ColorChanger from "@/components/ColorChanger";
 
 export default function Home() {
   const [primary, setPrimary] = useState("152 169 151"); 
+  const [primaryForeground, setPrimaryForeground] = useState("152 169 151"); 
   const [secondary, setSecondary] = useState("208 209 199");
+  const [secondaryForeground, setSecondaryForeground] = useState("152 169 151"); 
+
   const motionPrimary = useMotionValue(primary);
   const background = useMotionTemplate`rgb(${motionPrimary})`;
   const colChangeDiv = useRef<HTMLDivElement>(null);
@@ -23,7 +26,9 @@ export default function Home() {
     const primaryColorValue = getComputedStyle(root).getPropertyValue('--primary').trim();
     const secondaryColorValue = getComputedStyle(root).getPropertyValue('--secondary').trim();
     setPrimary(primaryColorValue || "152 169 151");
+    setPrimaryForeground(primaryColorValue || "152 169 151");
     setSecondary(secondaryColorValue || "208 209 199");
+    setSecondaryForeground(secondaryColorValue || "208 209 199");
   }, []);
 
   useEffect(() => {
@@ -57,8 +62,7 @@ export default function Home() {
     <ReactLenis root>
       <motion.section style={{ background }}>
         <NavBar />
-        <Hero setPrimary={setPrimary} setSecondary={setSecondary} />
-        {/* <ColorChanger setPrimary={setPrimary} setSecondary={setSecondary} /> */}
+        <Hero setPrimary={setPrimary} setSecondary={setSecondary}  setPrimaryForeground={setPrimaryForeground}  setSecondaryForeground={setSecondaryForeground}/>
         <div ref={colChangeDiv}>
           <Skills />
         </div>
