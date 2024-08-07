@@ -3,15 +3,15 @@ import Magnetic from '@/common/Magnetic'
 
 function CustomButton({children}) {
   return (<Magnetic>
-    <div className='border-4 px-4 py-2 h-min cursor-pointer m-4 rounded-full border-primary-foreground'>
-        <p className='text-3xl'>{children}</p>
-    </div>
-</Magnetic>);
+      <div className='border-4 px-4 py-2 h-min cursor-pointer m-4 rounded-full border-primary-foreground'>
+          <p className='text-3xl'>{children}</p>
+      </div>
+    </Magnetic>);
 }
 
 function Skills() {
   return (
-    <div className='h-screen flex flex-col items-center'>
+    <div className='h-[150vh] flex flex-col items-center justify-center'>
       <h1 className='text-9xl pb-24'>SOME OF MY SKILLS</h1>
       <div className='flex items-center'> 
           {design.map((item, id) => {return (

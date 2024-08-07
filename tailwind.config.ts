@@ -8,14 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        background: 'rgb(var(--background) / <alpha-value>)',
-        foreground: 'rgb(var(--foreground) / <alpha-value>)',
         primary: {
           DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
           foreground: 'rgb(var(--primary-foreground) / <alpha-value>)'
@@ -23,10 +16,6 @@ const config: Config = {
         secondary: {
           DEFAULT: 'rgb(var(--secondary) / <alpha-value>)',
           foreground: 'rgb(var(--secondary-foreground) / <alpha-value>)'
-        },
-        destructive: {
-          DEFAULT: 'rgb(var(--destructive) / <alpha-value>)',
-          foreground: 'var(--destructive-foreground) / <alpha-value>'
         },
         muted: {
           DEFAULT: 'rgb(var(--muted) / <alpha-value>)',

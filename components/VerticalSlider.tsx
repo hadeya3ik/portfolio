@@ -17,7 +17,7 @@ const VerticalSlider = () => {
     
     <section ref={targetRef} className="h-[380vh]">
       <svg width="100" height="100" viewBox="0 0 100 100" className="sticky top-16 left-full"> <motion.circle className="stroke-current text-primary-foreground" fill="none" style={{ pathLength: scrollYProgress }} cx="50" cy="50" r="30" pathLength="1" strokeWidth="8" /></svg>
-      <div className="sticky top-[300px] flex flex-col items-center overflow-hidden">
+      <div className="sticky top-[100px] flex flex-col items-center overflow-hidden">
         <div className="flex items-center">
           <h1 className='text-8xl pt-8 '>Project A</h1>
         </div><p className='pt-8 max-w-lg'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.</p>
