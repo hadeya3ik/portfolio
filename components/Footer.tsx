@@ -3,7 +3,7 @@ import  ParallaxText  from "@/common/ParallaxText";
 
 function Footer() {
     return (
-      <div className="bg-white h-[60vh] relative z-0" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
+      <div className="bg-primary-foreground h-[60vh] relative text-primary" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
         <div className='fixed h-[60vh] bottom-0 z-0'>
             <div className="flex gap-4">
                 <div className="text-6xl">

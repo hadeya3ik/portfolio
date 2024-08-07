@@ -6,53 +6,43 @@ const VerticalSlider = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  // Use useSpring to smooth out the scrollYProgress
   const smoothScrollYProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    mass: 1
+    stiffness: 200,
+    damping: 100,
   });
 
-  // Transform the scrollYProgress into the desired x value
-  const x = useTransform(smoothScrollYProgress, [0, 1], ["0%", "-55%"]);
+  const x = useTransform(smoothScrollYProgress, [0, 1], ["100%", "-100%"]);
 
   return (
-    <section ref={targetRef} className="h-[200vh]">
-      <svg width="100" height="100" viewBox="0 0 100 100" className="relative sticky top-[100px]">
-        <circle cx="50" cy="50" r="30" pathLength="1" className="stroke-current text-orange-50 -rotate-90" strokeWidth="8" fill="none" />
-        <motion.circle
-          cx="50"
-          cy="50"
-          r="30"
-          pathLength="1"
-          className="stroke-current text-accent"
-          strokeWidth="8"
-          fill="none"
-          style={{ pathLength: scrollYProgress }}
-        />
-      </svg>
-      <div className="sticky top-[300px] flex items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-40">
+    
+    <section ref={targetRef} className="h-[380vh]">
+      <svg width="100" height="100" viewBox="0 0 100 100" className="sticky top-16 left-full"> <motion.circle className="stroke-current text-primary-foreground" fill="none" style={{ pathLength: scrollYProgress }} cx="50" cy="50" r="30" pathLength="1" strokeWidth="8" /></svg>
+      <div className="sticky top-[300px] flex flex-col items-center overflow-hidden">
+        <div className="flex items-center">
+          <h1 className='text-8xl pt-8 '>Project A</h1>
+        </div><p className='pt-8 max-w-lg'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.</p>
+        <div>
+          <motion.div style={{ x }} className="flex gap-20">
           {cards.map((card, index) => (
-            <div key={index} className="p-4 group relative h-[450px] w-[450px] border-8 border-black bg-orange-50">
-              <h2 className="text-7xl">{card.title}</h2>
-              <p className="text-xl">{card.desc}</p>
+            <div key={index} className="p-4 group relative w-[580px] h-[420px] bg-primary-foreground">
+              <h2 className="text-primary text-7xl">{card.id}</h2>
             </div>
           ))}
         </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
 const cards = [
-  { title: "Title 1", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Title 2", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Title 3", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Title 4", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Title 5", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Title 6", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Title 7", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  {id : 1},
+  {id : 2},
+  {id : 3},
+  {id : 4},
+  {id : 5},
+  {id : 6},
+  {id : 7},
 ];
 
 export default VerticalSlider;
