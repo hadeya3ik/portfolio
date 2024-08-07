@@ -3,7 +3,7 @@ import Magnetic from '@/common/Magnetic'
 
 function CustomButton({children}) {
   return (<Magnetic>
-      <div className='border-4 px-4 py-2 h-min cursor-pointer m-4 rounded-full border-primary-foreground'>
+      <div className='border-4 px-4 py-2 h-min cursor-pointer m-4 rounded-full border-secondary-foreground'>
           <p className='text-3xl'>{children}</p>
       </div>
     </Magnetic>);
@@ -11,7 +11,7 @@ function CustomButton({children}) {
 
 function Skills() {
   return (
-    <div className='h-[150vh] flex flex-col items-center justify-center'>
+    <div className='h-[150vh] flex flex-col items-center justify-center text-secondary-foreground'>
       <h1 className='text-9xl pb-24'>SOME OF MY SKILLS</h1>
       <div className='flex items-center'> 
           {design.map((item, id) => {return (

@@ -4,10 +4,7 @@
 
 @layer base {
   :root {
-    --background: 102 65 169;
-    --foreground: 255 255 255;
-
-    --primary: 251 222 229;
+    --primary: 102 65 169;
     --primary-foreground: 219 139 157;
 
     --secondary: 196 26 105;

@@ -21,7 +21,7 @@ function NavBar() {
 
   return (
     <motion.nav 
-        className='sticky top-0 bg-primary flex justify-between transition-colors duration-1000 px-8 py-2'
+        className='sticky top-0 flex justify-between transition-colors duration-1000 px-8 py-2 mix-blend-hard-light'
         variants={{
             visible: { y: 0},
             hidden: {y: "-100%"}
