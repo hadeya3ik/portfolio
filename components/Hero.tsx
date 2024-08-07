@@ -3,13 +3,13 @@ import React from 'react';
 import { motion, useTime, useTransform } from 'framer-motion';
 import ColorChanger from "@/components/ColorChanger"; 
 
-function Hero() {
+function Hero({setPrimary, setSecondary}) {
   const time = useTime();
   const rotate = useTransform(time, [0, 8000], [0, 360], { clamp: false });
 
   return (
     <div className='h-screen flex flex-col items-center justify-center'>
-      <ColorChanger/>
+      <ColorChanger setPrimary={setPrimary} setSecondary={setSecondary}/>
         <h1>CREATIVE DEVELOPER</h1>
         <h1>UX UI DESIGNER</h1>
       <h1 className='text-9xl mb-10'>HADEYA IKRAM</h1>

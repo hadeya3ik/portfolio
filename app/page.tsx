@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Skills from "@/components/Skills";
 import React, { useRef, useEffect, useState } from 'react';
@@ -8,11 +8,12 @@ import VerticalSlider from "@/components/VerticalSlider";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
-import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion'
+import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
+import ColorChanger from "@/components/ColorChanger";
 
 export default function Home() {
-  const [primary, setPrimary] = useState("102 65 169"); 
-  const [secondary, setSecondary] = useState("255 255 255");
+  const [primary, setPrimary] = useState("152 169 151"); 
+  const [secondary, setSecondary] = useState("208 209 199");
   const motionPrimary = useMotionValue(primary);
   const background = useMotionTemplate`rgb(${motionPrimary})`;
   const colChangeDiv = useRef<HTMLDivElement>(null);
@@ -21,8 +22,8 @@ export default function Home() {
     const root = document.documentElement;
     const primaryColorValue = getComputedStyle(root).getPropertyValue('--primary').trim();
     const secondaryColorValue = getComputedStyle(root).getPropertyValue('--secondary').trim();
-    setPrimary(primaryColorValue || "102 65 169");
-    setSecondary(secondaryColorValue || "255 255 255");
+    setPrimary(primaryColorValue || "152 169 151");
+    setSecondary(secondaryColorValue || "208 209 199");
   }, []);
 
   useEffect(() => {
@@ -33,9 +34,9 @@ export default function Home() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          animate(motionPrimary, secondary, { duration: 1 }); // Change to secondary color when colChangeDiv is in view
+          animate(motionPrimary, secondary, { duration: 1 });
         } else {
-          animate(motionPrimary, primary, { duration: 1 }); // Change back to initial color when colChangeDiv is not in view
+          animate(motionPrimary, primary, { duration: 1 });
         }
       },
       { threshold: 0.5 }
@@ -54,17 +55,16 @@ export default function Home() {
 
   return (
     <ReactLenis root>
-      {/* <main className="bg-primary text-primary-foreground transition-colors duration-1000"> */}
       <motion.section style={{ background }}>
         <NavBar />
-        <Hero />
+        <Hero setPrimary={setPrimary} setSecondary={setSecondary} />
+        {/* <ColorChanger setPrimary={setPrimary} setSecondary={setSecondary} /> */}
         <div ref={colChangeDiv}>
           <Skills />
         </div>
         <Works />
         <Footer />
       </motion.section>
-      {/* </main> */}
     </ReactLenis>
   );
 }

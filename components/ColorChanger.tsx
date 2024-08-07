@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
@@ -10,7 +9,12 @@ const colors = [
   { id: '05', mainColor: '203 211 247', textColor: '220 236 205' },
 ];
 
-function ColorChanger() {
+interface ColorChangerProps {
+  setPrimary: React.Dispatch<React.SetStateAction<string>>;
+  setSecondary: React.Dispatch<React.SetStateAction<string>>;
+}
+
+function ColorChanger({ setPrimary, setSecondary }: ColorChangerProps) {
   const primary = useMotionValue('169 102 65');
   const background = useMotionTemplate`rgb(${primary})`;
 
@@ -20,13 +24,15 @@ function ColorChanger() {
     const root = document.documentElement;
     root.style.setProperty('--primary', mainColor);
     root.style.setProperty('--primary-foreground', textColor);
-    animate(primary, mainColor, { duration: 1 });
-    animate(primary, textColor, { duration: 1 });
+    setPrimary(mainColor);
+    setSecondary(textColor);
+    animate(primary, mainColor, { duration: 2 });
+    animate(primary, textColor, { duration: 2 });
   }
 
   return (
     <motion.section className=''>
-      <div className='container bg-primary transition-colors duration-1000 pt-4'>
+      <div className='container  transition-colors duration-1000 pt-4'>
         {colors.map(color => (
           <button
             key={color.id}
