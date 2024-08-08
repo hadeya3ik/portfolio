@@ -1,7 +1,7 @@
 import React from 'react'
 import VerticalSlider from './VerticalSlider'
 
-function Works() {
+const Works : React.FC = () => {
   return (
     <div className=''>
         <h1 className='text-9xl uppercase mb-12'>Some of my work</h1>
@@ -10,7 +10,7 @@ function Works() {
   )
 }
 
-function Project() {
+const Project : React.FC = () => {
     return (
     <div className='sticky top-0'>
           <VerticalSlider/>

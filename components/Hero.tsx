@@ -3,13 +3,20 @@ import React from 'react';
 import { motion, useTime, useTransform } from 'framer-motion';
 import ColorChanger from "@/components/ColorChanger"; 
 
-function Hero({setPrimary, setSecondary, setPrimaryForeground, setSecondaryForeground}) {
+interface ColorChangerProps {
+  setPrimary: React.Dispatch<React.SetStateAction<string>>;
+  setSecondary: React.Dispatch<React.SetStateAction<string>>;
+  setPrimaryForeground: React.Dispatch<React.SetStateAction<string>>;
+  setSecondaryForeground: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Hero : React.FC<ColorChangerProps> = (props) => {
   const time = useTime();
   const rotate = useTransform(time, [0, 8000], [0, 360], { clamp: false });
 
   return (
     <div className='h-screen flex flex-col items-center justify-center'>
-      <ColorChanger setPrimary={setPrimary} setSecondary={setSecondary} setPrimaryForeground={setPrimaryForeground}  setSecondaryForeground={setSecondaryForeground}/>
+      <ColorChanger {...props}/>
         <h1>CREATIVE DEVELOPER</h1>
         <h1>UX UI DESIGNER</h1>
       <h1 className='text-9xl mb-10'>HADEYA IKRAM</h1>

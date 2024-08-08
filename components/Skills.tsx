@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {ReactNode} from 'react'
 import Magnetic from '@/common/Magnetic'
 
-function CustomButton({children}) {
-  return (<Magnetic>
+interface CustomButtonProps {
+  children: ReactNode;
+}
+
+const CustomButton : React.FC <CustomButtonProps> = ({children}) => {
+  return (
+    <Magnetic>
       <div className='border-4 px-4 py-2 h-min cursor-pointer m-4 rounded-full border-secondary-foreground'>
           <p className='text-3xl'>{children}</p>
       </div>

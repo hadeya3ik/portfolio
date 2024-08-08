@@ -16,7 +16,7 @@ const MagneticWrapper: React.FC<MagneticWrapperProps> = ({ children }) => {
   const x = useMotionValue(0)
   const y = useMotionValue(0)
   const scale = useMotionValue(1)
-  const ref = useRef<HTMLDivElement>(null)  // Ensure the ref is correctly typed
+  const ref = useRef<HTMLDivElement>(null) 
   const springX = useSpring(x, SPRING_CONFIG)
   const springY = useSpring(y, SPRING_CONFIG)
   const springScale = useSpring(scale, { damping: 20, stiffness: 300 })
@@ -54,7 +54,7 @@ const MagneticWrapper: React.FC<MagneticWrapperProps> = ({ children }) => {
 
   return (
     <motion.div
-      ref={ref}  // Correct usage of the ref
+      ref={ref}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{

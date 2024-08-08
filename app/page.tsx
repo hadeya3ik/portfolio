@@ -4,22 +4,20 @@ import Skills from "@/components/Skills";
 import React, { useRef, useEffect, useState } from 'react';
 import Works from "@/components/Works";
 import NavBar from "@/components/NavBar";
-import VerticalSlider from "@/components/VerticalSlider";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
-import ColorChanger from "@/components/ColorChanger";
 
 export default function Home() {
   const [primary, setPrimary] = useState("152 169 151"); 
   const [primaryForeground, setPrimaryForeground] = useState("152 169 151"); 
   const [secondary, setSecondary] = useState("208 209 199");
   const [secondaryForeground, setSecondaryForeground] = useState("152 169 151"); 
-
   const motionPrimary = useMotionValue(primary);
   const background = useMotionTemplate`rgb(${motionPrimary})`;
   const colChangeDiv = useRef<HTMLDivElement>(null);
+  const colorChangerProps = { setPrimary, setSecondary, setPrimaryForeground, setSecondaryForeground };
 
   useEffect(() => {
     const root = document.documentElement;
@@ -62,7 +60,7 @@ export default function Home() {
     <ReactLenis root>
       <motion.section style={{ background }}>
         <NavBar />
-        <Hero setPrimary={setPrimary} setSecondary={setSecondary}  setPrimaryForeground={setPrimaryForeground}  setSecondaryForeground={setSecondaryForeground}/>
+        <Hero {...colorChangerProps} />
         <div ref={colChangeDiv}>
           <Skills />
         </div>

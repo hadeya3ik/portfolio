@@ -2,10 +2,9 @@
 import React, {useState, useEffect} from 'react'
 import {motion, useMotionValueEvent, useScroll} from 'framer-motion'
 import Logo from '@/app/Subtract.svg'
-import Page from '@/app/about/page'
 import Link from 'next/link'
 
-function NavBar() {
+const NavBar : React.FC = () => {
   const [hiddenNav, setHiddenNav] = useState(false);
   const [previousScrollYProgress, setPreviousScrollYProgress] = useState(0);
   const {scrollYProgress} = useScroll();

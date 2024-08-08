@@ -13,7 +13,7 @@ interface ColorChangerProps {
   setSecondaryForeground: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function ColorChanger({ setPrimary, setSecondary, setPrimaryForeground, setSecondaryForeground }: ColorChangerProps) {
+const ColorChanger : React.FC<ColorChangerProps> = ({ setPrimary, setSecondary, setPrimaryForeground, setSecondaryForeground }) => {
   const primary = useMotionValue('169 102 65');
 
   function ChangCol(e: React.MouseEvent<HTMLButtonElement>) {

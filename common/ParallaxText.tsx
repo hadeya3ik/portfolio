@@ -1,5 +1,5 @@
 'use client'
-import { useRef } from "react";
+import React, { useRef, ReactNode } from "react";
 import {
   motion,
   useScroll,
@@ -12,11 +12,11 @@ import {
 import { wrap } from "@motionone/utils";
 
 interface ParallaxProps {
-  children: string;
+  children: ReactNode;
   baseVelocity: number;
 }
 
-export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+const ParallaxText : React.FC<ParallaxProps> = ({children, baseVelocity = 100}) => {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -56,3 +56,5 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
     </div>
   );
 }
+
+export default ParallaxText
