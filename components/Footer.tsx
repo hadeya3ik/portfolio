@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer : React.FC = () => {
     return (
-      <div className="bg-secondary h-[60vh] relative text-secondary-foreground" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
+      <div className="bg-secondary h-[60vh] relative text-secondary-foreground border" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
         <div className='fixed h-[60vh] bottom-0'>
           <div className="py-16 border h-full">
           <div className="flex gap-4 pl-12">

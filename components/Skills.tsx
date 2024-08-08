@@ -45,12 +45,12 @@ const frameworks = [
   { title : "Reactjs"},
   { title : "Nodejs"},
   { title : "Expressjs"},
-  { title : "Threejs"},
-  { title : "Vuejs"},
-  { title : "Django"},
-  { title : "MongoDB"},
-  { title : "NoSQL"},
-  { title : "PyTorch"},
+  // { title : "Threejs"},
+  // { title : "Vuejs"},
+  // { title : "Django"},
+  // { title : "MongoDB"},
+  // { title : "NoSQL"},
+  // { title : "PyTorch"},
 ]
 
 const design = [

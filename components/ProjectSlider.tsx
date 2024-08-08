@@ -2,7 +2,23 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-const VerticalSlider : React.FC = () => {
+interface ProjectSliderProps {
+  id : number
+  title : string
+  desc : string
+  stack : string[];
+  service : string[];
+}
+
+function ListContainer({items} : {items : string[]}) {
+  return (
+    <div className="text-2xl flex flex-wrap max-w-sm">
+      <p>{items.join(' / ')}</p>
+    </div>
+  )
+}
+
+const ProjectSlider : React.FC <ProjectSliderProps> = ({id, title, desc, stack, service}) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -14,13 +30,27 @@ const VerticalSlider : React.FC = () => {
   const x = useTransform(smoothScrollYProgress, [0, 1], ["100%", "-100%"]);
 
   return (
-    
     <section ref={targetRef} className="h-[380vh]">
       <svg width="100" height="100" viewBox="0 0 100 100" className="sticky top-16 left-full"> <motion.circle className="stroke-current text-primary-foreground" fill="none" style={{ pathLength: scrollYProgress }} cx="50" cy="50" r="30" pathLength="1" strokeWidth="8" /></svg>
       <div className="sticky top-[100px] flex flex-col items-center overflow-hidden">
-        <div className="flex items-center">
-          <h1 className='text-8xl pt-8 '>Project A</h1>
-        </div><p className='pt-8 max-w-lg'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.</p>
+        <div className="w-full justify-start gap-12 flex bord border-red-500 pb-20">
+          <div className="flex flex-col gap-4 p-4">
+            <h1 className='text-7xl'>{`${String(id + 1).padStart(2, '0')} ${title}`}</h1>
+            <p className='max-w-lg text-2xl'>{desc}</p>
+          </div>
+          <div className="flex-1 flex self-center gap-12">
+            <div className="">
+              <h1 className='text-3xl'>SERVICE</h1>
+              <ListContainer items={service}/>
+            </div>
+            <div className="">
+            <h1 className='text-3xl'>STACK</h1>
+              <ListContainer items={stack}/>
+            </div>
+          </div>
+          
+          
+        </div>
         <div>
           <motion.div style={{ x }} className="flex gap-20">
           {cards.map((card, index) => (
@@ -45,4 +75,4 @@ const cards = [
   {id : 7},
 ];
 
-export default VerticalSlider;
+export default ProjectSlider;
