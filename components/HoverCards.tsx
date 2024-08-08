@@ -3,13 +3,17 @@ import React from 'react'
 import { motion } from "framer-motion"
 
 const content = [
-    { title : "title", desc : "lorem ipsum, lol i hate ipsum lorem te ami je suis lore pis feit." },
-    { title : "hkjhkj", desc : "lorem ipsum, lol i hate ipsum lorem te ami je suis lore pis feit." },
-    { title : "title", desc : "lorem ipsum, lol i hate ipsum lorem te ami je suis lore pis feit." },
-    { title : "title", desc : "lorem ipsum, lol i hate ipsum lorem te ami je suis lore pis feit." },
-    { title : "title", desc : "lorem ipsum, lol i hate ipsum lorem te ami je suis lore pis feit." },
-    { title : "title", desc : "lorem ipsum, lol i hate ipsum lorem te ami je suis lore pis feit." },
+    { title : "title",},
+    { title : "title",},
+    { title : "title",},
+    { title : "title",},
+    { title : "title",},
 ]
+
+interface CardsProps  {
+    title : string,
+    i : number
+}
 
 
 function HoverCards() {
@@ -20,7 +24,7 @@ function HoverCards() {
     )
   }
   
-  function Card({ title, desc, i }) {
+  function Card({ title, i } : CardsProps) {
       return (
           <motion.div 
           whileHover={{ top: -26, backgroundColor: "#ffa07a" }}
