@@ -15,8 +15,10 @@ export default function Home() {
   const [secondary, setSecondary] = useState("208 209 199");
   const [secondaryForeground, setSecondaryForeground] = useState("152 169 151"); 
   const motionPrimary = useMotionValue(primary);
+  const motionSecondary = useMotionValue(secondary);
   const background = useMotionTemplate`rgb(${motionPrimary})`;
   const colChangeDiv = useRef<HTMLDivElement>(null);
+
   const colorChangerProps = { setPrimary, setSecondary, setPrimaryForeground, setSecondaryForeground };
 
   useEffect(() => {
@@ -34,6 +36,11 @@ export default function Home() {
   }, [primary, motionPrimary]);
 
   useEffect(() => {
+    motionSecondary.set(secondary);
+  }, [secondary, motionSecondary]);
+
+  useEffect(() => {
+    const currentDiv = colChangeDiv.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -45,13 +52,13 @@ export default function Home() {
       { threshold: 0.5 }
     );
 
-    if (colChangeDiv.current) {
-      observer.observe(colChangeDiv.current);
+    if (currentDiv) {
+      observer.observe(currentDiv);
     }
 
     return () => {
-      if (colChangeDiv.current) {
-        observer.unobserve(colChangeDiv.current);
+      if (currentDiv) {
+        observer.unobserve(currentDiv);
       }
     };
   }, [motionPrimary, primary, secondary]);
