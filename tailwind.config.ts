@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        spectral: ['var(--font-spectral)', 'serif'], // Use Spectral as a custom font
+      },
       colors: {
         primary: {
           DEFAULT: 'rgb(var(--primary) / <alpha-value>)',

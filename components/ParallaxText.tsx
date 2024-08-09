@@ -47,7 +47,7 @@ const ParallaxText : React.FC<ParallaxProps> = ({children, baseVelocity = 100}) 
 
   return (
     <div className="tracking-tighter leading-none m-0 whitespace-nowrap flex flex-nowrap">
-      <motion.div className="  text-9xl flex whitespace-nowrap gap-8 flex-nowrap" style={{ x }}>
+      <motion.div className="  text-9xl flex whitespace-nowrap gap-9 flex-nowrap" style={{ x }}>
         <span className="block mr-8">{children} </span>
         <span className="block mr-8">{children} </span>
         <span className="block mr-8">{children} </span>

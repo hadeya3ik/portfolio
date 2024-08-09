@@ -1,7 +1,7 @@
 'use client'
 import React, {useState, useEffect} from 'react'
 import {motion, useMotionValueEvent, useScroll} from 'framer-motion'
-import Logo from '@/app/Subtract.svg'
+
 import Link from 'next/link'
 
 const NavBar : React.FC = () => {
@@ -20,16 +20,19 @@ const NavBar : React.FC = () => {
 
   return (
     <motion.nav 
-        className='sticky top-0 flex justify-between transition-colors duration-1000 px-8 py-2 mix-blend-color-burn'
+        className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-gray-300 mix-blend-color-burn'
         variants={{
             visible: { y: 0},
             hidden: {y: "-100%"}
         }}
         animate={hiddenNav ? "hidden" : "visible"}
         transition={{duration:0.35, ease:"easeInOut"}}>
-        <Logo height="40px" className="text-primary" />
-        <div className='flex gap-4 text-primary'>
-          <Link href="/about">ABOUT US</Link>
+          <div className='bg-gray-300 px-8 py-2 rounded-[50%]'>
+            <p className='text-white'>HDY</p>
+          </div>
+       
+        <div className='flex gap-4 '>
+          <Link href="/about">ABOUT</Link>
           <Link href="/about">CONTACT</Link>
         </div>
         

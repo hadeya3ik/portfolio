@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Archivo } from 'next/font/google'
+import { Spectral } from 'next/font/google'
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const spectral = Spectral({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"], // Specify all weights you want to include
+  style: ["normal", "italic"], // Include italic
+  variable: "--font-spectral"
+});
 
 export const metadata: Metadata = {
   title: "portfolio",
@@ -16,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-primary text-primary-foreground transition-colors duration-1000">{children}</body>
+      <body className={`${inter.className} ${spectral.variable} bg-primary text-primary-foreground transition-colors duration-1000`}>{children}</body>
     </html>
   );
 }

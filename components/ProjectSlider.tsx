@@ -1,6 +1,7 @@
 'use client'
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { RollLink } from "./RollLink";
 
 interface ProjectSliderProps {
   id : number
@@ -8,17 +9,18 @@ interface ProjectSliderProps {
   desc : string
   stack : string[];
   service : string[];
+  links: { title: string; url: string }[];
 }
 
-function ListContainer({items} : {items : string[]}) {
+function StackButton({ item }: { item: string }) {
   return (
-    <div className="text-2xl flex flex-wrap max-w-sm">
-      <p>{items.join(' / ')}</p>
+    <div className="border-2 border-primary-foreground rounded-full text-lg px-3">
+      {item}
     </div>
   )
 }
 
-const ProjectSlider : React.FC <ProjectSliderProps> = ({id, title, desc, stack, service}) => {
+const ProjectSlider : React.FC <ProjectSliderProps> = ({id, title, desc, stack, service, links}) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -33,23 +35,30 @@ const ProjectSlider : React.FC <ProjectSliderProps> = ({id, title, desc, stack, 
     <section ref={targetRef} className="h-[380vh]">
       <svg width="100" height="100" viewBox="0 0 100 100" className="sticky top-16 left-full"> <motion.circle className="stroke-current text-primary-foreground" fill="none" style={{ pathLength: scrollYProgress }} cx="50" cy="50" r="30" pathLength="1" strokeWidth="8" /></svg>
       <div className="sticky top-[100px] flex flex-col items-center overflow-hidden">
-        <div className="w-full justify-start gap-12 flex bord border-red-500 pb-20">
-          <div className="flex flex-col gap-4 p-4">
-            <h1 className='text-7xl'>{`${String(id + 1).padStart(2, '0')} ${title}`}</h1>
-            <p className='max-w-lg text-2xl'>{desc}</p>
-          </div>
-          <div className="flex-1 flex self-center gap-12">
-            <div className="">
-              <h1 className='text-3xl'>SERVICE</h1>
-              <ListContainer items={service}/>
+        <div className="w-full items-center gap-12 flex flex-col pb-20 ">
+          <div className="flex flex-col gap-12">
+            <div className="flex justify-between">
+              <h1 className='text-7xl self-start'>{`${String(id + 1).padStart(2, '0')} ${title}`}</h1>
+              <div className="text-3xl flex flex-col gap-4 text-right">
+              {links.map((item, id) => (
+              <RollLink key={id} href={item.url}>
+                {item.title}
+              </RollLink>
+              ))}
+              </div>
             </div>
-            <div className="">
-            <h1 className='text-3xl'>STACK</h1>
-              <ListContainer items={stack}/>
+          <div className="flex gap-12">
+            <p className='text-2xl max-w-lg'>
+              {desc}
+            </p>
+            <div className="w-full">
+              <div className="flex flex-wrap max-w-sm gap-1">
+                { service.map((item, index) => (<StackButton key={index} item={item}></StackButton>) )}
+                { stack.map((item, index) => (<StackButton key={index} item={item}></StackButton>) )}
+              </div>
             </div>
           </div>
-          
-          
+          </div>
         </div>
         <div>
           <motion.div style={{ x }} className="flex gap-20">

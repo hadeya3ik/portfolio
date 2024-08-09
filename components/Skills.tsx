@@ -8,8 +8,8 @@ interface CustomButtonProps {
 const CustomButton : React.FC <CustomButtonProps> = ({children}) => {
   return (
     <Magnetic>
-      <div className='border-4 px-4 py-2 h-min cursor-pointer m-4 rounded-full border-secondary-foreground'>
-          <p className='text-3xl'>{children}</p>
+      <div className='border-4 px-4 py-2 h-min cursor-pointer rounded-full border-secondary-foreground'>
+          <p className='text-xl font-semibold'>{children}</p>
       </div>
     </Magnetic>);
 }
@@ -17,15 +17,14 @@ const CustomButton : React.FC <CustomButtonProps> = ({children}) => {
 function Skills() {
   return (
     <div className='h-[150vh] flex flex-col items-center justify-center text-secondary-foreground'>
-      <h1 className='text-9xl pb-24'>SOME OF MY SKILLS</h1>
-      <div className='flex items-center'> 
+      <h1 className='text-[10vw] mb-10 leading-none text-center uppercase max-w-3xl'>Areas of Expertise</h1>
+            <div className='w-full'>
+      <div className='flex flex-wrap justify-center max-w-4xl mx-auto gap-2'> 
           {design.map((item, id) => {return (
               <CustomButton key={id}>
                 {item.title}
               </CustomButton>
           )})}
-      </div>
-      <div className='flex  items-center flex-wrap'> 
           {frameworks.map((item, id) => {return (
               <CustomButton key={id}>
                 {item.title}
@@ -36,6 +35,9 @@ function Skills() {
             </CustomButton>
         )})}
       </div>
+      </div>
+      
+          
     </div>
   )
 }
