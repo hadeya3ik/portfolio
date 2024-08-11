@@ -1,9 +1,36 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Archivo } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Spectral } from 'next/font/google'
-
+import localfont from "next/font/local";
 import "./globals.css";
+import { Noto_Serif } from 'next/font/google';
+
+const notoSerif = Noto_Serif({
+  weight: ['400', '700'], // Specify weights you need
+  subsets: ['latin'], // Specify the subsets you need
+  variable: "--font-notoSerif"
+});
+const ppNeueMontreal = localfont({
+  src: [
+    {
+      path: "../fonts/PPNeueMontreal-Bold.otf",
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/PPNeueMontreal-Book.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/PPNeueMontreal-Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-ppneuemonteal', // Optional: Define a CSS variable for Tailwind integration
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${spectral.variable} bg-primary text-primary-foreground transition-colors duration-1000`}>{children}</body>
+      <body className={`${ppNeueMontreal.className} ${notoSerif.variable} ${spectral.variable} bg-primary text-primary-foreground transition-colors duration-1000`}>{children}</body>
     </html>
   );
 }

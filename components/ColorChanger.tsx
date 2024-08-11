@@ -28,11 +28,11 @@ const ColorChanger: React.FC<ColorChangerProps> = ({ setPrimary, setSecondary, s
     root.style.setProperty('--primary-foreground', primaryForegroundColor);
     root.style.setProperty('--secondary-foreground', secondaryForegroundColor);
     setPrimary(primaryColor);
-    setSecondary(secondaryColor);  // Fix here
+    setSecondary(secondaryColor); 
     setPrimaryForeground(primaryForegroundColor);
     setSecondaryForeground(secondaryForegroundColor);
-    animate(primary, primaryColor, { duration: 1.5, ease: [0.25, 0.1, 0.25, 1] });
-    animate(secondary, secondaryColor, { duration: 1.5, ease: [0.25, 0.1, 0.25, 1] });
+    animate(primary, primaryColor, { duration: 1});
+    animate(secondary, secondaryColor, { duration: 1 });
   }
 
   return (

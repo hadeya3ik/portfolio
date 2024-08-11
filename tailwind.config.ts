@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        spectral: ['var(--font-spectral)', 'serif'], // Use Spectral as a custom font
+        spectral: ['var(--font-spectral)', 'serif'], 
+        ppneuemonteal: ['var(--font-ppneuemonteal)', 'serif'], 
+        notoSerif: ['var(--font-notoSerif)', 'serif'],
       },
       colors: {
         primary: {
