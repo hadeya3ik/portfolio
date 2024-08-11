@@ -19,7 +19,7 @@ interface ProjectSliderProps {
 
 function StackButton({ item }: { item: string }) {
   return (
-    <div className="border-2 border-primary-foreground rounded-full text-lg px-3">
+    <div className="border-2 whitespace-nowrap border-primary-foreground rounded-full text-lg px-3">
       {item}
     </div>
   )
@@ -50,7 +50,7 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
           strokeWidth="8"
         />
       </svg>
-      <div className="sticky top-[100px] flex flex-col items-center overflow-hidden">
+      <div className="sticky top-[20px] sm:top-[100px] flex flex-col items-center overflow-hidden">
         <div className="w-full items-center gap-12 flex flex-col pb-20">
           <div className="flex flex-col gap-12">
             <div className="flex justify-between">

@@ -8,8 +8,8 @@ interface CustomButtonProps {
 const CustomButton : React.FC <CustomButtonProps> = ({children}) => {
   return (
     <Magnetic>
-      <div className=' border-4 px-4 py-2 h-min cursor-pointer rounded-full border-secondary-foreground '>
-          <p className='font-notoSerif italic text-xl '>{children}</p>
+      <div className='border-4 px-4 py-2 h-min cursor-pointer rounded-full border-secondary-foreground '>
+          <p className='font-notoSerif text-nowrap italic text-xl '>{children}</p>
       </div>
     </Magnetic>);
 }
