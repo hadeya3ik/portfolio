@@ -19,7 +19,7 @@ interface ProjectSliderProps {
 
 function StackButton({ item }: { item: string }) {
   return (
-    <div className="border-2 whitespace-nowrap border-primary-foreground rounded-full text-lg px-3">
+    <div className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full text-lg px-3">
       {item}
     </div>
   )
@@ -55,11 +55,14 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
           <div className="flex flex-col gap-12">
             <div className="flex justify-between">
               <h1 className='text-7xl self-start'>{`${String(id + 1).padStart(2, '0')} ${title}`}</h1>
-              <div className="text-3xl flex flex-col gap-4 text-right pr-16">
+              <div className="text-3xl text-current text-end flex flex-col self-end pr-12 gap-0">
                 {links.map((item, id) => (
-                  <RollLink key={id} href={item.url}>
-                    {item.title}
-                  </RollLink>
+                  <div key={id} className="">
+                    <RollLink  href={item.url}>
+                      {item.title}
+                    </RollLink>
+                  </div>
+                  
                 ))}
               </div>
             </div>

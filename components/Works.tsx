@@ -75,8 +75,10 @@ const projects = [
   },
   {
     height : "h-[700vh]",
-    start : "100%",
-    end : "-400%",
+    // start : "100%",
+    // end : "-400%",
+    start : "60%",
+    end : "-210%",
     title : "Baking Horizon",
     stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
     service : ["Branding", "Visual Identity", "Web Design", "Development"],
