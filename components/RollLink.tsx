@@ -15,10 +15,8 @@ export const RollLink: React.FC<RollLinkProps> = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap"
-      style={{
-        lineHeight: 0.75,
-      }}
+      className="relative block overflow-hidden whitespace-nowrap leading-7"
+      
     >
       <div>
         {children.split("").map((l, i) => (

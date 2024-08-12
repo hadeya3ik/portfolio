@@ -36,7 +36,7 @@ const LinkList: React.FC<LinkListProps> = ({ links }) => {
 
 const Footer : React.FC = () => {
     return (
-      <div className="w-full bg-secondary h-[70vh] text-secondary-foreground" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
+      <div className="w-full bg-accent h-[70vh] text-accent-foreground" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0 100%)" }}>
         <div className='fixed h-[70vh] bottom-0 py-16'>
           <div className="w-[100vw] flex px-16 pb-16 uppercase items-center justify-between">
             <p>Lets Collaborate. </p>

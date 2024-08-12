@@ -20,15 +20,15 @@ const NavBar : React.FC = () => {
 
   return (
     <motion.nav 
-        className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-gray-300 mix-blend-color-burn'
+        className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-accent'
         variants={{
             visible: { y: 0},
             hidden: {y: "-100%"}
         }}
         animate={hiddenNav ? "hidden" : "visible"}
         transition={{duration:0.35, ease:"easeInOut"}}>
-          <div className='bg-gray-300 px-8 py-2 rounded-[50%]'>
-            <p className='text-white'>HDY</p>
+          <div className='border-4 border-accent px-8 py-2 rounded-[50%]'>
+            <p className='text-accent'>HDY</p>
           </div>
        
         <div className='flex gap-4 '>

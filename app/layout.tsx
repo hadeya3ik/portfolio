@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ppNeueMontreal.className} ${notoSerif.variable} ${spectral.variable} bg-primary text-primary-foreground transition-colors duration-1000`}>{children}</body>
+      <body className={`${ppNeueMontreal.className} ${notoSerif.variable} ${spectral.variable} text-primary-foreground`}>{children}</body>
     </html>
   );
 }
