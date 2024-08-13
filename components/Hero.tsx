@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion, useTime, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
-
+import { MaskedText } from "@/components/MaskedText"; 
 const DynamicClock = dynamic(() => import('@/components/Clock'), { ssr: false });
 
 function MovingIcon() {
@@ -33,17 +33,26 @@ const Hero : React.FC = () => {
       <div className='self-end px-8'>
       </div>
       <div className='font-medium w-full text-[17vw] leading-none uppercase flex flex-col'>
-        <h1 className='self-start'>Hadeya</h1>
+        <h1 className='self-start'>
+          <MaskedText>Hadeya</MaskedText></h1>
         <div className='flex self-end items-center gap-8'>
           <MovingIcon/>
-          <h1 className=''>Ikram</h1>
+          <h1 className=''><MaskedText>Ikram</MaskedText></h1>
         </div>
       </div>
       <div className='flex flex-col sm:flex-row w-full justify-between px-8'>
         <div className="flex items-center gap-2 whitespace-nowrap">
-          <h1>Creative Developer</h1>
+          <h1>
+            <MaskedText>
+              Creative Developer
+            </MaskedText>
+          </h1>
           <hr className="w-[30px] my-4 border-t-2 border-primary-foreground" />
-          <h1>UX UI Designer</h1>
+          <h1>
+            <MaskedText>
+              UX UI Designer
+            </MaskedText>
+          </h1>
         </div>
         <DynamicClock/>
       </div>

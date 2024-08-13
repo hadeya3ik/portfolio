@@ -58,7 +58,7 @@ const projects = [
     title : "Govee",
     stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
     service : ["Web Design", "Development"],
-    desc : "This is an App used to control your lights using the Govee api. At vero eos et accusamus et iusto odio dignissimos ducimus.",
+    desc : ["This is an App used to control your lights using the" , "At vero eos et accusamus et iusto odio dignissimos ducimus."],
     links : [{title : "Visit Site", url : "#"}, {title : "Github", url : "#"},],
     images : [govee1, govee2, govee3, govee4, govee5]
   },
@@ -69,7 +69,7 @@ const projects = [
     title : "Fitbud",
     stack : ["Figma", "Adobe"],
     service : ["Prototyping", "Case Study", "Illustrations", "Design System"],
-    desc : "This is an AI powered Fitness App. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+    desc : ["This is an AI powered Fitness App", "At vero eos et accusamus et iusto odio dignissimos." ],
     links : [],
     images : [fitBud1, fitBud2, fitBud3, fitBud4, fitBud5, fitBud6]
   },
@@ -82,7 +82,7 @@ const projects = [
     title : "Baking Horizon",
     stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
     service : ["Branding", "Visual Identity", "Web Design", "Development"],
-    desc : "This is an App used to control your lights using the Govee api. At vero eos et accusamus et iusto odio dignissimos .",
+    desc : ["This is an App used to control your lights using the", "Govee API."],
     links : [{title : "Visit Site", url : "#"}, {title : "Github", url : "#"},], 
     images : [bakingHorizon1, bakingHorizon2, bakingHorizon3, bakingHorizon4, bakingHorizon5, bakingHorizon6]
   }

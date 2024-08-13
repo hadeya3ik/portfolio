@@ -9,6 +9,8 @@ import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
+const word = "It is a long established fact";
+
 
 export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);

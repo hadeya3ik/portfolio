@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { RollLink } from "./RollLink";
 import Image, {StaticImageData} from "next/image";
+import { MaskedText } from "./MaskedText";
 
 interface ProjectSliderProps {
   height : string
@@ -10,7 +11,7 @@ interface ProjectSliderProps {
   end : string
   id: number
   title: string
-  desc: string
+  desc: string[];
   stack: string[];
   service: string[];
   links: { title: string; url: string }[];
@@ -67,9 +68,11 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
               </div>
             </div>
             <div className="flex gap-12">
-              <p className='text-2xl max-w-lg'>
-                {desc}
-              </p>
+              <div className='text-2xl text-nowrap max-w-lg'>
+                <MaskedText>
+                  {desc}
+                </MaskedText>
+              </div>
               <div className="w-full">
                 <div className="flex flex-wrap max-w-sm gap-1">
                   {service.map((item, index) => (<StackButton key={index} item={item}></StackButton>))}
