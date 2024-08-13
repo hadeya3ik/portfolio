@@ -1,6 +1,6 @@
 'use client'
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
 import { RollLink } from "./RollLink";
 import Image, {StaticImageData} from "next/image";
 import { MaskedText } from "./MaskedText";
@@ -18,15 +18,38 @@ interface ProjectSliderProps {
   images : StaticImageData[];
 }
 
-function StackButton({ item }: { item: string }) {
+const item = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1
+  }
+};
+
+const container = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+function StackButton({ text }: { text: string }) {
   return (
-    <div className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full text-lg px-3">
-      {item}
-    </div>
+    <motion.div 
+      variants={item}
+      className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full text-lg px-3">
+      {text}
+    </motion.div>
   )
 }
 
 const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, title, desc, stack, service, links, images }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 }); // triggers when 50% of the component is in view
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -51,19 +74,16 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
           strokeWidth="8"
         />
       </svg>
-      <div className="sticky top-[20px] sm:top-[100px] flex flex-col items-center overflow-hidden">
+      <div className="sticky top-[20px] sm:top-[100px] flex flex-col items-center overflow-hidden" ref={ref}>
         <div className="w-full items-center gap-12 flex flex-col pb-20">
           <div className="flex flex-col gap-12">
             <div className="flex justify-between">
               <h1 className='text-7xl self-start'>{`${String(id + 1).padStart(2, '0')} ${title}`}</h1>
               <div className="text-3xl text-current text-end flex flex-col self-end pr-12 gap-0">
                 {links.map((item, id) => (
-                  <div key={id} className="">
-                    <RollLink  href={item.url}>
+                    <RollLink key={id} href={item.url}>
                       {item.title}
                     </RollLink>
-                  </div>
-                  
                 ))}
               </div>
             </div>
@@ -74,10 +94,13 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
                 </MaskedText>
               </div>
               <div className="w-full">
-                <div className="flex flex-wrap max-w-sm gap-1">
-                  {service.map((item, index) => (<StackButton key={index} item={item}></StackButton>))}
-                  {stack.map((item, index) => (<StackButton key={index} item={item}></StackButton>))}
-                </div>
+                <motion.div 
+                  variants={container}
+                  initial="hidden"
+                  animate={isInView ? 'visible' : 'hidden'}className="flex flex-wrap max-w-sm gap-1">
+                    {service.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
+                    {stack.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
+                </motion.div>
               </div>
             </div>
           </div>
