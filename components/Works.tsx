@@ -1,5 +1,6 @@
 import React from 'react'
 import ProjectSlider from './ProjectSlider'
+import { RandomMaskedText } from './RandomMaskedTex';
 
 import govee1 from '@/images/govee/govee1.png'
 import govee2 from '@/images/govee/govee2.png'
@@ -24,7 +25,10 @@ import fitBud6 from '@/images/fitBud/fitbud6.png'
 const Works : React.FC = () => {
   return (
     <div className='flex flex-col'>
-        <h1 className='text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>Selected Works</h1>
+        <div className='text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>
+          <RandomMaskedText>{["Selected"]}</RandomMaskedText>
+          <RandomMaskedText>{["Works"]}</RandomMaskedText>
+        </div>
         <Project/>
     </div>
   )

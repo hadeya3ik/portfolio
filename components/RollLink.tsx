@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MaskedText } from "./MaskedText";
 
 const DURATION = 0.35;
-const STAGGER = 0.015;
+const STAGGER = 0.01;
 
 interface RollLinkProps {
   children: string;

@@ -4,7 +4,7 @@ import { motion, useTime, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { MaskedText } from "@/components/MaskedText"; 
 const DynamicClock = dynamic(() => import('@/components/Clock'), { ssr: false });
-
+import { RandomMaskedText } from './RandomMaskedTex';
 function MovingIcon() {
   const time = useTime();
   const rotate = useTransform(time, [0, 8000], [0, 360], { clamp: false });
@@ -30,14 +30,12 @@ function MovingIcon() {
 const Hero : React.FC = () => {
   return (
     <div className='h-[80vh] flex flex-col justify-between items-center text-2xl gap-8'>
-      <div className='self-end px-8'>
-      </div>
       <div className='font-medium w-full text-[17vw] leading-none uppercase flex flex-col'>
         <h1 className='self-start'>
-          <MaskedText>Hadeya</MaskedText></h1>
+          <RandomMaskedText>{["Hadeya"]}</RandomMaskedText></h1>
         <div className='flex self-end items-center gap-8'>
           <MovingIcon/>
-          <h1 className=''><MaskedText>Ikram</MaskedText></h1>
+          <h1 className=''><RandomMaskedText>{["Ikram"]}</RandomMaskedText></h1>
         </div>
       </div>
       <div className='flex flex-col sm:flex-row w-full justify-between px-8'>
@@ -61,4 +59,3 @@ const Hero : React.FC = () => {
 }
 
 export default Hero;
-

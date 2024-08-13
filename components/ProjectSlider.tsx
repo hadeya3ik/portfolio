@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, useSpring, useInView } from "framer-mo
 import { RollLink } from "./RollLink";
 import Image, {StaticImageData} from "next/image";
 import { MaskedText } from "./MaskedText";
+import { RandomMaskedText } from './RandomMaskedTex';
 
 interface ProjectSliderProps {
   height : string
@@ -78,7 +79,10 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
         <div className="w-full items-center gap-12 flex flex-col pb-20">
           <div className="flex flex-col gap-12">
             <div className="flex justify-between">
-              <h1 className='text-7xl self-start'>{`${String(id + 1).padStart(2, '0')} ${title}`}</h1>
+              <div className='text-7xl self-start flex'>
+                <RandomMaskedText className="pr-8">{[`${String(id + 1).padStart(2, '0')}`]}</RandomMaskedText>
+                <RandomMaskedText>{[`${title}`]}</RandomMaskedText>
+                </div>
               <div className="text-3xl text-current text-end flex flex-col self-end pr-12 gap-0">
                 {links.map((item, id) => (
                     <RollLink key={id} href={item.url}>

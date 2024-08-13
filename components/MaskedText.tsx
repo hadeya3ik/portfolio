@@ -1,15 +1,14 @@
 'use client';
-import styles from './page.module.css';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-export function MaskedText({ children }) {
+export function MaskedText({ children } : {children : string[] | string }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.75 });
   
     const animation = {
       initial: { y: "100%" },
-      enter: (i) => ({
+      enter: (i : number) => ({
         y: "0",
         transition: {
           duration: 0.75,

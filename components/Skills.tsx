@@ -2,6 +2,7 @@
 import React, { ReactNode, useRef } from 'react';
 import Magnetic from '@/common/Magnetic';
 import { motion, useInView } from 'framer-motion';
+import { RandomMaskedText } from './RandomMaskedTex';
 
 interface CustomButtonProps {
   children: ReactNode;
@@ -31,7 +32,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ children }) => {
       <motion.div
         variants={item}
         className="border-4 px-4 py-2 h-min cursor-pointer rounded-full border-secondary-foreground">
-        <p className="font-notoSerif text-nowrap italic text-xl">{children}</p>
+        <p className="text-nowrap font-semibold italic text-xl">{children}</p>
       </motion.div>
     </Magnetic>
   );
@@ -39,16 +40,19 @@ const CustomButton: React.FC<CustomButtonProps> = ({ children }) => {
 
 function Skills() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 }); // triggers when 50% of the component is in view
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <div
       ref={ref}
-      className="h-[150vh] flex flex-col items-center justify-center text-secondary-foreground"
-    >
-      <h1 className="text-[10vw] mb-10 leading-none text-center uppercase max-w-3xl">
-        Areas of Expertise
-      </h1>
+      className="h-[150vh] flex flex-col items-center justify-center text-secondary-foreground">
+      <div className="p-20 flex justify-center text-[10vw] mb-10 whitespace-nowrap flex-wrap leading-none text-center uppercase max-w-3xl ">
+        <div className='flex'>
+          <RandomMaskedText className='pr-16' >{["Areas"]}</RandomMaskedText>
+          <RandomMaskedText>{["of"]}</RandomMaskedText>
+        </div>
+        <RandomMaskedText>{["Expertise"]}</RandomMaskedText>
+      </div>
       <div className="w-full">
         <motion.div
           variants={container}

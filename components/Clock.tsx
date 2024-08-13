@@ -10,7 +10,6 @@ const Clock: React.FC = () => {
     day: '2-digit' 
   };
 
-  const formattedDate = date.toLocaleDateString('en-US', options).toUpperCase().replace(',', '');
   const [time, setTime] = useState<Date>(new Date());
   
   useEffect(() => {
