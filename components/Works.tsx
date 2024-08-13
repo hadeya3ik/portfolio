@@ -63,13 +63,13 @@ const projects = [
     stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
     service : ["Web Design", "Development"],
     desc : ["This is an App used to control your lights using the" , "At vero eos et accusamus et iusto odio dignissimos ducimus."],
-    links : [{title : "Visit Site", url : "#"}, {title : "Github", url : "#"},],
+    links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
     images : [govee1, govee2, govee3, govee4, govee5]
   },
   {
     height : "h-[700vh]",
     start : "100%",
-    end : "-400%",
+    end : "-300%",
     title : "Fitbud",
     stack : ["Figma", "Adobe"],
     service : ["Prototyping", "Case Study", "Illustrations", "Design System"],
@@ -79,15 +79,13 @@ const projects = [
   },
   {
     height : "h-[700vh]",
-    // start : "100%",
-    // end : "-400%",
-    start : "60%",
-    end : "-210%",
+    start : "100%",
+    end : "-300%",
     title : "Baking Horizon",
     stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
     service : ["Branding", "Visual Identity", "Web Design", "Development"],
     desc : ["This is an App used to control your lights using the", "Govee API."],
-    links : [{title : "Visit Site", url : "#"}, {title : "Github", url : "#"},], 
+    links : [{title : "Visit Site", url : "https://www.bakinghorizon.ca/"}, {title : "Github", url : "https://github.com/hadeya3ik/baking-horizon-next"},], 
     images : [bakingHorizon1, bakingHorizon2, bakingHorizon3, bakingHorizon4, bakingHorizon5, bakingHorizon6]
   }
 ]

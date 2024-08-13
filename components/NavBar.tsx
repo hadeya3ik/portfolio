@@ -4,6 +4,13 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
 
 const NavBar: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  };
+
   const [hiddenNav, setHiddenNav] = useState(false);
   const [previousScrollYProgress, setPreviousScrollYProgress] = useState(0);
   const { scrollYProgress } = useScroll();
@@ -21,7 +28,7 @@ const NavBar: React.FC = () => {
 
   return (
     <motion.nav
-  className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-accent'
+  className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-accent z-50'
   variants={{
     visible: { y: 0 },
     hidden: { y: '-100%' },
@@ -33,13 +40,13 @@ const NavBar: React.FC = () => {
   animate={hiddenNav ? 'hidden' : 'visible'}
   transition={{ duration: 0.8, ease: 'easeInOut' }} 
 >
-  <div className='border-4 border-accent px-8 py-2 rounded-[50%]'>
+  <div onClick={scrollToTop} className='cursor-pointer border-4 border-accent px-8 py-2 rounded-[50%]'>
     <p className='text-accent'>HDY</p>
   </div>
 
-  <div className='flex gap-4 '>
+  <div className='flex gap-4 cursor-pointer'>
     <Link href="/about">ABOUT</Link>
-    <Link href="/about">CONTACT</Link>
+    <Link href="mailto:h3ikram@uwaterloo.ca">CONTACT</Link>
   </div>
 </motion.nav>
   );

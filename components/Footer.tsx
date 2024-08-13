@@ -12,7 +12,7 @@ type LinkListProps = {
 };
 
 const pageLinks: LinkItem[] = [
-  { href: "https://github.com/hadeya3ik", label: "Contact" },
+  { href: "mailto:h3ikram@uwaterloo.ca", label: "Contact" },
   { href: "https://www.linkedin.com/in/hadeya-ikram-23197622a/", label: "About" },
 ];
 
