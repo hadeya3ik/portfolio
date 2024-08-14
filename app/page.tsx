@@ -9,7 +9,11 @@ import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
-const word = "It is a long established fact";
+import { PiButterfly } from "react-icons/pi";
+import { PiShootingStar } from "react-icons/pi";
+import { PiPlanet } from "react-icons/pi";
+import { PiCactus } from "react-icons/pi";
+import { PiTreePalm } from "react-icons/pi";
 
 
 export default function Home() {
@@ -68,11 +72,11 @@ export default function Home() {
     <ReactLenis root>
       <motion.section style={{ background }} className="transition-colors duration-100">
         <NavBar />
-        <button
-          className="border-4 px-4 border-current rounded-full"
+        <div
+          className="mr-8 absolute right-0 flex-end w-min border-4 p-4 border-accent text-accent rounded-full cursor-pointer z-50" 
           onClick={handleThemeChange} >
-          {colorPairs[colorIndex].id}
-        </button>
+          {React.createElement(colorPairs[colorIndex].icon, { size: 30 },)}
+        </div>
         <Hero />
         <div ref={colChangeDiv}>
           <Skills />
@@ -88,7 +92,7 @@ export default function Home() {
 
 const colorPairs = [
   { 
-    id : 1,
+    icon: PiButterfly,
     primary: "36, 39, 40", 
     primaryText: "80 113 217", 
     secondary: "80 113 217",
@@ -97,7 +101,7 @@ const colorPairs = [
     accentText: "28 28 26", 
   },
   { 
-    id : 3,
+    icon: PiShootingStar,
     primary: "239 237 204", 
     primaryText: "148 200 216", 
     secondary: "150 207 163",
@@ -106,7 +110,7 @@ const colorPairs = [
     accentText: "242 241 220", 
   },
   { 
-    id : 4,
+    icon: PiPlanet,
     primary: "60 78 52", 
     primaryText: "222 218 228", 
     secondary: "158 196 117",
@@ -115,7 +119,7 @@ const colorPairs = [
     accentText: "86 84 81", 
   },
   { 
-    id : 2,
+    icon: PiCactus,
     primary: "232 227 215", 
     primaryText: "245 109 50", 
     secondary: "245 109 50",
@@ -124,7 +128,7 @@ const colorPairs = [
     accentText: "255 255 255", 
   },
   { 
-    id : 5,
+    icon: PiTreePalm,
     primary: "162 149 128", 
     primaryText: "242 155 39", 
     secondary: "240 236 227",

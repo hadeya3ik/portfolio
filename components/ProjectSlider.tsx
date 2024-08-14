@@ -41,7 +41,7 @@ function StackButton({ text }: { text: string }) {
   return (
     <motion.div 
       variants={item}
-      className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full text-lg px-3">
+      className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full text-2xl px-3">
       {text}
     </motion.div>
   )
@@ -75,15 +75,15 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
           strokeWidth="8"
         />
       </svg>
-      <div className="sticky top-[20px] sm:top-[100px] flex flex-col items-center overflow-hidden" ref={ref}>
+      <div className="sticky top-[10px] sm:top-[100px] flex flex-col items-center overflow-hidden" ref={ref}>
         <div className="w-full items-center gap-12 flex flex-col pb-20">
           <div className="flex flex-col gap-12">
             <div className="flex justify-between">
-              <div className='text-7xl self-start flex'>
+              <div className='sm:text-8xl text-4xl  self-start flex'>
                 <RandomMaskedText className="pr-8">{[`${String(id + 1).padStart(2, '0')}`]}</RandomMaskedText>
                 <RandomMaskedText>{[`${title}`]}</RandomMaskedText>
                 </div>
-              <div className="text-3xl text-current text-end flex flex-col self-end pr-12 gap-0">
+              <div className="text-5xl text-current text-end flex flex-col self-end pr-16 gap-0">
                 {links.map((item, id) => (
                     <RollLink key={id} href={item.url}>
                       {item.title}
@@ -91,8 +91,8 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
                 ))}
               </div>
             </div>
-            <div className="flex gap-12">
-              <div className='text-2xl text-nowrap max-w-lg'>
+            <div className="flex md:flex-row flex-col gap-12">
+              <div className='md:text-4xl sm:text-3xl text-2xl text-nowrap max-w-'>
                 <MaskedText>
                   {desc}
                 </MaskedText>
@@ -101,7 +101,7 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, t
                 <motion.div 
                   variants={container}
                   initial="hidden"
-                  animate={isInView ? 'visible' : 'hidden'}className="flex flex-wrap max-w-sm gap-1">
+                  animate={isInView ? 'visible' : 'hidden'}className="flex flex-wrap max-w-md gap-1">
                     {service.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
                     {stack.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
                 </motion.div>

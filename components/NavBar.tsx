@@ -28,24 +28,23 @@ const NavBar: React.FC = () => {
 
   return (
     <motion.nav
-  className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-accent z-50'
-  variants={{
-    visible: { y: 0 },
-    hidden: { y: '-100%' },
-    initial: { 
-      y: '-100%',
-    },
-  }}
-  initial="initial"
-  animate={hiddenNav ? 'hidden' : 'visible'}
-  transition={{ duration: 0.8, ease: 'easeInOut' }} 
+      className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-accent z-50'
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: '-100%' },
+        initial: { 
+          y: '-100%',
+        },
+      }}
+      initial="initial"
+      animate={hiddenNav ? 'hidden' : 'visible'}
+      transition={{ duration: 0.8, ease: 'easeInOut' }} 
 >
-  <div onClick={scrollToTop} className='cursor-pointer border-4 border-accent px-8 py-2 rounded-[50%]'>
-    <p className='text-accent'>HDY</p>
+  <div onClick={scrollToTop} className='cursor-pointer bg-accent px-4 py-2 rounded-[50%]'>
+    <p className='text-sm text-accent-foreground uppercase font-bold'>Hadeya</p>
   </div>
 
   <div className='flex gap-4 cursor-pointer'>
-    <Link href="/about">ABOUT</Link>
     <Link href="mailto:h3ikram@uwaterloo.ca">CONTACT</Link>
   </div>
 </motion.nav>

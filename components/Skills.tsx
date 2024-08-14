@@ -31,8 +31,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({ children }) => {
     <Magnetic>
       <motion.div
         variants={item}
-        className="border-4 px-4 py-2 h-min cursor-pointer rounded-full border-secondary-foreground">
-        <p className="text-nowrap font-semibold italic text-xl">{children}</p>
+        className="border-4 px-4 py-2 h-min cursor-pointer bg-accent mix-blend-hard-light rounded-full border-secondary-foreground">
+        <p className="text-nowrap font-semibold italic text-4xl">{children}</p>
       </motion.div>
     </Magnetic>
   );
