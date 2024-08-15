@@ -31,8 +31,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({ children }) => {
     <Magnetic>
       <motion.div
         variants={item}
-        className="border-4 px-4 py-2 h-min cursor-pointer bg-accent mix-blend-hard-light rounded-full border-secondary-foreground">
-        <p className="text-nowrap font-semibold italic text-4xl">{children}</p>
+        className="border-4 px-4 py-2 h-min cursor-pointer bg-accent mix-blend-hard-light rounded-full text-accent-foreground border-accent-foreground">
+        <p className="text-nowrap font-semibold italic  text-2xl sm:text-3xl md:text-4xl">{children}</p>
       </motion.div>
     </Magnetic>
   );
@@ -46,7 +46,7 @@ function Skills() {
     <div
       ref={ref}
       className="h-[150vh] flex flex-col items-center justify-center text-secondary-foreground">
-      <div className="p-20 flex justify-center text-[10vw] mb-10 whitespace-nowrap flex-wrap leading-none text-center uppercase max-w-3xl ">
+      <div className="p-20 flex justify-center text-7xl sm:text-[10vw] mb-10 whitespace-nowrap flex-wrap leading-none text-center uppercase max-w-3xl ">
         <div className='flex'>
           <RandomMaskedText className='pr-16' >{["Areas"]}</RandomMaskedText>
           <RandomMaskedText>{["of"]}</RandomMaskedText>
@@ -58,7 +58,7 @@ function Skills() {
           variants={container}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="flex flex-wrap justify-center max-w-4xl mx-auto gap-2"
+          className="flex flex-wrap justify-center max-w-4xl mx-auto gap-2 px-2"
         >
           {frameworks.map((item, id) => (
             <CustomButton key={id}>{item.title}</CustomButton>

@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
 
   return (
     <motion.nav
-      className='sticky top-0 flex text-2xl justify-between px-8 py-4 text-accent z-50'
+      className='sticky top-0 flex text-2xl justify-between px-8 py-1 sm:py-4 text-accent z-50'
       variants={{
         visible: { y: 0 },
         hidden: { y: '-100%' },

@@ -25,7 +25,7 @@ import fitBud6 from '@/images/fitBud/fitbud6.png'
 const Works : React.FC = () => {
   return (
     <div className='flex flex-col'>
-        <div className='text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>
+        <div className='text-7xl sm:text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>
           <RandomMaskedText>{["Selected"]}</RandomMaskedText>
           <RandomMaskedText>{["Works"]}</RandomMaskedText>
         </div>
@@ -62,7 +62,7 @@ const projects = [
     title : "Govee",
     stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
     service : ["Web Design", "Development"],
-    desc : ["This is an App used to control your lights using the" , "At vero eos et accusamus et iusto odio dignissimos ducimus."],
+    desc : ["This is an App used to control your" , " lights using theGovee API."],
     links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
     images : [govee1, govee2, govee3, govee4, govee5]
   },

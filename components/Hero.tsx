@@ -32,7 +32,7 @@ const Hero : React.FC = () => {
   return (
     <div>
     <div className='h-[85vh] flex flex-col text-2xl justify-around'>
-      <div className='font-medium w-full text-[17vw] leading-none uppercase flex flex-col'>
+      <div className='font-medium w-full sm:text-[17vw] text-8xl leading-none uppercase flex flex-col'>
         <h1 className='self-start leading-none'>
           <RandomMaskedText>{["Hadeya"]}</RandomMaskedText>
         </h1>
