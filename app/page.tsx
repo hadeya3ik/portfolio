@@ -9,12 +9,6 @@ import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
-import { PiButterfly } from "react-icons/pi";
-import { PiShootingStar } from "react-icons/pi";
-import { PiPlanet } from "react-icons/pi";
-import { PiCactus } from "react-icons/pi";
-import { PiTreePalm } from "react-icons/pi";
-
 
 export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
@@ -71,12 +65,7 @@ export default function Home() {
   return (
     <ReactLenis root>
       <motion.section style={{ background }} className="transition-colors duration-100">
-        <NavBar />
-        <div
-          className="mr-8 absolute right-0 flex-end w-min border-4 p-4 border-accent text-accent rounded-full cursor-pointer z-50" 
-          onClick={handleThemeChange} >
-          {React.createElement(colorPairs[colorIndex].icon, { size: 30 },)}
-        </div>
+        <NavBar  colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
         <div ref={colChangeDiv}>
           <Skills />
@@ -92,7 +81,6 @@ export default function Home() {
 
 const colorPairs = [
   { 
-    icon: PiButterfly,
     primary: "36, 39, 40", 
     primaryText: "80 113 217", 
     secondary: "80 113 217",
@@ -101,7 +89,6 @@ const colorPairs = [
     accentText: "28 28 26", 
   },
   { 
-    icon: PiShootingStar,
     primary: "223 205 188", 
     primaryText: "61 53 55", 
     secondary: "243 242 231",
@@ -110,7 +97,6 @@ const colorPairs = [
     accentText: "243 242 231", 
   },
   { 
-    icon: PiPlanet,
     primary: "60 78 52", 
     primaryText: "222 218 228", 
     secondary: "158 196 117",
@@ -119,7 +105,6 @@ const colorPairs = [
     accentText: "86 84 81", 
   },
   { 
-    icon: PiCactus,
     primary: "232 227 215", 
     primaryText: "245 109 50", 
     secondary: "245 109 50",
@@ -128,11 +113,10 @@ const colorPairs = [
     accentText: "255 255 255", 
   },
   { 
-    icon: PiTreePalm,
     primary: "18 17 17", 
     primaryText: "243 242 231", 
-    secondary: "243 242 231",
-    secondaryText:"18 17 17", 
+    secondary: "58 56 56",
+    secondaryText: "243 242 231", 
     accent: "58 56 56", 
     accentText: "243 242 231", 
   },

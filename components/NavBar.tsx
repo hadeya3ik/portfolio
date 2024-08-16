@@ -2,8 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
+import ColorChanger from './ColorChanger';
 
-const NavBar: React.FC = () => {
+interface ColorChangerProps {
+  colorIndex: number;
+  handleThemeChange: () => void;
+}
+
+const NavBar = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -38,16 +44,17 @@ const NavBar: React.FC = () => {
       }}
       initial="initial"
       animate={hiddenNav ? 'hidden' : 'visible'}
-      transition={{ duration: 0.8, ease: 'easeInOut' }} 
->
-  <div onClick={scrollToTop} className='cursor-pointer bg-accent px-4 py-2 rounded-[50%]'>
-    <p className='text-sm text-accent-foreground uppercase font-bold'>Hadeya</p>
-  </div>
+      transition={{ duration: 0.8, ease: 'easeInOut' }} >
 
-  <div className='flex gap-4 cursor-pointer'>
-    <Link href="mailto:h3ikram@uwaterloo.ca">CONTACT</Link>
-  </div>
-</motion.nav>
+    <div onClick={scrollToTop} className='cursor-pointer bg-accent px-4 py-2 rounded-[50%]'>
+      <p className='text-sm text-accent-foreground uppercase font-bold'>Hadeya</p>
+    </div>
+
+    <div className='flex gap-4 cursor-pointer items-center'>
+      <Link href="mailto:h3ikram@uwaterloo.ca">CONTACT</Link>
+      <ColorChanger colorIndex={colorIndex} handleThemeChange={handleThemeChange}></ColorChanger>
+    </div>
+    </motion.nav>
   );
 }
 
