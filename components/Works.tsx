@@ -1,5 +1,6 @@
 import React from 'react'
 import ProjectSlider from './ProjectSlider'
+import { RandomMaskedText } from './RandomMaskedTex';
 
 import govee1 from '@/images/govee/govee1.png'
 import govee2 from '@/images/govee/govee2.png'
@@ -24,7 +25,10 @@ import fitBud6 from '@/images/fitBud/fitbud6.png'
 const Works : React.FC = () => {
   return (
     <div className='flex flex-col'>
-        <h1 className='text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>Selected Works</h1>
+        <div className='text-7xl sm:text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>
+          <RandomMaskedText>{["Selected"]}</RandomMaskedText>
+          <RandomMaskedText>{["Works"]}</RandomMaskedText>
+        </div>
         <Project/>
     </div>
   )
@@ -58,32 +62,30 @@ const projects = [
     title : "Govee",
     stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
     service : ["Web Design", "Development"],
-    desc : "This is an App used to control your lights using the Govee api. At vero eos et accusamus et iusto odio dignissimos ducimus.",
-    links : [{title : "Visit Site", url : "#"}, {title : "Github", url : "#"},],
+    desc : ["This is an App used to control your" , " lights using theGovee API."],
+    links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
     images : [govee1, govee2, govee3, govee4, govee5]
   },
   {
     height : "h-[700vh]",
     start : "100%",
-    end : "-400%",
+    end : "-300%",
     title : "Fitbud",
     stack : ["Figma", "Adobe"],
     service : ["Prototyping", "Case Study", "Illustrations", "Design System"],
-    desc : "This is an AI powered Fitness App. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+    desc : ["This is an AI powered Fitness App", "At vero eos et accusamus et iusto odio dignissimos." ],
     links : [],
     images : [fitBud1, fitBud2, fitBud3, fitBud4, fitBud5, fitBud6]
   },
   {
     height : "h-[700vh]",
-    // start : "100%",
-    // end : "-400%",
-    start : "60%",
-    end : "-210%",
+    start : "100%",
+    end : "-300%",
     title : "Baking Horizon",
     stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
     service : ["Branding", "Visual Identity", "Web Design", "Development"],
-    desc : "This is an App used to control your lights using the Govee api. At vero eos et accusamus et iusto odio dignissimos .",
-    links : [{title : "Visit Site", url : "#"}, {title : "Github", url : "#"},], 
+    desc : ["This is an App used to control your lights using the", "Govee API."],
+    links : [{title : "Visit Site", url : "https://www.bakinghorizon.ca/"}, {title : "Github", url : "https://github.com/hadeya3ik/baking-horizon-next"},], 
     images : [bakingHorizon1, bakingHorizon2, bakingHorizon3, bakingHorizon4, bakingHorizon5, bakingHorizon6]
   }
 ]

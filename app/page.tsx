@@ -65,12 +65,7 @@ export default function Home() {
   return (
     <ReactLenis root>
       <motion.section style={{ background }} className="transition-colors duration-100">
-        <NavBar />
-        <button
-          className="border-4 px-4 border-current rounded-full"
-          onClick={handleThemeChange} >
-          {colorPairs[colorIndex].id}
-        </button>
+        <NavBar  colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
         <div ref={colChangeDiv}>
           <Skills />
@@ -86,7 +81,6 @@ export default function Home() {
 
 const colorPairs = [
   { 
-    id : 1,
     primary: "36, 39, 40", 
     primaryText: "80 113 217", 
     secondary: "80 113 217",
@@ -95,16 +89,14 @@ const colorPairs = [
     accentText: "28 28 26", 
   },
   { 
-    id : 3,
-    primary: "239 237 204", 
-    primaryText: "148 200 216", 
-    secondary: "150 207 163",
-    secondaryText: "83 95 86", 
-    accent: "242 173 211", 
-    accentText: "242 241 220", 
+    primary: "223 205 188", 
+    primaryText: "61 53 55", 
+    secondary: "243 242 231",
+    secondaryText: "140 131 110", 
+    accent: "42 59 205", 
+    accentText: "243 242 231", 
   },
   { 
-    id : 4,
     primary: "60 78 52", 
     primaryText: "222 218 228", 
     secondary: "158 196 117",
@@ -113,7 +105,6 @@ const colorPairs = [
     accentText: "86 84 81", 
   },
   { 
-    id : 2,
     primary: "232 227 215", 
     primaryText: "245 109 50", 
     secondary: "245 109 50",
@@ -122,12 +113,11 @@ const colorPairs = [
     accentText: "255 255 255", 
   },
   { 
-    id : 5,
-    primary: "162 149 128", 
-    primaryText: "242 155 39", 
-    secondary: "240 236 227",
-    secondaryText: "233 174 14", 
-    accent: "35 26 20", 
-    accentText: "233 174 14", 
+    primary: "18 17 17", 
+    primaryText: "243 242 231", 
+    secondary: "58 56 56",
+    secondaryText: "243 242 231", 
+    accent: "58 56 56", 
+    accentText: "243 242 231", 
   },
 ];

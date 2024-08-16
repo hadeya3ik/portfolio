@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { MaskedText } from "./MaskedText";
 
 const DURATION = 0.35;
-const STAGGER = 0.015;
+const STAGGER = 0.01;
 
 interface RollLinkProps {
   children: string;
@@ -15,9 +16,7 @@ export const RollLink: React.FC<RollLinkProps> = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap leading-7"
-      
-    >
+      className="relative block overflow-hidden whitespace-nowrap">
       <div>
         {children.split("").map((l, i) => (
           <motion.span
