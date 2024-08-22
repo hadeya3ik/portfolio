@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { Roboto } from 'next/font/google'
 import { Spectral } from 'next/font/google'
 import localfont from "next/font/local";
-import "./globals.css";
 import { Noto_Serif } from 'next/font/google';
+import "./globals.css";
 
 const notoSerif = Noto_Serif({
   weight: ['400', '700'], 
