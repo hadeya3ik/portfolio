@@ -7,8 +7,8 @@ import "./globals.css";
 import { Noto_Serif } from 'next/font/google';
 
 const notoSerif = Noto_Serif({
-  weight: ['400', '700'], // Specify weights you need
-  subsets: ['latin'], // Specify the subsets you need
+  weight: ['400', '700'], 
+  subsets: ['latin'],
   variable: "--font-notoSerif"
 });
 const ppNeueMontreal = localfont({
@@ -29,15 +29,15 @@ const ppNeueMontreal = localfont({
       style: 'italic',
     },
   ],
-  variable: '--font-ppneuemonteal', // Optional: Define a CSS variable for Tailwind integration
+  variable: '--font-ppneuemonteal', 
 });
 
 const inter = Inter({ subsets: ["latin"] });
 
 const spectral = Spectral({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"], // Specify all weights you want to include
-  style: ["normal", "italic"], // Include italic
+  weight: ["200", "300", "400", "500", "600", "700", "800"], 
+  style: ["normal", "italic"], 
   variable: "--font-spectral"
 });
 
