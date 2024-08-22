@@ -11,6 +11,7 @@ const notoSerif = Noto_Serif({
   subsets: ['latin'],
   variable: "--font-notoSerif"
 });
+
 const ppNeueMontreal = localfont({
   src: [
     {
@@ -48,9 +49,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
   return (
     <html lang="en">
       <body className={`${ppNeueMontreal.className} ${notoSerif.variable} ${spectral.variable} text-primary-foreground`}>{children}</body>
