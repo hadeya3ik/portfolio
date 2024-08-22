@@ -49,8 +49,7 @@ const Project : React.FC = () => {
           service={item.service}
           desc={item.desc}
           links={item.links}
-          images={item.images}/>)
-      )} 
+          images={item.images}/>))} 
     </div> )
 }
 
