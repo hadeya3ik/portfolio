@@ -33,7 +33,7 @@ const Hero : React.FC = () => {
   return (
     <div>
     <div className='h-[85vh] flex flex-col text-2xl justify-around'>
-    <div className='w-[100vw] flex flex-col text-2xl justify-around px-2 sm:px-16'>
+    <div className='w-[100vw] h-[100%] flex flex-col text-2xl justify-around px-2 sm:px-16'>
       <Frame10 className="fill-current text-primary-foreground" />
     </div>
     </div>
