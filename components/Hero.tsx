@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { MaskedText } from "@/components/MaskedText"; 
 const DynamicClock = dynamic(() => import('@/components/Clock'), { ssr: false });
 import { RandomMaskedText } from './RandomMaskedTex';
+import Frame10 from '@/images/Vector.svg'
 
 function MovingIcon() {
   const time = useTime();
@@ -32,24 +33,18 @@ const Hero : React.FC = () => {
   return (
     <div>
     <div className='h-[85vh] flex flex-col text-2xl justify-around'>
-      <div className='font-medium w-full sm:text-[17vw] text-8xl leading-none uppercase flex flex-col'>
-        <h1 className='self-start leading-none'>
-          <RandomMaskedText>{["Hadeya"]}</RandomMaskedText>
-        </h1>
-        <div className='flex self-end items-center gap-8'>
-          <MovingIcon />
-          <h1 className=''><RandomMaskedText>{["Ikram"]}</RandomMaskedText></h1>
-        </div>
-      </div>
+    <div className='w-[100vw] flex flex-col text-2xl justify-around px-2 sm:px-16'>
+      <Frame10 className="fill-current text-primary-foreground" />
     </div>
-    <div className='flex self-end justify-self-end sm:text-4xl text-2xl flex-col sm:flex-row w-full justify-between px-4'>
+    </div>
+    <div className='text-accent flex self-end justify-self-end sm:text-4xl text-2xl flex-col sm:flex-row w-full justify-between px-4'>
     <div className="flex items-center gap-2 whitespace-nowrap">
       <h1>
         <MaskedText>
           Creative Developer
         </MaskedText>
       </h1>
-      <hr className="w-[30px] my-4 border-t-2 border-primary-foreground" />
+      <hr className="w-[30px] my-4 border-t-2 border-accent" />
       <h1>
         <MaskedText>
           UX UI Designer

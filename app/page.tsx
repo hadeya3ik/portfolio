@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <ReactLenis root>
       <motion.section style={{ background }} className="transition-colors duration-100">
-        <NavBar  colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
+        <NavBar colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
         <div ref={colChangeDiv}>
           <Skills />
