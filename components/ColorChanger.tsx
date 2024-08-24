@@ -2,11 +2,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
-import { PiButterfly } from "react-icons/pi";
-import { PiShootingStar } from "react-icons/pi";
-import { PiPlanet } from "react-icons/pi";
-import { PiCactus } from "react-icons/pi";
-import { PiTreePalm } from "react-icons/pi";
+import { WiMoonAltFull } from "react-icons/wi";
+import { WiMoonAltWaningCrescent3 } from "react-icons/wi";
+import { WiMoonAltThirdQuarter } from "react-icons/wi";
+import { WiMoonAltWaxingCrescent3 } from "react-icons/wi";
+import { WiMoonFull } from "react-icons/wi";
+
 
 interface ColorChangerProps {
   colorIndex: number;
@@ -15,7 +16,7 @@ interface ColorChangerProps {
 
 const ColorChanger = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
   return (<div
-    className="flex justify-center items-center p-1 border-2 w-[35px] h-[35px] border-accent text-accent rounded-full cursor-pointer z-50" 
+    className="flex justify-center items-center p-1  w-[40px] h-[40px] border-accent text-accent rounded-full cursor-pointer z-50" 
     onClick={handleThemeChange} >
     {React.createElement(colorPairs[colorIndex].icon, { size: 30 },)}
   </div>)
@@ -23,19 +24,19 @@ const ColorChanger = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
 
 const colorPairs = [
   { 
-    icon: PiButterfly,
+    icon: WiMoonAltFull,
   },
   { 
-    icon: PiShootingStar,
+    icon: WiMoonAltWaningCrescent3,
   },
   { 
-    icon: PiPlanet,
+    icon: WiMoonAltThirdQuarter,
   },
   { 
-    icon: PiCactus,
+    icon: WiMoonAltWaxingCrescent3,
   },
   { 
-    icon: PiTreePalm,
+    icon: WiMoonFull,
   },
 ];
 
