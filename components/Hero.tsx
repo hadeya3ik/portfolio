@@ -10,7 +10,7 @@ import Frame10 from '@/images/Frame 12.svg'
 function MovingIcon() {
   const time = useTime();
   const rotate = useTransform(time, [0, 8000], [0, 360], { clamp: false });
-
+  
   return (<div className='h-[200px] flex items-center justify-center'>
     <motion.svg 
       width="90" 
