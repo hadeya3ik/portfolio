@@ -81,6 +81,14 @@ export default function Home() {
 
 const colorPairs = [
   { 
+    primary: "18 17 17", 
+    primaryText: "243 242 231", 
+    secondary: "58 56 56",
+    secondaryText: "243 242 231", 
+    accent: "122 130 125", 
+    accentText: "243 242 231", 
+  },
+  { 
     primary: "36, 39, 40", 
     primaryText: "80 113 217", 
     secondary: "80 113 217",
@@ -89,12 +97,12 @@ const colorPairs = [
     accentText: "28 28 26", 
   },
   { 
-    primary: "223 205 188", 
-    primaryText: "61 53 55", 
-    secondary: "243 242 231",
-    secondaryText: "140 131 110", 
-    accent: "42 59 205", 
-    accentText: "243 242 231", 
+    primary: "227 188 189", 
+    primaryText: "244 102 93", 
+    secondary: "246 128 149",
+    secondaryText: "235 234 234", 
+    accent: "228 69 38", 
+    accentText: "235 234 234", 
   },
   { 
     primary: "60 78 52", 
@@ -111,13 +119,5 @@ const colorPairs = [
     secondaryText: "232 227 215", 
     accent: "88 108 244", 
     accentText: "255 255 255", 
-  },
-  { 
-    primary: "18 17 17", 
-    primaryText: "243 242 231", 
-    secondary: "58 56 56",
-    secondaryText: "243 242 231", 
-    accent: "58 56 56", 
-    accentText: "243 242 231", 
   },
 ];

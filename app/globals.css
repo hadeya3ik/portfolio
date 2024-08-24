@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --primary: 6 16 201;
-    --primary-foreground: 80 113 217;
+    --primary: 18 17 17;
+    --primary-foreground: 243 242 231;
 
-    --secondary: 153 154 233;
-    --secondary-foreground: 28 28 26;
+    --secondary: 58 56 56;
+    --secondary-foreground: 243 242 231;
 
-    --accent: 235 244 145;
-    --accent-foreground: 28 28 26;
+    --accent: 122 130 125;
+    --accent-foreground: 243 242 231;
   }
 }
