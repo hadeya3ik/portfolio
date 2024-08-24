@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { MaskedText } from "@/components/MaskedText"; 
 const DynamicClock = dynamic(() => import('@/components/Clock'), { ssr: false });
 import { RandomMaskedText } from './RandomMaskedTex';
-import Frame10 from '@/images/Vector.svg'
+import Frame10 from '@/images/Frame 12.svg'
 
 function MovingIcon() {
   const time = useTime();
