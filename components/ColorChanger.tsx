@@ -8,7 +8,6 @@ import { WiMoonAltThirdQuarter } from "react-icons/wi";
 import { WiMoonAltWaxingCrescent3 } from "react-icons/wi";
 import { WiMoonFull } from "react-icons/wi";
 
-
 interface ColorChangerProps {
   colorIndex: number;
   handleThemeChange: () => void;
@@ -24,7 +23,7 @@ const ColorChanger = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
 
 const colorPairs = [
   { 
-    icon: WiMoonAltFull,
+    icon: WiMoonFull,
   },
   { 
     icon: WiMoonAltWaningCrescent3,
@@ -36,7 +35,7 @@ const colorPairs = [
     icon: WiMoonAltWaxingCrescent3,
   },
   { 
-    icon: WiMoonFull,
+    icon: WiMoonAltFull,
   },
 ];
 

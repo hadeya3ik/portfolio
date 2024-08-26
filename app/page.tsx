@@ -5,6 +5,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Works from "@/components/Works";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
@@ -67,6 +68,7 @@ export default function Home() {
       <motion.section style={{ background }} className="transition-colors duration-100">
         <NavBar colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
+        <About />
         <div ref={colChangeDiv}>
           <Skills />
         </div>
