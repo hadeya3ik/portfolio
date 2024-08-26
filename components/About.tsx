@@ -18,16 +18,16 @@ import SpiralCircle from '@/images/SVG/SpiralCircle.svg'
 import Arrow from '@/images/SVG/arrow.svg'
 
 export default function About() {
-    return (<main className='pt-[50vh] flex justify-center'>
+    return (<main className='pt-[50vh] flex justify-center text-secondary-foreground'>
         <div className='flex text-2xl sm:text-5xl text-nowrap max-w-xl flex-col sm:gap-8 gap-4'>
             <div className="flex flex-col items-center">
                 <div className='flex items-center gap-4'>
                     <MovingIcon>
                         {/* <MaskedText> */}
-                            <SpiralCircle className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                            <SpiralCircle className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                         {/* </MaskedText> */}
                     </MovingIcon>
-                    <MaskedText>I'm</MaskedText>
+                    <MaskedText>I am</MaskedText>
                     <MaskedText>Hadeya</MaskedText>
                         <hr className="w-[50px] my-4 border-t-2 border-current" />
                     <MaskedText>A</MaskedText>
@@ -35,7 +35,7 @@ export default function About() {
                 </div>
                 <div className='flex items-center gap-4'>
                     <MaskedText>
-                        <FilledAnd className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <FilledAnd className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>Designer</MaskedText>
                 </div>
@@ -44,23 +44,23 @@ export default function About() {
                 <div className='flex items-center gap-4'>
                     <MaskedText>Currently</MaskedText>
                     <MaskedText>
-                        <Diamond className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <Diamond className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>Studying</MaskedText>
                     <MaskedText>
-                        <DoubleArrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <DoubleArrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                 </div>
                 <div className='flex items-center gap-4'>
                     <MaskedText>Computational</MaskedText>
                     <MaskedText>
-                        <MathSymbols className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <MathSymbols className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>Math</MaskedText>
                 </div>
                 <div className='flex gap-4 self-end'>
                     <MaskedText>
-                        <Arrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <Arrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>At</MaskedText>
                     <MaskedText>(@)</MaskedText>
@@ -70,7 +70,7 @@ export default function About() {
             <div className="flex flex-col items-center">
                 <div className='flex items-center gap-4'>
                     <MaskedText>
-                        <Star className="h-[1.5rem] sm:h-[2.25rem] stroke-current text-primary-foreground"/>
+                        <Star className="h-[1.5rem] sm:h-[2.25rem] stroke-current  "/>
                     </MaskedText>
                     <MaskedText>I</MaskedText>
                     <MaskedText>Lead</MaskedText>
@@ -78,13 +78,13 @@ export default function About() {
                     <MaskedText>Design</MaskedText>
                     <div className='flex'>
                         <MaskedText>
-                            <Checkered className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                            <Checkered className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                         </MaskedText>
                         <MaskedText>
-                            <Checkered className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                            <Checkered className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                         </MaskedText>
                         <MaskedText>
-                            <Checkered className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                            <Checkered className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                         </MaskedText>
                     </div>
                     
@@ -95,12 +95,12 @@ export default function About() {
                     <MaskedText>(@)</MaskedText>
                     <MaskedText>SMILE</MaskedText>
                     <MaskedText>
-                        <Smile className="h-[1.5rem] sm:h-[2.25rem] stroke-current  text-primary-foreground"/>
+                        <Smile className="h-[1.5rem] sm:h-[2.25rem] stroke-current   "/>
                     </MaskedText>
                 </div>
                 <div className='flex items-center gap-4'>
                     <MaskedText>
-                        <OutlinedAnd className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <OutlinedAnd className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>Work</MaskedText>
                     <MaskedText>As</MaskedText>
@@ -110,7 +110,7 @@ export default function About() {
                     <MaskedText>Full-Stack</MaskedText>
                     {/* <MaskedText> */}
                         <MovingIcon>
-                            <Fan className="h-[1.5rem] sm:h-[2.25rem] stroke-current text-primary-foreground"/>
+                            <Fan className="h-[1.5rem] sm:h-[2.25rem] stroke-current  "/>
                         </MovingIcon>
                     {/* </MaskedText> */}
                     <MaskedText>Freelancer</MaskedText>
@@ -119,14 +119,14 @@ export default function About() {
             <div className="flex flex-col items-start">
                 <div className='flex items-center gap-4'>
                     <MaskedText>
-                        <Gem className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <Gem className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>I</MaskedText>
                     <MaskedText>Also</MaskedText>
                     <MaskedText>Have</MaskedText>
                     <MaskedText>a</MaskedText>
                     <MaskedText>
-                        <DoubleArrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <DoubleArrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                     <MaskedText>Passion</MaskedText>
                 </div>
@@ -134,14 +134,14 @@ export default function About() {
                     {/* <MaskedText> */}
                     <MovingIcon>
                     
-                        <Flower className="h-[1.5rem] sm:h-[2.25rem] stroke-current text-primary-foreground"/>
+                        <Flower className="h-[1.5rem] sm:h-[2.25rem] stroke-current  "/>
                     
                     </MovingIcon>
                     {/* </MaskedText> */}
                     <MaskedText>3D</MaskedText>
                     <MaskedText>Modelling</MaskedText>
                     <MaskedText>
-                        <Dots className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current text-primary-foreground"/>
+                        <Dots className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
                 </div>
             </div>
@@ -155,7 +155,7 @@ function MovingIcon({ children } : { children: React.ReactNode }) {
   
     return (
       <div className="">
-        <motion.div style={{ rotate }} className="text-accent">
+        <motion.div style={{ rotate }} className="  ">
           {children}
         </motion.div>
       </div>

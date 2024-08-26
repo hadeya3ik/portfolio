@@ -70,11 +70,13 @@ export default function Home() {
         <NavBar colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
         <div ref={colChangeDiv}>
-          <About />
+          
+
+        <About/>
         </div>
-        <div ref={colChangeDiv}>
+        {/* <div ref={colChangeDiv}> */}
           <Skills />
-        </div>
+        {/* </div> */}
         
         <div className="pb-40">
           <Works />
