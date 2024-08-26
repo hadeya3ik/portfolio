@@ -2,7 +2,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-export function MaskedText({ children } : {children : string[] | string }) {
+export function MaskedText({ children }: { children: React.ReactNode }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.75 });
   
@@ -21,8 +21,7 @@ export function MaskedText({ children } : {children : string[] | string }) {
     return (
       <div
         ref={ref}
-        className="flex flex-col "
-      >
+        className="flex flex-col ">
         {sentences.map((sentence, index) => (
           <div key={index} className="overflow-hidden">
             <motion.p

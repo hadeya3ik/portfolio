@@ -10,35 +10,13 @@ import Name2 from '@/images/Frame 14.svg';
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
 const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
-// const gradient = (direction: string, size: number, mask: boolean) =>
-//   `repeating-linear-gradient(to ${direction}, ` +
-//   `black 0px, ` +
-//   `black ${mask ? 0 : size / 2}px, ` +
-//   `transparent ${mask ? 0 : size / 2}px, ` +
-//   `transparent ${mask ? size : size / 2}px, ` +
-//   `black ${mask ? size : size / 2}px, ` +
-//   `black ${size}px` +
-//   ")";
-
-// const hiddenMask = `${gradient("right", 30, true)}, ${gradient(
-//   "bottom",
-//   30,
-//   true
-// )}`;
-// const visibleMask = `${gradient("right", 30, false)}, ${gradient(
-//   "bottom",
-//   30,
-//   false
-// )}`;
-
-
 const Hero: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 500); // Delay before the animation starts
+    }, 500); 
 
     return () => clearTimeout(timer);
   }, []);

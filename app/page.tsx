@@ -38,6 +38,7 @@ export default function Home() {
     if (currentDiv) {
       observer.observe(currentDiv);
     }
+    
     return () => {
       if (currentDiv) {
         observer.unobserve(currentDiv);
@@ -68,10 +69,13 @@ export default function Home() {
       <motion.section style={{ background }} className="transition-colors duration-100">
         <NavBar colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
-        <About />
+        <div ref={colChangeDiv}>
+          <About />
+        </div>
         <div ref={colChangeDiv}>
           <Skills />
         </div>
+        
         <div className="pb-40">
           <Works />
         </div>
