@@ -18,7 +18,7 @@ import SpiralCircle from '@/images/SVG/SpiralCircle.svg'
 import Arrow from '@/images/SVG/arrow.svg'
 
 export default function About() {
-    return (<main className='pt-[50vh] flex justify-center text-secondary-foreground'>
+    return (<main className='pt-[50vh] flex justify-center text-accent-foreground'>
         <div className='flex text-2xl sm:text-5xl text-nowrap max-w-xl flex-col sm:gap-8 gap-4'>
             <div className="flex flex-col items-center">
                 <div className='flex items-center gap-4'>

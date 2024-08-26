@@ -1,5 +1,4 @@
 'use client';
-
 import Skills from "@/components/Skills";
 import React, { useRef, useEffect, useState } from 'react';
 import Works from "@/components/Works";
@@ -10,24 +9,26 @@ import Footer from "@/components/Footer";
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
-
 export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
   const motionPrimary = useMotionValue(colorPairs[colorIndex].primary);
   const background = useMotionTemplate`rgb(${motionPrimary})`;
-  const colChangeDiv = useRef<HTMLDivElement>(null);
-
+  const skillsDiv = useRef<HTMLDivElement>(null);
+  const aboutDiv = useRef<HTMLDivElement>(null);
   const [curPrimary, setCurPrimary] = useState(colorPairs[colorIndex].primary);
   const [curSecondary, setCurSecondary] = useState(colorPairs[colorIndex].secondary);
+  const [curAccent, setCurAccent] = useState(colorPairs[colorIndex].accent);
 
   useEffect(() => {
-    const currentDiv = colChangeDiv.current;
-    const observer = new IntersectionObserver(
+    const currentSkillsDiv = skillsDiv.current;
+    const currentAboutDiv = aboutDiv.current;
+
+    const skillsObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           console.log("changing to", curSecondary);
           animate(motionPrimary, curSecondary, { duration: 0.5 });
-        } else if (!entry.isIntersecting) {
+        } else {
           console.log("changing to", curPrimary);
           animate(motionPrimary, curPrimary, { duration: 0.5 });
         }
@@ -35,22 +36,43 @@ export default function Home() {
       { threshold: 0.5 }
     );
 
-    if (currentDiv) {
-      observer.observe(currentDiv);
+    const aboutObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log("changing to", curAccent);
+          animate(motionPrimary, curAccent, { duration: 0.5 });
+        } else {
+          console.log("changing to", curPrimary);
+          animate(motionPrimary, curPrimary, { duration: 0.5 });
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (currentSkillsDiv) {
+      skillsObserver.observe(currentSkillsDiv);
     }
-    
+
+    if (currentAboutDiv) {
+      aboutObserver.observe(currentAboutDiv);
+    }
+
     return () => {
-      if (currentDiv) {
-        observer.unobserve(currentDiv);
+      if (currentSkillsDiv) {
+        skillsObserver.unobserve(currentSkillsDiv);
+      }
+      if (currentAboutDiv) {
+        aboutObserver.unobserve(currentAboutDiv);
       }
     };
-  }, [curPrimary, curSecondary, motionPrimary]);
+  }, [curPrimary, curSecondary, curAccent, motionPrimary]);
 
   const handleThemeChange = () => {
     const nextIndex = (colorIndex + 1) % colorPairs.length;
     setColorIndex(nextIndex);
     setCurPrimary(colorPairs[nextIndex].primary);
     setCurSecondary(colorPairs[nextIndex].secondary);
+    setCurAccent(colorPairs[nextIndex].accent);
     animate(motionPrimary, colorPairs[nextIndex].primary, { duration: 0.25 });
     console.log("changing to", colorPairs[nextIndex]);
     const primaryForegroundColor = colorPairs[nextIndex].primaryText as string;
@@ -69,15 +91,12 @@ export default function Home() {
       <motion.section style={{ background }} className="transition-colors duration-100">
         <NavBar colorIndex={colorIndex} handleThemeChange={handleThemeChange}/>
         <Hero />
-        <div ref={colChangeDiv}>
-          
-
-        <About/>
+        <div ref={aboutDiv}>
+          <About/>
         </div>
-        {/* <div ref={colChangeDiv}> */}
+        <div ref={skillsDiv}>
           <Skills />
-        {/* </div> */}
-        
+        </div>
         <div className="pb-40">
           <Works />
         </div>
@@ -91,10 +110,10 @@ const colorPairs = [
   { 
     primary: "18 17 17", 
     primaryText: "243 242 231", 
-    secondary: "58 56 56",
-    secondaryText: "243 242 231", 
-    accent: "122 130 125", 
-    accentText: "243 242 231", 
+    secondary: "37 37 37",
+    secondaryText: "232 230 209", 
+    accent: "239 243 231", 
+    accentText: "18 17 17", 
   },
   { 
     primary: "36, 39, 40", 
