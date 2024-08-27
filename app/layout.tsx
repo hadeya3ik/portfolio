@@ -43,7 +43,7 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  title: "portfolio",
+  title: "Hadeya",
   description: "Hadeya Ikram",
   icons: {
     icon: './Frame31.svg', 
