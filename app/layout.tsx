@@ -45,6 +45,9 @@ const spectral = Spectral({
 export const metadata: Metadata = {
   title: "portfolio",
   description: "Hadeya Ikram",
+  icons: {
+    icon: './Frame31.svg', 
+  },
 };
 
 export default function RootLayout({
