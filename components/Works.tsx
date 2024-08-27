@@ -73,7 +73,7 @@ const projects = [
     stack : ["Figma", "Adobe"],
     service : ["Prototyping", "Case Study", "Illustrations", "Design System"],
     desc : ["This is an AI powered Fitness App", "At vero eos et accusamus et iusto odio dignissimos." ],
-    links : [],
+    links : [{title : "View Case Study", url : "/Fitbud"},], 
     images : [fitBud1, fitBud2, fitBud3, fitBud4, fitBud5, fitBud6]
   },
   {

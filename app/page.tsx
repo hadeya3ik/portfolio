@@ -112,7 +112,7 @@ const colorPairs = [
     primaryText: "243 242 231", 
     secondary: "37 37 37",
     secondaryText: "232 230 209", 
-    accent: "239 243 231", 
+    accent: "219 215 209", 
     accentText: "18 17 17", 
   },
   { 
