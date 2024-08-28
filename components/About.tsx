@@ -42,10 +42,10 @@ export default function About() {
             </div>
             <div className="flex flex-col items-start">
                 <div className='flex items-center gap-4'>
-                    <MaskedText>Currently</MaskedText>
-                    <MaskedText>
+                <MaskedText>
                         <Diamond className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
+                    <MaskedText>Currently</MaskedText>
                     <MaskedText>Studying</MaskedText>
                     <MaskedText>
                         <DoubleArrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
@@ -53,12 +53,12 @@ export default function About() {
                 </div>
                 <div className='flex items-center gap-4'>
                     <MaskedText>Computational</MaskedText>
+                    <MaskedText>Math</MaskedText>
                     <MaskedText>
                         <MathSymbols className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
-                    <MaskedText>Math</MaskedText>
                 </div>
-                <div className='flex gap-4 self-end'>
+                <div className='flex gap-4 self-end items-center'>
                     <MaskedText>
                         <Arrow className="h-[1.5rem] sm:h-[2.25rem] stroke-current fill-current  "/>
                     </MaskedText>
