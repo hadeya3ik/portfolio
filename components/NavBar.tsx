@@ -52,6 +52,7 @@ const NavBar = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
 
     <div className='flex gap-4 cursor-pointer items-center'>
       <Link href="mailto:h3ikram@uwaterloo.ca">CONTACT</Link>
+      <Link href="/Projects">PROJECTS</Link>
       <ColorChanger colorIndex={colorIndex} handleThemeChange={handleThemeChange}></ColorChanger>
     </div>
     </motion.nav>
