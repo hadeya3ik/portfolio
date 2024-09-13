@@ -1,11 +1,11 @@
 'use client';
-import Skills from "@/components/Skills";
 import React, { useRef, useEffect, useState } from 'react';
-import Works from "@/components/Works";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
+import Skills from "@/components/Skills";
+import Works from "@/components/Works"
 import { ReactLenis } from 'lenis/react';
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion';
 
@@ -26,10 +26,8 @@ export default function Home() {
     const skillsObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log("changing to", curSecondary);
           animate(motionPrimary, curSecondary, { duration: 0.5 });
         } else {
-          console.log("changing to", curPrimary);
           animate(motionPrimary, curPrimary, { duration: 0.5 });
         }
       },
@@ -39,10 +37,8 @@ export default function Home() {
     const aboutObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log("changing to", curAccent);
           animate(motionPrimary, curAccent, { duration: 0.5 });
         } else {
-          console.log("changing to", curPrimary);
           animate(motionPrimary, curPrimary, { duration: 0.5 });
         }
       },
@@ -74,7 +70,6 @@ export default function Home() {
     setCurSecondary(colorPairs[nextIndex].secondary);
     setCurAccent(colorPairs[nextIndex].accent);
     animate(motionPrimary, colorPairs[nextIndex].primary, { duration: 0.25 });
-    console.log("changing to", colorPairs[nextIndex]);
     const primaryForegroundColor = colorPairs[nextIndex].primaryText as string;
     const secondaryForegroundColor = colorPairs[nextIndex].secondaryText as string;
     const accentColor = colorPairs[nextIndex].accent as string;
@@ -96,6 +91,7 @@ export default function Home() {
         </div>
         <div ref={skillsDiv}>
           <Skills />
+          {/* <Works/> */}
         </div>
         <Footer />
       </motion.section>

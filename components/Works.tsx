@@ -1,88 +1,41 @@
-import React from 'react'
-import ProjectSlider from './ProjectSlider'
+'use client';
+import React, { ReactNode, useRef } from 'react';
+import Magnetic from '@/common/Magnetic';
+import { motion, useInView } from 'framer-motion';
 import { RandomMaskedText } from './RandomMaskedTex';
+import pic1 from '@/images/Works/Frame 139.jpg'
+import pic2 from '@/images/Works/bedroom.jpg'
+import pic3 from '@/images/Works//help.png'
+import pic4 from '@/images/Works/smile.png'
+import Image from 'next/image';
 
-import govee1 from '@/images/govee/govee1.png'
-import govee2 from '@/images/govee/govee2.png'
-import govee3 from '@/images/govee/govee3.png'
-import govee4 from '@/images/govee/govee4.png'
-import govee5 from '@/images/govee/govee5.png'
 
-import bakingHorizon1 from '@/images/bakingHorizon/bakinghorizon1.png'
-import bakingHorizon2 from '@/images/bakingHorizon/bakinghorizon2.png'
-import bakingHorizon3 from '@/images/bakingHorizon/BakingHorizon3.png'
-import bakingHorizon4 from '@/images/bakingHorizon/BakingHorizon4.png'
-import bakingHorizon5 from '@/images/bakingHorizon/BakingHorizon5.png'
-import bakingHorizon6 from '@/images/bakingHorizon/BakingHorizon6.png'
-
-import fitBud1 from '@/images/fitBud/fitbud1.png'
-import fitBud2 from '@/images/fitBud/fitbud2.png'
-import fitBud3 from '@/images/fitBud/fitbud3.png'
-import fitBud4 from '@/images/fitBud/fitbud4.png'
-import fitBud5 from '@/images/fitBud/fitbud5.png'
-import fitBud6 from '@/images/fitBud/fitbud6.png'
-
-const Works : React.FC = () => {
+function Skills() {
   return (
-    <div className='flex flex-col'>
-        <div className='text-7xl sm:text-[10vw] mb-10 leading-none text-center uppercase max-w-md:'>
-          <RandomMaskedText>{["Selected"]}</RandomMaskedText>
-          <RandomMaskedText>{["Works"]}</RandomMaskedText>
+    <div
+      className="flex flex-col items-center justify-center text-secondary-foreground">
+      <div className="p-20 flex justify-center text-7xl sm:text-[10vw] mb-10 whitespace-nowrap flex-wrap leading-none text-center uppercase max-w-3xl ">
+        <div className='flex'>
+          <RandomMaskedText className='pr-16' >{["MY"]}</RandomMaskedText>
+          <RandomMaskedText>{["WORKS"]}</RandomMaskedText>
         </div>
-        <Project/>
+      </div>
+      
+      <div className="w-screen h-screen relative">
+       <Magnetic>
+          <Image src={pic1} alt=""  width={300} height={300} className="absolute left-[60%] top-[40%]" />
+       </Magnetic>
+       <Magnetic>
+        <Image src={pic2} alt="" width={300} height={300} className="absolute left-[5%] top-[55%]" />
+       </Magnetic>
+       <Magnetic>
+        <Image src={pic3} alt="" width={225} height={225} className="absolute left-[35%] top-0"/>
+       </Magnetic>
+       <Image src={pic4} alt="" width={250} height={250} className="absolute left-[5%] top-[10%]"/>
+      </div>
     </div>
-  )
+  );
 }
 
-const Project : React.FC = () => {
-    return (
-    <div className='sticky top-0'>
-      {projects.map((item, index) => (
-        <ProjectSlider 
-          key={index} 
-          title={item.title}
-          desc={item.desc}
-          stack={item.stack}
-          service={item.service}
-          links={item.links}
-          images={item.images}/>))} 
-    </div> )
-}
 
-const projects = [
-  {
-    height : "h-[500vh]",
-    start : "100%",
-    end : "-300%",
-    title : "Govee",
-    stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
-    service : ["Web Design", "Development"],
-    desc : ["This is an App used to control your" , " lights using theGovee API."],
-    links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
-    images : [govee1, govee2, govee3, govee4, govee5]
-  },
-  {
-    height : "h-[700vh]",
-    start : "100%",
-    end : "-300%",
-    title : "Fitbud",
-    stack : ["Figma", "Adobe"],
-    service : ["Prototyping", "Case Study", "Illustrations", "Design System"],
-    desc : ["This is an AI powered Fitness App", "At vero eos et accusamus et iusto odio dignissimos." ],
-    links : [{title : "View Case Study", url : "/Fitbud"},], 
-    images : [fitBud1, fitBud2, fitBud3, fitBud4, fitBud5, fitBud6]
-  },
-  {
-    height : "h-[700vh]",
-    start : "100%",
-    end : "-300%",
-    title : "Baking Horizon",
-    stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
-    service : ["Branding", "Visual Identity", "Web Design", "Development"],
-    desc : ["This is an App used to control your lights using the", "Govee API."],
-    links : [{title : "Visit Site", url : "https://www.bakinghorizon.ca/"}, {title : "Github", url : "https://github.com/hadeya3ik/baking-horizon-next"},], 
-    images : [bakingHorizon1, bakingHorizon2, bakingHorizon3, bakingHorizon4, bakingHorizon5, bakingHorizon6]
-  }
-]
-
-export default Works
+export default Skills;

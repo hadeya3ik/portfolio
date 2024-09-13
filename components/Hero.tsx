@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      <div className='text-accent flex self-end justify-self-end sm:text-4xl text-2xl flex-col sm:flex-row w-full justify-between px-4'>
+      <div className='text-accent flex self-end justify-self-end sm:text-3xl text-2xl flex-col sm:flex-row w-full justify-between px-4'>
         <div className="flex items-center gap-2 whitespace-nowrap">
           <h1>
             <MaskedText>

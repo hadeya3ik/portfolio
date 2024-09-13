@@ -3,7 +3,6 @@ import React, { ReactNode, useRef } from 'react';
 import Magnetic from '@/common/Magnetic';
 import { motion, useInView } from 'framer-motion';
 import { RandomMaskedText } from './RandomMaskedTex';
-import About from './About';
 
 interface CustomButtonProps {
   children: ReactNode;
