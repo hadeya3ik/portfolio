@@ -75,6 +75,7 @@ const frameworks = [
   { title: 'MatLab' },
   { title: 'C++' },
   { title: 'C' },
+  { title: 'HTML/CSS' },
   { title: 'Nextjs' },
   { title: 'Reactjs' },
   { title: 'Nodejs' },
