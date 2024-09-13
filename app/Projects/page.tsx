@@ -9,7 +9,7 @@ import {motion} from 'framer-motion'
 
 const projects = [
     {
-        title1: "SMILE",
+        title: "SMILE",
         src: "smile.png",
         linkTitle : "Visit Site",
         href:"https://smileclub.vercel.app/",
@@ -17,7 +17,7 @@ const projects = [
         id : "01"
     },
     {
-        title1: "Modern Walls",
+        title: "Modern Walls",
         src: "nothing_design_studio.png",
         linkTitle : "Visit Site",
         href:"https://studiobrand.vercel.app/", 
@@ -25,15 +25,15 @@ const projects = [
         id : "02"
     },
     {
-        title1: "Fitbud",
-        src: "fitbud4.png", 
+        title: "Fitbud",
+        src: "fitbud5.png", 
         linkTitle : "View Case Study",
         href:"https://www.hadeyaik.com/Fitbud", 
         topics:["Illustrations", "Case Study"], 
         id : "03"
     },
     {
-        title1: "Govee",
+        title: "Govee",
         src: "govee1.png", 
         linkTitle : "Visit Site",
         href : "https://govee1.vercel.app/demo",
@@ -41,15 +41,15 @@ const projects = [
         id : "04"
     },
     {
-        title1: "Baking Horizon",
-        src: "bakinghorizon1.png",
+        title: "Baking Horizon",
+        src: "b.png",
         linkTitle : "Visit Site",
         href : "https://www.bakinghorizon.ca/",
         topics : ["Web Design", "Development"], 
         id : "05"
     },
     {
-        title1: "3D Creations",
+        title: "3D Creations",
         src: "bedroom.jpg",
         linkTitle : "",
         href : "/",

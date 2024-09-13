@@ -20,10 +20,21 @@ const imgAnim = {
     closed: { scale: 1 }, 
 };
 
-export default function Projects({ project }) {
-    const [isActive, setIsActive] = useState(false);
-    const { title1, src } = project;
+interface Projects {
+    title : string,
+    src : string,
+    linkTitle : string,
+    href: string,
+    topics:string[], 
+    id : string
+}
 
+type ProjectsProps = {
+    project: Projects;
+  };
+
+export default function Projects({ project } : ProjectsProps) {
+    const [isActive, setIsActive] = useState(false);
     return (
         <div
             onMouseEnter={() => setIsActive(true)}
@@ -31,12 +42,12 @@ export default function Projects({ project }) {
             className="border-t-2 border-primary-foreground cursor-pointer w-full flex justify-between md:py-5 md:pl-20 py-10 sm:pl-10 pl-2"
         >
             <div className="self-start text-xl sm:text-5xl flex gap-2">
-                <MaskedText>{title1}</MaskedText>
+                <MaskedText>{project.title}</MaskedText>
                 <div className=' text-xs self-start'><MaskedText>{project.id}</MaskedText></div>
             </div>
             
             <div className='text-xs sm:text-lg'>
-                {project.topics.map((item, index) => <div key={index}><MaskedText>{item}</MaskedText></div>)}
+                {project.topics.map((item : string, index : number) => <div key={index}><MaskedText>{item}</MaskedText></div>)}
             </div>
             {project.linkTitle !== "" && (
                 <a
@@ -55,7 +66,7 @@ export default function Projects({ project }) {
                 style={{ width: '8vw', height: '8vw' }} 
             >
                 <motion.img
-                    src={`/medias/${src}`}
+                    src={`/medias/${project.src}`}
                     className="object-cover"
                     variants={imgAnim}
                     initial="initial"
