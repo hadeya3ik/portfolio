@@ -39,15 +39,11 @@ const Project : React.FC = () => {
     <div className='sticky top-0'>
       {projects.map((item, index) => (
         <ProjectSlider 
-          height={item.height}
-          start={item.start}
-          end={item.end}
           key={index} 
-          id={index} 
           title={item.title}
+          desc={item.desc}
           stack={item.stack}
           service={item.service}
-          desc={item.desc}
           links={item.links}
           images={item.images}/>))} 
     </div> )
