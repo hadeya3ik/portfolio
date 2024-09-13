@@ -97,9 +97,6 @@ export default function Home() {
         <div ref={skillsDiv}>
           <Skills />
         </div>
-        <div className="pb-40">
-          <Works />
-        </div>
         <Footer />
       </motion.section>
     </ReactLenis>

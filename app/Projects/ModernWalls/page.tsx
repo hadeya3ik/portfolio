@@ -5,25 +5,26 @@ import { MaskedText } from '@/components/MaskedText'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 import ProjectSlider from '@/components/ProjectSlider'
-import Image from 'next/image' // Import Next.js Image component
-import pic1 from '@/images/Smile/Smile1.png'
-import pic2 from '@/images/Smile/Smile2.png'
-import pic3 from '@/images/Smile/Smile3.png'
-import pic4 from '@/images/Smile/Smile4.png'
-import pic5 from '@/images/Smile/Smile5.png'
+import govee1 from '@/images/govee/govee1.png'
+import govee2 from '@/images/govee/govee2.png'
+import govee3 from '@/images/govee/govee3.png'
+import govee4 from '@/images/govee/govee4.png'
+import govee5 from '@/images/govee/govee5.png'
+import Image from 'next/image'
 
 const projects = [
     {
-      title : "Smile",
-      stack : ["Figma", "Adobe", "Next.js", "Typescript", ],
+      
+      title : "Govee",
+      stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
       service : ["Web Design", "Development"],
-      desc : ["Working on revamping" , " the clubs website.", "Designing posts on Instagram"],
-      links : [{title : "In development Site", url : "https://smileclub.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/smile-Club-Frontend"},],
-      images : [pic1, pic2]
+      desc : ["This is an App used to control your" , " lights using theGovee API."],
+      links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
+      images : [govee1, govee2, govee3, govee4, govee5]
     }
-]
-
-function Page() {
+  ]
+  
+function page() {
   return (
     <main className="bg-primary text-primary-foreground flex flex-col h-screen">
       <div className='flex-grow h-full flex md:flex-row flex-col'>
@@ -43,6 +44,7 @@ function Page() {
                     </Link>
                 </div>
                 <ProjectSlider 
+            
                     title={item.title}
                     stack={item.stack}
                     service={item.service}
@@ -52,17 +54,17 @@ function Page() {
                 />
             </div>
         ))}
-
-        <div className='flex-1 flex flex-col md:overflow-y-scroll gap-8 bg-primary'>
-          <Image alt='Project Image 1' src={pic1} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic4} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic2} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic3} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic5} className='w-full h-auto' />
+        
+        <div className='flex-1 flex flex-col md:overflow-y-scroll'>
+          <Image alt='' src={govee1} className='w-full h-auto' />
+          <Image alt='' src={govee2} className='w-full h-auto' />
+          <Image alt='' src={govee3} className='w-full h-auto' />
+          <Image alt='' src={govee4} className='w-full h-auto' />
+          <Image alt='' src={govee5} className='w-full h-auto' />
         </div>
       </div>
     </main>
   )
 }
 
-export default Page
+export default page

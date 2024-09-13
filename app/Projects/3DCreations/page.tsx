@@ -5,25 +5,27 @@ import { MaskedText } from '@/components/MaskedText'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 import ProjectSlider from '@/components/ProjectSlider'
-import Image from 'next/image' // Import Next.js Image component
-import pic1 from '@/images/Smile/Smile1.png'
-import pic2 from '@/images/Smile/Smile2.png'
-import pic3 from '@/images/Smile/Smile3.png'
-import pic4 from '@/images/Smile/Smile4.png'
-import pic5 from '@/images/Smile/Smile5.png'
+import pic1 from '@/images/3D/bedroom.jpg'
+import pic2 from '@/images/3D/kitchen.jpg'
+import pic3 from '@/images/3D/bonnies.png'
+import pic4 from '@/images/3D/flowers.png'
+import pic5 from '@/images/3D/smile.png'
+import pic6 from '@/images/3D/bonni.png'
+import Image from 'next/image'
 
 const projects = [
     {
-      title : "Smile",
-      stack : ["Figma", "Adobe", "Next.js", "Typescript", ],
-      service : ["Web Design", "Development"],
-      desc : ["Working on revamping" , " the clubs website.", "Designing posts on Instagram"],
-      links : [{title : "In development Site", url : "https://smileclub.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/smile-Club-Frontend"},],
+      
+      title : "3D Art",
+      stack : ["Blender"],
+      service : ["3D Modelling"],
+      desc : ["Some of my poorly rendered 3d" , "Models"],
+      links : [],
       images : [pic1, pic2]
     }
-]
-
-function Page() {
+  ]
+  
+function page() {
   return (
     <main className="bg-primary text-primary-foreground flex flex-col h-screen">
       <div className='flex-grow h-full flex md:flex-row flex-col'>
@@ -43,6 +45,7 @@ function Page() {
                     </Link>
                 </div>
                 <ProjectSlider 
+            
                     title={item.title}
                     stack={item.stack}
                     service={item.service}
@@ -52,17 +55,18 @@ function Page() {
                 />
             </div>
         ))}
-
+        
         <div className='flex-1 flex flex-col md:overflow-y-scroll gap-8 bg-primary'>
-          <Image alt='Project Image 1' src={pic1} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic4} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic2} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic3} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic5} className='w-full h-auto' />
+          <Image alt='' src={pic1} className='w-full h-auto' />
+          <Image alt='' src={pic2} className='w-full h-auto' />
+          <Image alt='' src={pic3} className='w-full h-auto' />
+          <Image alt='' src={pic4} className='w-full h-auto' />
+          <Image alt='' src={pic5} className='w-full h-auto' />
+          <Image alt='' src={pic6} className='w-full h-auto' />
         </div>
       </div>
     </main>
   )
 }
 
-export default Page
+export default page

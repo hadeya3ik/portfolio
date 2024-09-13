@@ -5,25 +5,27 @@ import { MaskedText } from '@/components/MaskedText'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 import ProjectSlider from '@/components/ProjectSlider'
-import Image from 'next/image' // Import Next.js Image component
-import pic1 from '@/images/Smile/Smile1.png'
-import pic2 from '@/images/Smile/Smile2.png'
-import pic3 from '@/images/Smile/Smile3.png'
-import pic4 from '@/images/Smile/Smile4.png'
-import pic5 from '@/images/Smile/Smile5.png'
+import pic1 from '@/images/bakingHorizon/bakinghorizon1.png'
+import pic2 from '@/images/bakingHorizon/bakinghorizon2.png'
+import pic3 from '@/images/bakingHorizon/bakinghorizon3.png'
+import pic4 from '@/images/bakingHorizon/bakinghorizon4.png'
+import pic5 from '@/images/bakingHorizon/bakinghorizon5.png'
+import pic6 from '@/images/bakingHorizon/bakinghorizon6.png'
+import Image from 'next/image'
 
 const projects = [
     {
-      title : "Smile",
-      stack : ["Figma", "Adobe", "Next.js", "Typescript", ],
-      service : ["Web Design", "Development"],
-      desc : ["Working on revamping" , " the clubs website.", "Designing posts on Instagram"],
-      links : [{title : "In development Site", url : "https://smileclub.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/smile-Club-Frontend"},],
-      images : [pic1, pic2]
+      
+      title : "Baking Horizon",
+      stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
+      service : ["Branding", "Visual Identity", "Web Design", "Development"],
+      desc : ["This is an App used to control your" , " lights using theGovee API."],
+      links : [{title : "Visit Site", url : "https://www.bakinghorizon.ca/"}, {title : "Github", url : "https://github.com/hadeya3ik/baking-horizon-next"},], 
+      images : [pic1, pic2, pic3, pic4, pic5, pic6]
     }
-]
-
-function Page() {
+  ]
+  
+function page() {
   return (
     <main className="bg-primary text-primary-foreground flex flex-col h-screen">
       <div className='flex-grow h-full flex md:flex-row flex-col'>
@@ -43,6 +45,7 @@ function Page() {
                     </Link>
                 </div>
                 <ProjectSlider 
+            
                     title={item.title}
                     stack={item.stack}
                     service={item.service}
@@ -52,17 +55,18 @@ function Page() {
                 />
             </div>
         ))}
-
+        
         <div className='flex-1 flex flex-col md:overflow-y-scroll gap-8 bg-primary'>
-          <Image alt='Project Image 1' src={pic1} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic4} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic2} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic3} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic5} className='w-full h-auto' />
+          <Image alt='' src={pic1} className='w-full h-auto' />
+          <Image alt='' src={pic2} className='w-full h-auto' />
+          <Image alt='' src={pic3} className='w-full h-auto' />
+          <Image alt='' src={pic4} className='w-full h-auto' />
+          <Image alt='' src={pic5} className='w-full h-auto' />
+          <Image alt='' src={pic6} className='w-full h-auto' />
         </div>
       </div>
     </main>
   )
 }
 
-export default Page
+export default page

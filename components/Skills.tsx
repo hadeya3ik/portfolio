@@ -49,10 +49,9 @@ function Skills() {
       className="h-[150vh] flex flex-col items-center justify-center text-secondary-foreground">
       <div className="p-20 flex justify-center text-7xl sm:text-[10vw] mb-10 whitespace-nowrap flex-wrap leading-none text-center uppercase max-w-3xl ">
         <div className='flex'>
-          <RandomMaskedText className='pr-16' >{["Areas"]}</RandomMaskedText>
-          <RandomMaskedText>{["of"]}</RandomMaskedText>
+          <RandomMaskedText className='pr-16' >{["MY"]}</RandomMaskedText>
+          <RandomMaskedText>{["SKILLS"]}</RandomMaskedText>
         </div>
-        <RandomMaskedText>{["Expertise"]}</RandomMaskedText>
       </div>
       <div className="w-full">
         <motion.div
@@ -71,21 +70,20 @@ function Skills() {
 }
 
 const frameworks = [
+  { title: 'Python' },
+  { title: 'R' },
+  { title: 'Bash' },
+  { title: 'MatLab' },
+  { title: 'C++' },
+  { title: 'C' },
   { title: 'Nextjs' },
   { title: 'Reactjs' },
   { title: 'Nodejs' },
   { title: 'Expressjs' },
+  { title: 'TypeScript' },
   { title: 'Illustrator' },
   { title: 'Figma' },
   { title: 'Blender' },
-  { title: 'Prototyping' },
-  { title: 'C++' },
-  { title: 'C' },
-  { title: 'Python' },
-  { title: 'JavaScript' },
-  { title: 'R' },
-  { title: 'Bash' },
-  { title: 'MatLab' },
 ];
 
 export default Skills;
