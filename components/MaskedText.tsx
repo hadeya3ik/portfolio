@@ -23,7 +23,7 @@ export function MaskedText({ children }: { children: React.ReactNode }) {
         ref={ref}
         className="flex flex-col ">
         {sentences.map((sentence, index) => (
-          <div key={index} className="overflow-hidden">
+          <div key={index} className="overflow-hidden whitespace-nowrap">
             <motion.p
               custom={index}
               variants={animation}
