@@ -2,8 +2,8 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-const DURATION = 0.75;
-const ANIMATION_DELAY = 0.025;
+const DURATION = 0.5;
+const ANIMATION_DELAY = 0.0025;
 
 export function RandomMaskedText({
   children,
@@ -16,13 +16,12 @@ export function RandomMaskedText({
   const isInView = useInView(ref, { once: true, amount: 0.75 });
 
   const animation = {
-    initial: { y: '-100%', opacity: 0 },
+    initial: { x: '50%', opacity: 0 },
     enter: (i: number) => ({
-      y: '0',
+      x: '0',
       opacity: 1,
       transition: {
         duration: DURATION,
-        ease: [0.33, 1, 0.68, 1],
         delay: ANIMATION_DELAY + Math.random() * 0.5,
       },
     }),

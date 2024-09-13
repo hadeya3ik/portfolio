@@ -15,6 +15,7 @@ export const RollLink: React.FC<RollLinkProps> = ({ children, href }) => {
     <motion.a
       initial="initial"
       whileHover="hovered"
+      target="_blank"
       href={href}
       className="relative block overflow-hidden whitespace-nowrap">
       <div>

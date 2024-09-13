@@ -10,6 +10,7 @@ import {motion} from 'framer-motion'
 const projects = [
     {
         title: "SMILE",
+        url: "/Smile",
         src: "smile.png",
         linkTitle : "Visit Site",
         href:"https://smileclub.vercel.app/",
@@ -18,6 +19,7 @@ const projects = [
     },
     {
         title: "Modern Walls",
+        url: "/ModernWalls",
         src: "nothing_design_studio.png",
         linkTitle : "Visit Site",
         href:"https://studiobrand.vercel.app/", 
@@ -26,6 +28,7 @@ const projects = [
     },
     {
         title: "Fitbud",
+        url: "/Fitbud",
         src: "fitbud5.png", 
         linkTitle : "View Case Study",
         href:"https://www.hadeyaik.com/Fitbud", 
@@ -34,6 +37,7 @@ const projects = [
     },
     {
         title: "Govee",
+        url: "/Govee",
         src: "govee1.png", 
         linkTitle : "Visit Site",
         href : "https://govee1.vercel.app/demo",
@@ -42,6 +46,7 @@ const projects = [
     },
     {
         title: "Baking Horizon",
+        url: "/BakingHorizon",
         src: "b.png",
         linkTitle : "Visit Site",
         href : "https://www.bakinghorizon.ca/",
@@ -50,6 +55,7 @@ const projects = [
     },
     {
         title: "3D Creations",
+        url: "/3DCreations",
         src: "bedroom.jpg",
         linkTitle : "",
         href : "/",
@@ -62,7 +68,7 @@ function page() {
   return (
     <main className='bg-primary text-primary-foreground flex flex-col'>
         <div className='flex justify-between whitespace-nowrap md:flex-row flex-col '>
-            <Link href='/' className='flex gap-4 border border-r-primary-foreground w-min h-min p-4 rounded-full m-4'>
+            <Link href='/' className='flex gap-4 border border-primary-foreground w-min h-min p-4 rounded-full m-4'>
                 <div className='h-[1.5rem] sm:h-[2.25rem] sm:text-4xl text-2xl whitespace-nowrap'>
                     <MaskedText>
                         GO BACK

@@ -7,10 +7,6 @@ import { MaskedText } from "./MaskedText";
 import { RandomMaskedText } from './RandomMaskedTex';
 
 interface ProjectSliderProps {
-  height : string
-  start :string
-  end : string
-  id: number
   title: string
   desc: string[];
   stack: string[];
@@ -41,88 +37,39 @@ function StackButton({ text }: { text: string }) {
   return (
     <motion.div 
       variants={item}
-      className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full text-2xl px-3">
+      className="font-medium whitespace-nowrap bg-accent text-accent-foreground rounded-full px-3 text-lg md:text-2xl sm:text-xl">
       {text}
     </motion.div>
   )
 }
 
-const ProjectSlider: React.FC<ProjectSliderProps> = ({ height, start, end, id, title, desc, stack, service, links, images }) => {
+const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, desc, stack, service, links }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 }); // triggers when 50% of the component is in view
-
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
-
-  const smoothScrollYProgress = useSpring(scrollYProgress, {
-    stiffness: 200,
-    damping: 100,
-  });
-
-  const x = useTransform(smoothScrollYProgress, [0, 1], [start, end]);
+  const isInView = useInView(ref, { once: true, amount: 0.5 }); 
 
   return (
-    <section ref={targetRef} className={height}>
-      <svg width="60" height="60" viewBox="0 0 60 60" className="sticky top-12 left-full sm:mr-8">
-        <motion.circle
-          className="stroke-current border-red-500 text-primary-foreground"
-          fill="none"
-          style={{ pathLength: scrollYProgress }}
-          cx="30"
-          cy="30"
-          r="20"
-          pathLength="1"
-          strokeWidth="4"
-        />
-      </svg>
-      <div className="sticky top-[50px] sm:top-[100px] flex flex-col items-center overflow-hidden" ref={ref}>
-        <div className="w-full items-center gap-12 flex flex-col pb-20">
-          <div className="flex flex-col gap-12">
-            <div className="flex justify-between">
-              <div className='md:text-8xl sm:text-5xl text-4xl  self-start flex'>
-                <RandomMaskedText className="pr-2">{[`${String(id + 1).padStart(2, '0')}`]}</RandomMaskedText>
-                <RandomMaskedText>{[`${title}`]}</RandomMaskedText>
-                </div>
-              <div className=" text-3xl md:text-5xl sm:text-4xl text-current text-end flex flex-col self-end pr-8 sm:pr-0 md:pr-16 gap-0">
-                {links.map((item, id) => (
-                    <RollLink key={id} href={item.url}>
-                      {item.title}
-                    </RollLink>
-                ))}
-              </div>
-            </div>
-            <div className="flex md:flex-row flex-col sm:gap-12 gap-4">
-              <div className='md:text-4xl text-2xl text-nowrap max-w-'>
-                <MaskedText>
-                  {desc}
-                </MaskedText>
-              </div>
-              <div className="w-full">
-                <motion.div 
-                  variants={container}
-                  initial="hidden"
-                  animate={isInView ? 'visible' : 'hidden'}className="flex flex-wrap max-w-md gap-1">
-                    {service.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
-                    {stack.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
-                </motion.div>
-              </div>
-            </div>
-          </div>
+    <section className="flex md:flex-col flex-row justify-between p-4 h-[85%]">
+      <div className="flex flex-col text-xl md:text-3xl sm:text-2xl gap-4" ref={ref}>
+        <div className='md:text-8xl sm:text-5xl text-4xl '>
+          <RandomMaskedText>{[`${title}`]}</RandomMaskedText>
         </div>
-        <div>
-          <motion.div style={{ x }} className="flex gap-8">
-            {images.map((item, index) => (
-              <Image
-                key={index}
-                src={item}
-                alt={`Project image ${index + 1}`}
-                width={580}
-                height={420}
-                className=""
-              />
-            ))}
-          </motion.div>
-        </div>
+        <MaskedText>
+          {desc}
+        </MaskedText>
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}className="flex flex-wrap max-w-md gap-1">
+            {service.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
+            {stack.map((item, index) => (<StackButton key={index} text={item}></StackButton>))}
+        </motion.div>
+      </div>
+      <div className="text-current  text-3xl md:text-5xl sm:text-4xl">
+        {links.map((item, id) => (
+          <RollLink key={id} href={item.url}>
+            {item.title}
+          </RollLink>
+        ))}
       </div>
     </section>
   );
