@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
 import ColorChanger from './ColorChanger';
+import { RollLink } from './RollLink';
 
 interface ColorChangerProps {
   colorIndex: number;
@@ -51,8 +52,8 @@ const NavBar = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
     </div>
 
     <div className='flex gap-8 cursor-pointer items-center'>
-      <Link href="mailto:h3ikram@uwaterloo.ca">CONTACT</Link>
-      <Link href="/Projects">PROJECTS</Link>
+        <RollLink href="mailto:h3ikram@uwaterloo.ca">{"CONTACT"}</RollLink>
+        <RollLink href="/Projects" openInNewTab={false} >{"PROJECTS"}</RollLink>
       <ColorChanger colorIndex={colorIndex} handleThemeChange={handleThemeChange}></ColorChanger>
     </div>
     </motion.nav>

@@ -8,16 +8,19 @@ const STAGGER = 0.01;
 interface RollLinkProps {
   children: string;
   href: string;
+  openInNewTab?: boolean;
 }
 
-export const RollLink: React.FC<RollLinkProps> = ({ children, href }) => {
+export const RollLink: React.FC<RollLinkProps> = ({ children, href, openInNewTab = true }) => {
   return (
     <motion.a
       initial="initial"
       whileHover="hovered"
-      target="_blank"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap">
+      target={openInNewTab ? "_blank" : "_self"} 
+      rel={openInNewTab ? "noopener noreferrer" : undefined} 
+      className="relative block overflow-hidden whitespace-nowrap"
+    >
       <div>
         {children.split("").map((l, i) => (
           <motion.span

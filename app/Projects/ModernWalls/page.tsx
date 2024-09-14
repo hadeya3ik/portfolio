@@ -5,22 +5,21 @@ import { MaskedText } from '@/components/MaskedText'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 import ProjectSlider from '@/components/ProjectSlider'
-import govee1 from '@/images/govee/govee1.png'
-import govee2 from '@/images/govee/govee2.png'
-import govee3 from '@/images/govee/govee3.png'
-import govee4 from '@/images/govee/govee4.png'
-import govee5 from '@/images/govee/govee5.png'
+import pic1 from '@/images/modernWalls/home.png'
+import pic2 from '@/images/modernWalls/service.png'
+import pic3 from '@/images/modernWalls/gallery1.png'
+import pic4 from '@/images/modernWalls/gallery.png'
+import pic5 from '@/images/modernWalls/contact.png'
 import Image from 'next/image'
 
 const projects = [
     {
-      
-      title : "Govee",
-      stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
+      title : "Modern Walls Studio",
+      stack : ["React", "Next js", "Typescript", "Vercel", "Framer Motion" ],
       service : ["Web Design", "Development"],
-      desc : ["This is an App used to control your" , " lights using theGovee API."],
+      desc : ["Developed the Website for a" , "Interior Design studio."],
       links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
-      images : [govee1, govee2, govee3, govee4, govee5]
+      images : [pic1, pic2, pic3, pic4, pic5]
     }
   ]
   
@@ -44,7 +43,6 @@ function page() {
                     </Link>
                 </div>
                 <ProjectSlider 
-            
                     title={item.title}
                     stack={item.stack}
                     service={item.service}
@@ -54,13 +52,12 @@ function page() {
                 />
             </div>
         ))}
-        
-        <div className='flex-1 flex flex-col md:overflow-y-scroll'>
-          <Image alt='' src={govee1} className='w-full h-auto' />
-          <Image alt='' src={govee2} className='w-full h-auto' />
-          <Image alt='' src={govee3} className='w-full h-auto' />
-          <Image alt='' src={govee4} className='w-full h-auto' />
-          <Image alt='' src={govee5} className='w-full h-auto' />
+        <div className='flex-1 flex flex-col md:overflow-y-scroll gap-8'>
+          <Image alt='' src={pic1} className='w-full h-auto' />
+          <Image alt='' src={pic2} className='w-full h-auto' />
+          <Image alt='' src={pic3} className='w-full h-auto' />
+          <Image alt='' src={pic4} className='w-full h-auto' />
+          <Image alt='' src={pic5} className='w-full h-auto' />
         </div>
       </div>
     </main>
