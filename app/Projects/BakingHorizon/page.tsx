@@ -19,7 +19,7 @@ const projects = [
       title : "Baking Horizon",
       stack : ["Next js", "Vercel", "Figma", "Framer Motion" ],
       service : ["Branding", "Visual Identity", "Web Design", "Development"],
-      desc : ["This is an App used to control your" , " lights using theGovee API."],
+      desc : ["Created a strong brand identity for a local", "Bakery. This project included the design of multiple", "logos, business cards, and the development of a", "responsive company website."],
       links : [{title : "Visit Site", url : "https://www.bakinghorizon.ca/"}, {title : "Github", url : "https://github.com/hadeya3ik/baking-horizon-next"},], 
       images : [pic1, pic2, pic3, pic4, pic5, pic6]
     }

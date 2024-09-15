@@ -18,7 +18,7 @@ const projects = [
       title : "Govee",
       stack : ["Django", "Next js", "Typescript", "Vercel", "SQLite", "REST Api", "Framer Motion" ],
       service : ["Web Design", "Development"],
-      desc : ["This is an App used to control your" , " lights using theGovee API."],
+      desc : ["Developed a smart bulb control system using the" , "Govee API enabling efficient and real-time device", "management and control through a responsive,", "user-friendly interface."],
       links : [{title : "Visit Site", url : "https://govee1.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
       images : [govee1, govee2, govee3, govee4, govee5]
     }

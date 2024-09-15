@@ -19,8 +19,8 @@ const projects = [
       
       title : "FitBud",
       stack : ["Adobe", "Figma" ],
-      service : ["Prototyping"],
-      desc : ["Fitbud is an AI powered Fitness App" , " aimed to help users stick to their", "goals using "],
+      service : ["Prototyping", "Wire framing", "Case study"],
+      desc : ["An interactive Prototype for an AI-powered health" , "app. Created illustrations to add a playful tone", "and implemented a design system with reusable", "components to ensure visual consistency."],
       links : [],
       images : [pic1, pic2, pic3, pic4, pic5, pic6]
     }

@@ -19,7 +19,7 @@ const projects = [
       title : "3D Art",
       stack : ["Blender"],
       service : ["3D Modelling"],
-      desc : ["Some of my poorly rendered 3d" , "Models"],
+      desc : ["Some of my poorly rendered 3D models" ],
       links : [],
       images : [pic1, pic2]
     }

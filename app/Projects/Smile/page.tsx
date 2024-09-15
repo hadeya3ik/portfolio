@@ -17,8 +17,8 @@ const projects = [
       title : "Smile",
       stack : ["Figma", "Adobe", "Next.js", "Typescript", ],
       service : ["Web Design", "Development"],
-      desc : ["Working on revamping" , " the clubs website.", "Designing posts on Instagram"],
-      links : [{title : "In development Site", url : "https://smileclub.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/smile-Club-Frontend"},],
+      desc : ["As the head of design I create illustrations and", "design posters for our social media pages.", "Currently working on revamping our website", "to improve visuals and functionality"],
+      links : [{title : "Site(WIP)", url : "https://smileclub.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/smile-Club-Frontend"},],
       images : [pic1, pic2]
     }
 ]

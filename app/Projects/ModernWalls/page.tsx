@@ -14,11 +14,11 @@ import Image from 'next/image'
 
 const projects = [
     {
-      title : "Modern Walls Studio",
+      title : "Modern Walls",
       stack : ["React", "Next js", "Typescript", "Vercel", "Framer Motion" ],
       service : ["Web Design", "Development"],
-      desc : ["Developed the Website for a" , "Interior Design studio."],
-      links : [{title : "Visit Site", url : "https://modernwalls.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/modernWalls-Frontend"},],
+      desc : ["Developed a company website for an interior design" , "agency using Next.js and TypeScript, with a focus", "on smooth, visually appealing animations powered", "by Framer Motion."],
+      links : [{title : "Site(WIP)", url : "https://modernwalls.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/modernWalls-Frontend"},],
       images : [pic1, pic2, pic3, pic4, pic5]
     }
   ]
