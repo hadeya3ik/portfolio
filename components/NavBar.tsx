@@ -24,7 +24,7 @@ const NavBar = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const previous = previousScrollYProgress;
-    if (latest > previous) {
+    if (latest > previous ) {
       setHiddenNav(true);
     } else {
       setHiddenNav(false);
@@ -35,7 +35,7 @@ const NavBar = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
 
   return (
     <motion.nav
-      className='sticky top-0 flex sm:text-2xl text-xl justify-between px-8 py-1 sm:py-4 text-accent z-50'
+      className='sticky top-0 flex sm:text-2xl text-base justify-between px-8 py-1 sm:py-4 text-accent z-50'
       variants={{
         visible: { y: 0 },
         hidden: { y: '-100%' },
@@ -48,10 +48,10 @@ const NavBar = ({colorIndex, handleThemeChange} : ColorChangerProps) => {
       transition={{ duration: 0.8, ease: 'easeInOut' }} >
 
     <div onClick={scrollToTop} className='cursor-pointer ]'>
-      <p className='text-xl text-primary-foreground '>hadeya ikram</p>
+      <p className='text-xl text-primary-foreground whitespace-nowrap'>hadeya ikram</p>
     </div>
 
-    <div className='flex gap-8 cursor-pointer items-center'>
+    <div className='flex sm:gap-8 gap-2 cursor-pointer items-center'>
         <RollLink href="mailto:h3ikram@uwaterloo.ca">{"CONTACT"}</RollLink>
         <RollLink href="/Projects" openInNewTab={false} >{"PROJECTS"}</RollLink>
       <ColorChanger colorIndex={colorIndex} handleThemeChange={handleThemeChange}></ColorChanger>

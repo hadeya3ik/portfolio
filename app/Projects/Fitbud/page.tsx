@@ -11,7 +11,7 @@ import pic3 from '@/images/CaseStudy/Frame 138.jpg'
 import pic4 from '@/images/CaseStudy/Frame 139.jpg'
 import pic5 from '@/images/CaseStudy/Frame 140.jpg'
 import pic6 from '@/images/CaseStudy/Frame 141.jpg'
-
+import pic7 from '@/images/fitBud/fitbud6.png'
 import Image from 'next/image'
 
 const projects = [
@@ -64,6 +64,7 @@ function page() {
           <Image alt='' src={pic4} className='w-full h-auto' />
           <Image alt='' src={pic5} className='w-full h-auto' />
           <Image alt='' src={pic6} className='w-full h-auto' />
+          <Image alt='' src={pic7} className='w-full h-auto' />
         </div>
       </div>
     </main>

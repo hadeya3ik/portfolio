@@ -18,7 +18,7 @@ const projects = [
       stack : ["React", "Next js", "Typescript", "Vercel", "Framer Motion" ],
       service : ["Web Design", "Development"],
       desc : ["Developed the Website for a" , "Interior Design studio."],
-      links : [{title : "Visit Site", url : "https://govee-kohl.vercel.app/demo"}, {title : "Github", url : "https://github.com/hadeya3ik/govee"},],
+      links : [{title : "Visit Site", url : "https://modernwalls.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/modernWalls-Frontend"},],
       images : [pic1, pic2, pic3, pic4, pic5]
     }
   ]

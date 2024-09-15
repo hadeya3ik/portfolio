@@ -58,7 +58,7 @@ const projects = [
         url: "/ModernWalls",
         src: "home copy.png",
         linkTitle : "Visit Site",
-        href:"https://studiobrand.vercel.app/", 
+        href:"https://modernwalls.vercel.app/", 
         topics:["Web Design", "Development"], 
         id : "02"
     },
