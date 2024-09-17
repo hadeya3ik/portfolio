@@ -5,7 +5,7 @@ import { Spectral } from 'next/font/google'
 import localfont from "next/font/local";
 import { Noto_Serif } from 'next/font/google';
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react"
 const notoSerif = Noto_Serif({
   weight: ['400', '700'], 
   subsets: ['latin'],
@@ -57,6 +57,7 @@ export default function RootLayout({
   }>) {
   return (
     <html lang="en">
+      <Analytics/>
       <body className={`${ppNeueMontreal.className} ${notoSerif.variable} ${spectral.variable} text-primary-foreground`}>{children}</body>
     </html>
   );
