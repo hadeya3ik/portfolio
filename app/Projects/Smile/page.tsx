@@ -15,10 +15,10 @@ import pic5 from '@/images/Smile/Smile5.png'
 const projects = [
     {
       title : "Smile",
-      stack : ["Figma", "Adobe", "Next.js", "Typescript", ],
-      service : ["Web Design", "Development"],
-      desc : ["As the head of design I create illustrations and", "design posters for our social media pages.", "Currently working on revamping our website", "to improve visuals and functionality"],
-      links : [{title : "Site(WIP)", url : "https://smileclub.vercel.app/"}, {title : "Github", url : "https://github.com/hadeya3ik/smile-Club-Frontend"},],
+      stack : ["Figma", "Adobe" ],
+      service : [],
+      desc : ["As the head of design I create illustrations and", "design posters for our social media pages."],
+      links : [],
       images : [pic1, pic2]
     }
 ]
@@ -55,10 +55,7 @@ function Page() {
 
         <div className='flex-1 flex flex-col md:overflow-y-scroll gap-8 bg-primary'>
           <Image alt='Project Image 1' src={pic1} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic4} className='w-full h-auto' />
           <Image alt='Project Image 2' src={pic2} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic3} className='w-full h-auto' />
-          <Image alt='Project Image 2' src={pic5} className='w-full h-auto' />
         </div>
       </div>
     </main>
