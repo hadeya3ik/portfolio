@@ -48,8 +48,8 @@ const projects = [
         title: "SMILE",
         url: "/Smile",
         src: "smile.png",
-        linkTitle : "Visit Site",
-        href:"https://smileclub.vercel.app/",
+        linkTitle : "",
+        href : "/",
         topics:["Web Design", "Development", "Illustrations"], 
         id : "01"
     },
