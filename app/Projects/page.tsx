@@ -50,7 +50,7 @@ const projects = [
         src: "smile.png",
         linkTitle : "",
         href : "/",
-        topics:["Web Design", "Development", "Illustrations"], 
+        topics:["Illustrations"], 
         id : "01"
     },
     {
